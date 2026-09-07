@@ -6,42 +6,43 @@
 
   <title>YouTube Thumbnail Resizer - Resize Thumbnails Free | YouTubeToolly</title>
 
-  <meta name="description"
-    content="Resize YouTube thumbnails online for free. Easily resize images to 1280x720, custom dimensions, JPG or PNG, with instant preview and download.">
+  <meta name="description" content="Resize YouTube thumbnails online for free. Resize images to 1280x720, 1920x1080 or custom dimensions with YouTubeToolly.">
 
-  <meta name="keywords"
-    content="YouTube thumbnail resizer, resize YouTube thumbnail, YouTube thumbnail size, 1280x720 thumbnail, resize image online, YouTube tools">
+  <meta name="keywords" content="YouTube thumbnail resizer, resize YouTube thumbnail, YouTube thumbnail size, 1280x720 thumbnail, resize image online, YouTube tools">
 
   <meta name="robots" content="index, follow">
+  <meta name="author" content="YouTubeToolly">
 
-  <link rel="canonical"
-    href="https://www.youtubetoolly.com/tools/youtube-thumbnail-resizer.html">
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-thumbnail-resizer.html">
+
+  <!-- Open Graph -->
 
   <meta property="og:type" content="website">
-  <meta property="og:title"
-    content="YouTube Thumbnail Resizer - Resize Thumbnails Free">
-  <meta property="og:description"
-    content="Resize YouTube thumbnails online for free with instant preview and download.">
-  <meta property="og:url"
-    content="https://www.youtubetoolly.com/tools/youtube-thumbnail-resizer.html">
+  <meta property="og:title" content="YouTube Thumbnail Resizer - Free | YouTubeToolly">
+  <meta property="og:description" content="Resize YouTube thumbnails online for free with 1280x720, 1920x1080 and custom sizes.">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-thumbnail-resizer.html">
   <meta property="og:site_name" content="YouTubeToolly">
 
+  <!-- Twitter -->
+
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title"
-    content="YouTube Thumbnail Resizer - Resize Thumbnails Free">
-  <meta name="twitter:description"
-    content="Resize YouTube thumbnails quickly and easily with YouTubeToolly.">
+  <meta name="twitter:title" content="YouTube Thumbnail Resizer - Free">
+  <meta name="twitter:description" content="Resize YouTube thumbnails quickly and easily with YouTubeToolly.">
 
   <meta name="theme-color" content="#0f172a">
 
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Cpath d='M40 30L72 50L40 70Z' fill='white'/%3E%3C/svg%3E">
+  <!-- Favicon -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema -->
 
   <script type="application/ld+json">
   {
@@ -49,10 +50,9 @@
     "@type": "WebApplication",
     "name": "YouTube Thumbnail Resizer",
     "url": "https://www.youtubetoolly.com/tools/youtube-thumbnail-resizer.html",
-    "description": "Free online tool for resizing YouTube thumbnails to 1280x720 or custom dimensions.",
-    "applicationCategory": "MultimediaApplication",
+    "description": "Free online tool for resizing YouTube thumbnails to recommended or custom dimensions.",
+    "applicationCategory": "UtilitiesApplication",
     "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -62,163 +62,282 @@
   </script>
 
   <style>
+
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: "Inter", sans-serif;
-      background: #f8fafc;
-      color: #0f172a;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
     }
 
     .container {
-      width: min(1100px, 92%);
+      width: min(1180px, 92%);
       margin: auto;
     }
 
     /* Header */
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
     }
 
     .nav {
-      min-height: 70px;
+      height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
     }
 
-    .logo {
-      font-size: 23px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 21px;
       font-weight: 800;
-      letter-spacing: -0.5px;
+      letter-spacing: -0.6px;
+      color: var(--dark);
     }
 
-    .logo span {
-      color: #ef4444;
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--dark);
+      display: grid;
+      place-items: center;
+      position: relative;
+      box-shadow: 0 7px 18px rgba(15,23,42,.18);
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      top: 5px;
+      right: 5px;
+      border: 2px solid white;
+    }
+
+    .brand span {
+      color: var(--red);
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 28px;
+    }
+
+    nav a {
       color: #475569;
       font-size: 14px;
       font-weight: 600;
     }
 
     nav a:hover {
-      color: #ef4444;
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--dark);
+      color: white !important;
+      padding: 10px 17px;
+      border-radius: 10px;
     }
 
     /* Hero */
 
     .hero {
-      padding: 70px 0 45px;
+      padding: 75px 0 65px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(239,68,68,.10), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(37,99,235,.09), transparent 25%),
+        var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
       text-align: center;
-      background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #f8fafc 100%
-      );
     }
 
     .badge {
-      display: inline-block;
-      background: #fee2e2;
-      color: #dc2626;
-      font-size: 13px;
-      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
       padding: 7px 13px;
       border-radius: 999px;
-      margin-bottom: 18px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .hero h1 {
-      font-size: clamp(32px, 5vw, 52px);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      margin-bottom: 18px;
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 .highlight {
+      color: var(--red);
     }
 
     .hero p {
       max-width: 720px;
       margin: auto;
-      color: #64748b;
-      font-size: 17px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
     }
 
     /* Tool */
 
     .tool-section {
-      padding: 20px 0 70px;
+      padding: 65px 0;
     }
 
-    .tool-card {
+    .tool-box {
       max-width: 850px;
       margin: auto;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 30px;
-      box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: var(--shadow);
     }
+
+    .tool-box h2 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 26px;
+      margin-bottom: 9px;
+    }
+
+    .tool-box-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* Upload */
 
     .upload-area {
       border: 2px dashed #cbd5e1;
       border-radius: 16px;
-      padding: 45px 25px;
+      padding: 42px 25px;
       text-align: center;
-      cursor: pointer;
-      transition: 0.2s;
       background: #f8fafc;
+      cursor: pointer;
+      display: block;
+      transition: background .2s, border-color .2s;
     }
 
     .upload-area:hover {
-      border-color: #ef4444;
-      background: #fffafa;
+      border-color: #cbd5e1;
+      background: #f1f5f9;
     }
 
     .upload-icon {
-      font-size: 42px;
-      margin-bottom: 12px;
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
-    .upload-area h2 {
-      font-size: 20px;
-      margin-bottom: 8px;
+    .upload-area h3 {
+      color: var(--dark);
+      font-size: 19px;
+      margin-bottom: 6px;
     }
 
     .upload-area p {
-      color: #64748b;
-      font-size: 14px;
-      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
     }
 
     .upload-button {
       display: inline-block;
-      background: #ef4444;
+      background: var(--red);
       color: white;
-      padding: 11px 20px;
+      padding: 11px 18px;
       border-radius: 10px;
-      font-weight: 700;
       font-size: 14px;
-      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .upload-area:hover .upload-button {
+      background: var(--red-dark);
     }
 
     #imageInput {
@@ -236,297 +355,360 @@
       display: block;
     }
 
-    .controls h3 {
+    .control-title {
+      color: var(--dark);
       font-size: 18px;
-      margin-bottom: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
 
     .presets {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 24px;
+      gap: 10px;
+      margin-bottom: 23px;
     }
 
     .preset {
-      border: 1px solid #cbd5e1;
-      background: #ffffff;
-      border-radius: 10px;
-      padding: 12px;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      border-radius: 11px;
+      padding: 13px 10px;
       cursor: pointer;
-      font-weight: 600;
-      color: #334155;
-      transition: 0.2s;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
     }
 
     .preset:hover {
-      border-color: #ef4444;
+      border-color: #cbd5e1;
+      background: #f8fafc;
     }
 
     .preset.active {
-      background: #ef4444;
-      border-color: #ef4444;
-      color: white;
+      border-color: var(--red);
+      background: var(--soft-red);
+      color: var(--red-dark);
     }
 
-    .custom-grid {
+    .preset small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .preset.active small {
+      color: var(--red-dark);
+    }
+
+    .dimensions {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-bottom: 18px;
+      gap: 12px;
+      margin-bottom: 17px;
     }
 
     .field label {
       display: block;
+      color: #475569;
       font-size: 13px;
       font-weight: 700;
-      color: #475569;
       margin-bottom: 7px;
     }
 
     .field input,
     .field select {
       width: 100%;
-      border: 1px solid #cbd5e1;
-      border-radius: 10px;
-      padding: 12px;
-      font-size: 15px;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
       outline: none;
+      color: var(--text);
       background: white;
     }
 
     .field input:focus,
     .field select:focus {
-      border-color: #ef4444;
+      border-color: #94a3b8;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.08);
     }
 
     .checkbox-row {
       display: flex;
       align-items: center;
       gap: 9px;
+      color: var(--muted);
+      font-size: 13px;
       margin: 12px 0 20px;
-      color: #475569;
-      font-size: 14px;
     }
 
     .checkbox-row input {
       width: 17px;
       height: 17px;
-      accent-color: #ef4444;
+      accent-color: var(--red);
     }
 
     .resize-button {
       width: 100%;
-      border: none;
-      background: #0f172a;
-      color: white;
+      border: 0;
       padding: 14px;
-      border-radius: 11px;
-      font-size: 15px;
+      border-radius: 12px;
+      background: var(--red);
+      color: white;
       font-weight: 700;
       cursor: pointer;
-      transition: 0.2s;
+      transition: .2s;
+      margin-top: 18px;
     }
 
     .resize-button:hover {
-      background: #1e293b;
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Message */
+
+    .message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-size: 14px;
+    }
+
+    .message.error {
+      display: block;
+      background: var(--soft-red);
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    .message.success {
+      display: block;
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
     }
 
     /* Preview */
 
-    .preview-section {
+    .results {
       display: none;
-      margin-top: 30px;
+      margin-top: 35px;
     }
 
-    .preview-section.show {
-      display: block;
-    }
-
-    .preview-section h3 {
-      font-size: 18px;
-      margin-bottom: 15px;
-    }
-
-    .preview-box {
-      background: #f1f5f9;
-      border-radius: 14px;
-      padding: 20px;
+    .results-title {
       text-align: center;
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .preview-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .preview-area {
+      background: #f1f5f9;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
       overflow: hidden;
     }
 
     #previewCanvas {
       max-width: 100%;
+      max-height: 500px;
+      width: auto;
       height: auto;
       display: block;
-      margin: auto;
       border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.12);
+      box-shadow: 0 7px 25px rgba(15,23,42,.12);
     }
 
-    .image-info {
-      margin-top: 14px;
-      color: #64748b;
+    .preview-info {
+      padding: 17px;
+    }
+
+    .preview-info h3 {
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .preview-info p {
+      color: var(--muted);
       font-size: 13px;
+      margin-bottom: 14px;
     }
 
     .download-button {
       display: block;
       width: 100%;
-      margin-top: 18px;
       text-align: center;
-      background: #16a34a;
-      color: white;
-      padding: 13px;
-      border-radius: 10px;
+      padding: 11px 12px;
+      border-radius: 9px;
+      font-size: 13px;
       font-weight: 700;
+      background: var(--dark);
+      color: white;
+      border: 1px solid var(--dark);
       cursor: pointer;
     }
 
     .download-button:hover {
-      background: #15803d;
+      background: #1e293b;
     }
 
-    .error {
-      display: none;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
-      color: #b91c1c;
-      padding: 12px;
-      border-radius: 10px;
-      margin-top: 18px;
-      font-size: 14px;
-    }
+    /* Info */
 
-    .error.show {
-      display: block;
-    }
-
-    /* Content */
-
-    .content-section {
-      padding: 65px 0;
+    .info-section {
+      padding: 70px 0;
       background: white;
-      border-top: 1px solid #e5e7eb;
     }
 
-    .content {
-      max-width: 850px;
+    .content-box {
+      max-width: 900px;
       margin: auto;
     }
 
-    .content h2 {
-      font-size: 30px;
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
+    .content-box h2 {
+      color: var(--dark);
+      font-size: 31px;
+      letter-spacing: -1px;
+      margin-bottom: 17px;
     }
 
-    .content h3 {
+    .content-box h3 {
+      color: var(--dark);
       font-size: 21px;
-      margin: 30px 0 10px;
+      margin: 30px 0 9px;
     }
 
-    .content p {
-      color: #475569;
-      margin-bottom: 16px;
+    .content-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
     }
 
-    .content ul {
+    .content-box ul {
+      color: var(--muted);
       padding-left: 22px;
-      color: #475569;
+      margin-bottom: 18px;
     }
 
-    .content li {
-      margin-bottom: 8px;
+    .content-box li {
+      margin-bottom: 7px;
     }
 
     .info-box {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
+      background: var(--soft-blue);
+      border: 1px solid #bfdbfe;
       border-radius: 14px;
-      padding: 20px;
-      margin: 22px 0;
+      padding: 18px 20px;
+      margin: 20px 0;
+      color: #1e40af;
     }
 
     .info-box strong {
-      color: #0f172a;
+      color: #1e3a8a;
     }
 
     /* FAQ */
 
+    .faq-section {
+      padding: 70px 0;
+      background: var(--bg);
+    }
+
+    .faq-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 31px;
+      margin-bottom: 35px;
+    }
+
     .faq {
-      margin-top: 40px;
+      max-width: 850px;
+      margin: auto;
     }
 
     .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: 18px 0;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
     }
 
     .faq-item h3 {
-      margin: 0 0 8px;
-      font-size: 17px;
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 7px;
     }
 
     .faq-item p {
-      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     /* Footer */
 
     footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 45px 0 25px;
+      background: #020617;
+      color: #94a3b8;
+      padding: 50px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 40px;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 35px;
     }
 
-    .footer-logo {
+    footer .brand {
       color: white;
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
-    .footer-logo span {
-      color: #ef4444;
-    }
-
-    .footer-about p {
-      max-width: 600px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .footer-about {
+      max-width: 430px;
       font-size: 14px;
     }
 
-    .footer-links a:hover {
+    footer h4 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    footer a {
+      display: block;
+      font-size: 14px;
+      margin: 9px 0;
+    }
+
+    footer a:hover {
       color: white;
     }
 
-    .footer-bottom {
-      border-top: 1px solid #334155;
-      margin-top: 35px;
-      padding-top: 20px;
-      font-size: 13px;
-      color: #94a3b8;
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
       text-align: center;
+      font-size: 13px;
     }
 
     .disclaimer {
       max-width: 850px;
-      margin: 18px auto 0;
+      margin: 12px auto 0;
       text-align: center;
       font-size: 12px;
       color: #64748b;
@@ -535,75 +717,116 @@
     /* Mobile */
 
     @media (max-width: 700px) {
+
       nav {
-        gap: 12px;
-        font-size: 12px;
+        display: none;
       }
 
       .hero {
-        padding: 50px 0 35px;
+        padding: 58px 0 50px;
       }
 
-      .tool-card {
-        padding: 20px;
+      h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tool-section,
+      .info-section,
+      .faq-section {
+        padding: 50px 0;
+      }
+
+      .tool-box {
+        padding: 22px;
       }
 
       .presets {
         grid-template-columns: 1fr;
       }
 
-      .custom-grid {
+      .dimensions {
         grid-template-columns: 1fr;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
+        gap: 28px;
       }
 
-      .logo {
-        font-size: 20px;
+      .preview-area {
+        padding: 15px;
       }
 
-      .upload-area {
-        padding: 35px 15px;
-      }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
+<header>
 
-  <header>
-    <div class="container nav">
+  <div class="container nav">
 
-      <a href="../index.html" class="logo">
-        YouTube<span>Toolly</span>
-      </a>
+    <a href="/" class="brand" aria-label="YouTubeToolly Home">
 
-      <nav>
-        <a href="../index.html">Home</a>
-        <a href="../index.html#tools">Tools</a>
-      </nav>
+      <div class="brand-icon"></div>
 
-    </div>
-  </header>
+      YouTube<span>Toolly</span>
+
+    </a>
+
+    <nav>
+
+      <a href="/#tools">Tools</a>
+
+      <a href="/#why">Why YouTubeToolly</a>
+
+      <a href="/#about">About</a>
+
+      <a href="/#tools" class="nav-button">Explore Tools</a>
+
+    </nav>
+
+  </div>
+
+</header>
 
 
-  <!-- Hero -->
+<main>
+
+  <!-- HERO -->
 
   <section class="hero">
 
-    <div class="container">
+    <div class="container hero-content">
 
-      <div class="badge">Free YouTube Creator Tool</div>
+      <div class="badge">
 
-      <h1>YouTube Thumbnail Resizer</h1>
+        <span class="badge-dot"></span>
+
+        Free YouTube Creator Tool
+
+      </div>
+
+      <h1>
+
+        YouTube Thumbnail<br>
+
+        <span class="highlight">Resizer</span>
+
+      </h1>
 
       <p>
+
         Resize your YouTube thumbnails quickly and easily.
-        Choose the recommended 1280×720 size or enter your own custom dimensions.
+        Choose a recommended size or enter custom dimensions
+        and download your resized image.
+
       </p>
 
     </div>
@@ -611,22 +834,38 @@
   </section>
 
 
-  <!-- Tool -->
+  <!-- TOOL -->
 
   <section class="tool-section">
 
     <div class="container">
 
-      <div class="tool-card">
+      <div class="tool-box">
+
+        <h2>Resize YouTube Thumbnail</h2>
+
+        <p class="tool-box-subtitle">
+
+          Upload an image, choose your preferred size,
+          and download the resized thumbnail.
+
+        </p>
+
+
+        <!-- Upload -->
 
         <label class="upload-area" for="imageInput">
 
-          <div class="upload-icon">🖼️</div>
+          <div class="upload-icon">
+            🖼️
+          </div>
 
-          <h2>Upload Your Thumbnail</h2>
+          <h3>
+            Upload Your Thumbnail
+          </h3>
 
           <p>
-            Choose a JPG, PNG, or WebP image from your device.
+            JPG, PNG, or WebP images are supported.
           </p>
 
           <span class="upload-button">
@@ -638,26 +877,47 @@
         <input
           type="file"
           id="imageInput"
-          accept="image/jpeg,image/png,image/webp">
+          accept="image/jpeg,image/png,image/webp"
+        >
 
+
+        <!-- Controls -->
 
         <div class="controls" id="controls">
 
-          <h3>Choose Thumbnail Size</h3>
+          <div class="control-title">
+            Choose Thumbnail Size
+          </div>
+
 
           <div class="presets">
 
-            <button class="preset active" data-width="1280" data-height="720">
+            <button
+              type="button"
+              class="preset active"
+              data-width="1280"
+              data-height="720"
+            >
               1280 × 720
               <small>Recommended</small>
             </button>
 
-            <button class="preset" data-width="1920" data-height="1080">
+            <button
+              type="button"
+              class="preset"
+              data-width="1920"
+              data-height="1080"
+            >
               1920 × 1080
               <small>Full HD</small>
             </button>
 
-            <button class="preset" data-width="640" data-height="360">
+            <button
+              type="button"
+              class="preset"
+              data-width="640"
+              data-height="360"
+            >
               640 × 360
               <small>Smaller</small>
             </button>
@@ -665,7 +925,9 @@
           </div>
 
 
-          <div class="custom-grid">
+          <!-- Dimensions -->
+
+          <div class="dimensions">
 
             <div class="field">
 
@@ -678,7 +940,8 @@
                 id="widthInput"
                 value="1280"
                 min="1"
-                max="5000">
+                max="5000"
+              >
 
             </div>
 
@@ -694,19 +957,23 @@
                 id="heightInput"
                 value="720"
                 min="1"
-                max="5000">
+                max="5000"
+              >
 
             </div>
 
           </div>
 
 
+          <!-- Aspect Ratio -->
+
           <div class="checkbox-row">
 
             <input
               type="checkbox"
               id="aspectRatio"
-              checked>
+              checked
+            >
 
             <label for="aspectRatio">
               Keep original aspect ratio
@@ -714,6 +981,8 @@
 
           </div>
 
+
+          <!-- Format -->
 
           <div class="field">
 
@@ -737,215 +1006,64 @@
 
 
           <button
+            type="button"
             class="resize-button"
             id="resizeButton"
-            type="button">
-
+          >
             Resize Thumbnail
-
           </button>
 
 
           <div
-            class="error"
-            id="errorMessage">
-          </div>
+            id="message"
+            class="message"
+          ></div>
 
         </div>
 
 
-        <!-- Preview -->
+        <!-- Results -->
 
-        <div class="preview-section" id="previewSection">
+        <div
+          id="results"
+          class="results"
+        >
 
-          <h3>Resized Thumbnail Preview</h3>
-
-          <div class="preview-box">
-
-            <canvas id="previewCanvas"></canvas>
-
-            <div class="image-info" id="imageInfo"></div>
-
-          </div>
-
-          <a
-            href="#"
-            class="download-button"
-            id="downloadButton">
-
-            Download Resized Thumbnail
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SEO Content -->
-
-  <section class="content-section">
-
-    <div class="container">
-
-      <div class="content">
-
-        <h2>
-          Resize YouTube Thumbnails Online
-        </h2>
-
-        <p>
-          YouTubeToolly's free YouTube Thumbnail Resizer makes it easy
-          to resize images for your YouTube videos. Upload your image,
-          select the size you need, and download the resized thumbnail
-          instantly.
-        </p>
-
-        <h3>
-          What is the recommended YouTube thumbnail size?
-        </h3>
-
-        <p>
-          The commonly recommended YouTube thumbnail size is
-          <strong>1280 × 720 pixels</strong>, with a 16:9 aspect ratio.
-          This size provides a high-quality image that works well across
-          desktop computers, mobile devices, and other screens.
-        </p>
-
-        <div class="info-box">
-
-          <strong>Recommended YouTube Thumbnail:</strong>
-
-          <ul>
-            <li>Width: 1280 pixels</li>
-            <li>Height: 720 pixels</li>
-            <li>Aspect ratio: 16:9</li>
-            <li>Format: JPG or PNG</li>
-          </ul>
-
-        </div>
-
-
-        <h3>
-          Why resize a YouTube thumbnail?
-        </h3>
-
-        <p>
-          A properly sized thumbnail can help your video look professional
-          and consistent across different devices. Resizing an image also
-          makes it easier to meet recommended dimensions before uploading
-          it to YouTube.
-        </p>
-
-        <ul>
-          <li>Prepare images for YouTube videos.</li>
-          <li>Create thumbnails with a 16:9 layout.</li>
-          <li>Reduce unnecessarily large image dimensions.</li>
-          <li>Convert your thumbnail to JPG or PNG.</li>
-          <li>Preview the final image before downloading.</li>
-        </ul>
-
-
-        <h3>
-          Is this YouTube thumbnail resizer free?
-        </h3>
-
-        <p>
-          Yes. YouTubeToolly's thumbnail resizer is completely free to use.
-          There is no account or registration required.
-        </p>
-
-
-        <h3>
-          Are my images uploaded to a server?
-        </h3>
-
-        <p>
-          No. Image resizing is performed directly in your web browser
-          using JavaScript and the HTML Canvas API. Your selected image
-          does not need to be uploaded to our server.
-        </p>
-
-
-        <!-- FAQ -->
-
-        <div class="faq">
-
-          <h2>
-            Frequently Asked Questions
+          <h2 class="results-title">
+            Resized Thumbnail
           </h2>
 
 
-          <div class="faq-item">
+          <div class="preview-card">
 
-            <h3>
-              What size should a YouTube thumbnail be?
-            </h3>
+            <div class="preview-area">
 
-            <p>
-              1280 × 720 pixels is a commonly recommended YouTube thumbnail
-              size and uses the 16:9 aspect ratio.
-            </p>
+              <canvas
+                id="previewCanvas"
+              ></canvas>
 
-          </div>
+            </div>
 
 
-          <div class="faq-item">
+            <div class="preview-info">
 
-            <h3>
-              Can I resize a thumbnail to a custom size?
-            </h3>
+              <h3>
+                Your Resized Thumbnail
+              </h3>
 
-            <p>
-              Yes. Enter your preferred width and height in pixels using
-              the custom size fields.
-            </p>
+              <p id="previewInfo">
+                Ready to download.
+              </p>
 
-          </div>
+              <a
+                href="#"
+                id="downloadButton"
+                class="download-button"
+              >
+                Download Thumbnail
+              </a>
 
-
-          <div class="faq-item">
-
-            <h3>
-              Can I resize JPG and PNG images?
-            </h3>
-
-            <p>
-              Yes. The tool supports JPG, PNG, and WebP images as input.
-              You can download the resized image as JPG or PNG.
-            </p>
-
-          </div>
-
-
-          <div class="faq-item">
-
-            <h3>
-              Does the tool work on mobile devices?
-            </h3>
-
-            <p>
-              Yes. The YouTube Thumbnail Resizer works in modern mobile
-              and desktop web browsers.
-            </p>
-
-          </div>
-
-
-          <div class="faq-item">
-
-            <h3>
-              Do I need to install software?
-            </h3>
-
-            <p>
-              No. The tool works directly in your browser and does not
-              require any software installation.
-            </p>
+            </div>
 
           </div>
 
@@ -958,457 +1076,922 @@
   </section>
 
 
-  <!-- Footer -->
+  <!-- INFORMATION -->
 
-  <footer>
+  <section class="info-section">
+
+    <div class="container content-box">
+
+      <h2>
+        YouTube Thumbnail Resizer
+      </h2>
+
+      <p>
+        YouTubeToolly's free YouTube Thumbnail Resizer makes it easy
+        to resize your images for YouTube videos. Upload your image,
+        choose a recommended size or enter custom dimensions,
+        and download the resized thumbnail instantly.
+      </p>
+
+      <p>
+        The tool works directly in your browser, so you can resize
+        thumbnails without installing image editing software.
+      </p>
+
+
+      <h3>
+        What is the recommended YouTube thumbnail size?
+      </h3>
+
+      <p>
+        A commonly recommended YouTube thumbnail size is
+        <strong>1280 × 720 pixels</strong> with a 16:9 aspect ratio.
+        This gives creators a high-quality thumbnail suitable for
+        YouTube video pages and different screen sizes.
+      </p>
+
+
+      <div class="info-box">
+
+        <strong>
+          Recommended YouTube Thumbnail
+        </strong>
+
+        <ul>
+
+          <li>
+            Width: 1280 pixels
+          </li>
+
+          <li>
+            Height: 720 pixels
+          </li>
+
+          <li>
+            Aspect ratio: 16:9
+          </li>
+
+          <li>
+            Common formats: JPG and PNG
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <h3>
+        How to Resize a YouTube Thumbnail
+      </h3>
+
+      <p>
+        Resizing your thumbnail takes only a few simple steps:
+      </p>
+
+      <ul>
+
+        <li>
+          Upload your JPG, PNG, or WebP image.
+        </li>
+
+        <li>
+          Choose a recommended thumbnail size.
+        </li>
+
+        <li>
+          Or enter your own custom width and height.
+        </li>
+
+        <li>
+          Choose JPG or PNG as the output format.
+        </li>
+
+        <li>
+          Click "Resize Thumbnail".
+        </li>
+
+        <li>
+          Preview and download your resized image.
+        </li>
+
+      </ul>
+
+
+      <h3>
+        Can I use a custom thumbnail size?
+      </h3>
+
+      <p>
+        Yes. You can enter any width and height between
+        1 and 5000 pixels. If the aspect ratio option is enabled,
+        the tool automatically maintains the original image ratio.
+      </p>
+
+
+      <h3>
+        Does the tool work without uploading my image?
+      </h3>
+
+      <p>
+        No. You need to select an image from your device before
+        resizing it. The image is processed locally in your browser
+        using JavaScript and the Canvas API.
+      </p>
+
+
+      <h3>
+        Is the YouTube Thumbnail Resizer free?
+      </h3>
+
+      <p>
+        Yes. YouTubeToolly's thumbnail resizer is free to use and
+        does not require registration or software installation.
+      </p>
+
+
+      <h3>
+        Free YouTube Creator Tools
+      </h3>
+
+      <p>
+        YouTubeToolly provides a growing collection of free tools
+        for YouTube creators, including thumbnail tools, title
+        generators, tag generators, hashtag tools, description
+        tools and content idea generators.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
 
     <div class="container">
 
-      <div class="footer-grid">
+      <h2 class="faq-title">
+        Frequently Asked Questions
+      </h2>
 
-        <div class="footer-about">
 
-          <div class="footer-logo">
-            YouTube<span>Toolly</span>
-          </div>
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <h3>
+            What size should a YouTube thumbnail be?
+          </h3>
 
           <p>
-            Free online tools for YouTube creators.
-            Create better content, optimize your videos,
-            and grow your channel with simple creator tools.
+            1280 × 720 pixels with a 16:9 aspect ratio is a commonly
+            recommended size for YouTube thumbnails.
           </p>
 
         </div>
 
 
-        <div class="footer-links">
+        <div class="faq-item">
 
-          <a href="../index.html">
-            Home
-          </a>
+          <h3>
+            Can I resize a thumbnail to 1280 × 720?
+          </h3>
 
-          <a href="../privacy-policy.html">
-            Privacy Policy
-          </a>
+          <p>
+            Yes. Select the 1280 × 720 preset and click
+            "Resize Thumbnail".
+          </p>
 
-          <a href="../terms-of-service.html">
-            Terms of Service
-          </a>
+        </div>
 
-          <a href="../contact.html">
-            Contact
-          </a>
+
+        <div class="faq-item">
+
+          <h3>
+            Can I enter custom dimensions?
+          </h3>
+
+          <p>
+            Yes. You can enter your preferred width and height
+            using the custom dimension fields.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Can I keep the original aspect ratio?
+          </h3>
+
+          <p>
+            Yes. Enable "Keep original aspect ratio" and the tool
+            will automatically calculate the corresponding dimension.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Which image formats are supported?
+          </h3>
+
+          <p>
+            The tool accepts JPG, PNG and WebP images and lets you
+            download the result as JPG or PNG.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Are my images uploaded to a server?
+          </h3>
+
+          <p>
+            No. The image is processed directly in your browser.
+            The tool does not require your image to be uploaded
+            to a server for resizing.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Does the tool work on mobile devices?
+          </h3>
+
+          <p>
+            Yes. The YouTube Thumbnail Resizer works in modern
+            mobile and desktop browsers.
+          </p>
 
         </div>
 
       </div>
 
+    </div>
 
-      <div class="footer-bottom">
+  </section>
 
-        © 2026 YouTubeToolly. All rights reserved.
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <a href="/" class="brand">
+
+          <div class="brand-icon"></div>
+
+          YouTube<span>Toolly</span>
+
+        </a>
+
+        <p class="footer-about">
+
+          Free online tools designed to help YouTube creators
+          plan, optimize and create content more efficiently.
+
+        </p>
 
       </div>
 
-      <div class="disclaimer">
 
-        YouTubeToolly is an independent website and is not affiliated
-        with, endorsed by, or sponsored by YouTube or Google.
+      <div>
+
+        <h4>
+          Tools
+        </h4>
+
+        <a href="/#tools">
+          All Tools
+        </a>
+
+        <a href="/#tools">
+          YouTube SEO
+        </a>
+
+        <a href="/#tools">
+          Generators
+        </a>
+
+        <a href="/#tools">
+          Creator Tools
+        </a>
 
       </div>
+
+
+      <div>
+
+        <h4>
+          Website
+        </h4>
+
+        <a href="/about.html">
+          About
+        </a>
+
+        <a href="/privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/terms.html">
+          Terms of Service
+        </a>
+
+        <a href="/contact.html">
+          Contact
+        </a>
+
+      </div>
+
 
     </div>
 
-  </footer>
+
+    <div class="copyright">
+
+      © 2026 YouTubeToolly. All rights reserved.
+
+    </div>
 
 
-  <script>
+    <p class="disclaimer">
 
-    const imageInput = document.getElementById("imageInput");
-    const controls = document.getElementById("controls");
+      YouTubeToolly is an independent website and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google.
 
-    const widthInput = document.getElementById("widthInput");
-    const heightInput = document.getElementById("heightInput");
+    </p>
 
-    const aspectRatio = document.getElementById("aspectRatio");
+  </div>
 
-    const formatSelect = document.getElementById("formatSelect");
-
-    const resizeButton = document.getElementById("resizeButton");
-
-    const previewSection =
-      document.getElementById("previewSection");
-
-    const previewCanvas =
-      document.getElementById("previewCanvas");
-
-    const imageInfo =
-      document.getElementById("imageInfo");
-
-    const downloadButton =
-      document.getElementById("downloadButton");
-
-    const errorMessage =
-      document.getElementById("errorMessage");
-
-    const presets =
-      document.querySelectorAll(".preset");
+</footer>
 
 
-    let originalImage = null;
-    let originalWidth = 0;
-    let originalHeight = 0;
+<script>
+
+  const imageInput =
+    document.getElementById("imageInput");
+
+  const controls =
+    document.getElementById("controls");
+
+  const widthInput =
+    document.getElementById("widthInput");
+
+  const heightInput =
+    document.getElementById("heightInput");
+
+  const aspectRatio =
+    document.getElementById("aspectRatio");
+
+  const formatSelect =
+    document.getElementById("formatSelect");
+
+  const resizeButton =
+    document.getElementById("resizeButton");
+
+  const results =
+    document.getElementById("results");
+
+  const previewCanvas =
+    document.getElementById("previewCanvas");
+
+  const previewInfo =
+    document.getElementById("previewInfo");
+
+  const downloadButton =
+    document.getElementById("downloadButton");
+
+  const message =
+    document.getElementById("message");
+
+  const presets =
+    document.querySelectorAll(".preset");
 
 
-    /* Upload Image */
+  let originalImage = null;
 
-    imageInput.addEventListener("change", function () {
+  let originalWidth = 0;
 
-      const file = this.files[0];
+  let originalHeight = 0;
 
-      if (!file) {
-        return;
-      }
-
-      if (!file.type.startsWith("image/")) {
-
-        showError("Please select a valid image file.");
-
-        return;
-      }
-
-      const reader = new FileReader();
-
-      reader.onload = function (event) {
-
-        const img = new Image();
-
-        img.onload = function () {
-
-          originalImage = img;
-
-          originalWidth = img.naturalWidth;
-          originalHeight = img.naturalHeight;
-
-          controls.classList.add("show");
-
-          previewSection.classList.remove("show");
-
-          hideError();
-
-          updateHeightFromWidth();
-
-        };
-
-        img.onerror = function () {
-
-          showError(
-            "Unable to read this image. Please try another file."
-          );
-
-        };
-
-        img.src = event.target.result;
-
-      };
-
-      reader.onerror = function () {
-
-        showError(
-          "Unable to load the selected image."
-        );
-
-      };
-
-      reader.readAsDataURL(file);
-
-    });
+  let currentDownloadUrl = null;
 
 
-    /* Presets */
+  /* Upload */
 
-    presets.forEach(function (preset) {
+  imageInput.addEventListener("change", function () {
 
-      preset.addEventListener("click", function () {
+    const file = this.files[0];
 
-        presets.forEach(function (item) {
-          item.classList.remove("active");
+    if (!file) {
+      return;
+    }
+
+
+    hideMessage();
+
+    results.style.display = "none";
+
+
+    if (!file.type.startsWith("image/")) {
+
+      showMessage(
+        "Please select a valid image file.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    const reader = new FileReader();
+
+
+    reader.onload = function (event) {
+
+      const img = new Image();
+
+
+      img.onload = function () {
+
+        originalImage = img;
+
+        originalWidth = img.naturalWidth;
+
+        originalHeight = img.naturalHeight;
+
+        controls.classList.add("show");
+
+        hideMessage();
+
+        /*
+          Set recommended size.
+          The default YouTube ratio is 16:9.
+        */
+
+        widthInput.value = 1280;
+
+        heightInput.value = 720;
+
+        presets.forEach(function (preset) {
+
+          preset.classList.remove("active");
+
         });
 
-        this.classList.add("active");
+        presets[0].classList.add("active");
 
-        const width =
-          parseInt(this.dataset.width);
-
-        const height =
-          parseInt(this.dataset.height);
-
-        widthInput.value = width;
-        heightInput.value = height;
-
-      });
-
-    });
+      };
 
 
-    /* Aspect Ratio */
+      img.onerror = function () {
 
-    widthInput.addEventListener("input", function () {
+        showMessage(
+          "Unable to read this image. Please try another file.",
+          "error"
+        );
 
-      if (aspectRatio.checked) {
-        updateHeightFromWidth();
-      }
-
-      deactivatePresets();
-
-    });
+      };
 
 
-    heightInput.addEventListener("input", function () {
+      img.src = event.target.result;
 
-      if (aspectRatio.checked) {
-        updateWidthFromHeight();
-      }
-
-      deactivatePresets();
-
-    });
+    };
 
 
-    function updateHeightFromWidth() {
+    reader.onerror = function () {
 
-      if (!originalImage) {
-        return;
-      }
+      showMessage(
+        "Unable to load the selected image.",
+        "error"
+      );
 
-      const width =
-        parseInt(widthInput.value);
-
-      if (!width || width < 1) {
-        return;
-      }
-
-      const ratio =
-        originalHeight / originalWidth;
-
-      heightInput.value =
-        Math.round(width * ratio);
-
-    }
+    };
 
 
-    function updateWidthFromHeight() {
+    reader.readAsDataURL(file);
 
-      if (!originalImage) {
-        return;
-      }
-
-      const height =
-        parseInt(heightInput.value);
-
-      if (!height || height < 1) {
-        return;
-      }
-
-      const ratio =
-        originalWidth / originalHeight;
-
-      widthInput.value =
-        Math.round(height * ratio);
-
-    }
+  });
 
 
-    function deactivatePresets() {
+  /* Presets */
+
+  presets.forEach(function (preset) {
+
+    preset.addEventListener("click", function () {
 
       presets.forEach(function (item) {
+
         item.classList.remove("active");
+
       });
+
+
+      this.classList.add("active");
+
+
+      const width =
+        parseInt(this.dataset.width);
+
+      const height =
+        parseInt(this.dataset.height);
+
+
+      widthInput.value = width;
+
+      heightInput.value = height;
+
+    });
+
+  });
+
+
+  /* Width */
+
+  widthInput.addEventListener("input", function () {
+
+    deactivatePresets();
+
+    if (
+      aspectRatio.checked &&
+      originalWidth &&
+      originalHeight
+    ) {
+
+      const width =
+        parseInt(this.value);
+
+      if (width > 0) {
+
+        const ratio =
+          originalHeight / originalWidth;
+
+        heightInput.value =
+          Math.round(width * ratio);
+
+      }
 
     }
 
-
-    /* Resize */
-
-    resizeButton.addEventListener("click", function () {
-
-      hideError();
-
-      if (!originalImage) {
-
-        showError(
-          "Please upload an image first."
-        );
-
-        return;
-      }
-
-      let width =
-        parseInt(widthInput.value);
-
-      let height =
-        parseInt(heightInput.value);
+  });
 
 
-      if (!width || width < 1 || width > 5000) {
+  /* Height */
 
-        showError(
-          "Please enter a valid width between 1 and 5000 pixels."
-        );
+  heightInput.addEventListener("input", function () {
 
-        return;
-      }
+    deactivatePresets();
 
+    if (
+      aspectRatio.checked &&
+      originalWidth &&
+      originalHeight
+    ) {
 
-      if (!height || height < 1 || height > 5000) {
+      const height =
+        parseInt(this.value);
 
-        showError(
-          "Please enter a valid height between 1 and 5000 pixels."
-        );
-
-        return;
-      }
-
-
-      if (aspectRatio.checked) {
+      if (height > 0) {
 
         const ratio =
           originalWidth / originalHeight;
 
-        height =
-          Math.round(width / ratio);
-
-        heightInput.value = height;
+        widthInput.value =
+          Math.round(height * ratio);
 
       }
 
+    }
 
-      previewCanvas.width = width;
-      previewCanvas.height = height;
-
-
-      const ctx =
-        previewCanvas.getContext("2d");
-
-      ctx.clearRect(
-        0,
-        0,
-        width,
-        height
-      );
+  });
 
 
-      ctx.drawImage(
-        originalImage,
-        0,
-        0,
-        width,
-        height
-      );
+  /* Aspect Ratio */
+
+  aspectRatio.addEventListener("change", function () {
+
+    if (
+      this.checked &&
+      originalWidth &&
+      originalHeight
+    ) {
+
+      const width =
+        parseInt(widthInput.value);
+
+      if (width > 0) {
+
+        const ratio =
+          originalHeight / originalWidth;
+
+        heightInput.value =
+          Math.round(width * ratio);
+
+      }
+
+    }
+
+  });
 
 
-      previewSection.classList.add("show");
+  /* Deactivate presets */
 
+  function deactivatePresets() {
 
-      const formatName =
-        formatSelect.value === "image/png"
-          ? "PNG"
-          : "JPG";
+    presets.forEach(function (preset) {
 
-
-      imageInfo.textContent =
-        "Output size: " +
-        width +
-        " × " +
-        height +
-        " pixels • " +
-        formatName;
-
-
-      prepareDownload(formatName);
-
-      previewSection.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
-      });
+      preset.classList.remove("active");
 
     });
 
-
-    /* Download */
-
-    function prepareDownload(formatName) {
-
-      const mimeType =
-        formatName === "PNG"
-          ? "image/png"
-          : "image/jpeg";
+  }
 
 
-      const extension =
-        formatName === "PNG"
-          ? "png"
-          : "jpg";
+  /* Resize */
+
+  resizeButton.addEventListener("click", function () {
+
+    hideMessage();
 
 
-      previewCanvas.toBlob(function (blob) {
+    if (!originalImage) {
+
+      showMessage(
+        "Please upload an image first.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    let width =
+      parseInt(widthInput.value);
+
+    let height =
+      parseInt(heightInput.value);
+
+
+    if (
+      !width ||
+      width < 1 ||
+      width > 5000
+    ) {
+
+      showMessage(
+        "Please enter a width between 1 and 5000 pixels.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    if (
+      !height ||
+      height < 1 ||
+      height > 5000
+    ) {
+
+      showMessage(
+        "Please enter a height between 1 and 5000 pixels.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    /*
+      Maintain original ratio when enabled.
+    */
+
+    if (aspectRatio.checked) {
+
+      const ratio =
+        originalWidth / originalHeight;
+
+      height =
+        Math.round(width / ratio);
+
+      heightInput.value = height;
+
+    }
+
+
+    if (height > 5000) {
+
+      showMessage(
+        "The calculated height is larger than 5000 pixels. Please use a smaller width.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    /*
+      Prepare Canvas
+    */
+
+    previewCanvas.width = width;
+
+    previewCanvas.height = height;
+
+
+    const ctx =
+      previewCanvas.getContext("2d");
+
+
+    ctx.clearRect(
+      0,
+      0,
+      width,
+      height
+    );
+
+
+    /*
+      High-quality image resizing.
+    */
+
+    ctx.imageSmoothingEnabled = true;
+
+    ctx.imageSmoothingQuality = "high";
+
+
+    ctx.drawImage(
+      originalImage,
+      0,
+      0,
+      width,
+      height
+    );
+
+
+    /*
+      Show results.
+    */
+
+    results.style.display = "block";
+
+
+    const format =
+      formatSelect.value;
+
+
+    const formatName =
+      format === "image/png"
+        ? "PNG"
+        : "JPG";
+
+
+    previewInfo.textContent =
+      "Size: " +
+      width +
+      " × " +
+      height +
+      " pixels • Format: " +
+      formatName;
+
+
+    createDownload(
+      format,
+      width,
+      height
+    );
+
+
+    showMessage(
+      "Your thumbnail has been resized successfully.",
+      "success"
+    );
+
+
+    results.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+
+  /* Create Download */
+
+  function createDownload(
+    format,
+    width,
+    height
+  ) {
+
+    if (currentDownloadUrl) {
+
+      URL.revokeObjectURL(
+        currentDownloadUrl
+      );
+
+      currentDownloadUrl = null;
+
+    }
+
+
+    previewCanvas.toBlob(
+      function (blob) {
 
         if (!blob) {
 
-          showError(
-            "Unable to create the resized image."
+          showMessage(
+            "Unable to create the resized image.",
+            "error"
           );
 
           return;
+
         }
 
 
-        const url =
+        currentDownloadUrl =
           URL.createObjectURL(blob);
 
 
-        downloadButton.href = url;
+        const extension =
+          format === "image/png"
+            ? "png"
+            : "jpg";
+
+
+        downloadButton.href =
+          currentDownloadUrl;
+
 
         downloadButton.download =
           "youtube-thumbnail-" +
-          Date.now() +
+          width +
+          "x" +
+          height +
           "." +
           extension;
 
+      },
+      format,
+      format === "image/jpeg"
+        ? 0.95
+        : undefined
+    );
 
-        downloadButton.onclick = function () {
-
-          setTimeout(function () {
-            URL.revokeObjectURL(url);
-          }, 1000);
-
-        };
-
-      }, mimeType, 0.92);
-
-    }
+  }
 
 
-    /* Error Handling */
+  /* Message */
 
-    function showError(message) {
+  function showMessage(
+    text,
+    type
+  ) {
 
-      errorMessage.textContent = message;
+    message.textContent = text;
 
-      errorMessage.classList.add("show");
+    message.className =
+      "message " + type;
 
-    }
+  }
 
 
-    function hideError() {
+  function hideMessage() {
 
-      errorMessage.textContent = "";
+    message.textContent = "";
 
-      errorMessage.classList.remove("show");
+    message.className = "message";
 
-    }
+  }
 
-  </script>
+
+</script>
 
 </body>
 </html>
