@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +14,6 @@
   <link rel="canonical" href="https://www.youtubetoolly.com/">
 
   <!-- Open Graph -->
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="Free YouTube Tools for Creators | YouTubeToolly">
   <meta property="og:description" content="Powerful free tools designed to help YouTube creators create, optimize and grow their channels.">
@@ -23,27 +21,22 @@
   <meta property="og:site_name" content="YouTubeToolly">
 
   <!-- Twitter -->
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free YouTube Tools for Creators | YouTubeToolly">
   <meta name="twitter:description" content="Free online tools for YouTube creators, including title, tag, hashtag and description generators.">
 
   <!-- Theme -->
-
   <meta name="theme-color" content="#0f172a">
 
   <!-- Favicon -->
-
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
 
   <!-- Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- SoftwareApplication / WebSite Schema -->
-
+  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -365,6 +358,7 @@
       cursor: pointer;
       font-size: 13px;
       font-weight: 600;
+      transition: .2s;
     }
 
     .category.active,
@@ -603,7 +597,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -611,19 +604,17 @@
 <header>
   <div class="container nav">
 
+    <a href="/" class="brand" aria-label="YouTubeToolly Home">
+      <div class="brand-icon"></div>
+      YouTube<span>Toolly</span>
+    </a>
 
-<a href="/" class="brand" aria-label="YouTubeToolly Home">
-  <div class="brand-icon"></div>
-  YouTube<span>Toolly</span>
-</a>
-
-<nav>
-  <a href="#tools">Tools</a>
-  <a href="#why">Why YouTubeToolly</a>
-  <a href="#about">About</a>
-  <a href="#tools" class="nav-button">Explore Tools</a>
-</nav>
-
+    <nav>
+      <a href="#tools">Tools</a>
+      <a href="#why">Why YouTubeToolly</a>
+      <a href="#about">About</a>
+      <a href="#tools" class="nav-button">Explore Tools</a>
+    </nav>
 
   </div>
 </header>
@@ -631,331 +622,377 @@
 <main>
 
   <!-- HERO -->
-
   <section class="hero">
     <div class="container hero-content">
 
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Free Tools for YouTube Creators
+      </div>
 
-  <div class="badge">
-    <span class="badge-dot"></span>
-    Free Tools for YouTube Creators
-  </div>
+      <h1>
+        Create Better Videos.<br>
+        <span class="highlight">Grow Your Channel.</span>
+      </h1>
 
-  <h1>
-    Create Better Videos.<br>
-    <span class="highlight">Grow Your Channel.</span>
-  </h1>
+      <p>
+        Powerful free YouTube tools built for creators. Generate better titles,
+        tags, hashtags, descriptions and more — quickly and easily.
+      </p>
 
-  <p>
-    Powerful free YouTube tools built for creators. Generate better titles,
-    tags, hashtags, descriptions and more — quickly and easily.
-  </p>
+      <div class="hero-buttons">
+        <a href="#tools" class="primary-btn">Explore Free Tools</a>
+        <a href="#about" class="secondary-btn">Learn More</a>
+      </div>
 
-  <div class="hero-buttons">
-    <a href="#tools" class="primary-btn">Explore Free Tools</a>
-    <a href="#about" class="secondary-btn">Learn More</a>
-  </div>
+      <div class="search-wrapper">
+        <span class="search-icon">⌕</span>
+        <input
+          type="search"
+          id="toolSearch"
+          placeholder="Search YouTube tools..."
+          aria-label="Search YouTube tools"
+        >
+      </div>
 
-  <div class="search-wrapper">
-    <span class="search-icon">⌕</span>
-    <input
-      type="search"
-      id="toolSearch"
-      placeholder="Search YouTube tools..."
-      aria-label="Search YouTube tools"
-    >
-  </div>
-
-</div>
-
-
+    </div>
   </section>
 
   <!-- TOOLS -->
-
   <section class="tools-section" id="tools">
     <div class="container">
 
+      <div class="section-heading">
+        <h2>Free YouTube Tools</h2>
+        <p>
+          Simple, fast and free tools to help YouTube creators save time
+          and improve their content workflow.
+        </p>
+      </div>
 
-  <div class="section-heading">
-    <h2>Free YouTube Tools</h2>
-    <p>
-      Simple, fast and free tools to help YouTube creators save time
-      and improve their content workflow.
-    </p>
-  </div>
+      <div class="categories">
+        <button class="category active" data-category="all">All</button>
+        <button class="category" data-category="seo">SEO</button>
+        <button class="category" data-category="generators">Generators</button>
+        <button class="category" data-category="creators">Creators</button>
+        <button class="category" data-category="utilities">Utilities</button>
+      </div>
 
-  <div class="categories">
-    <button class="category active">All</button>
-    <button class="category">SEO</button>
-    <button class="category">Generators</button>
-    <button class="category">Creators</button>
-    <button class="category">Utilities</button>
-  </div>
+      <div class="tools-grid" id="toolsGrid">
 
-  <div class="tools-grid" id="toolsGrid">
+        <!-- 1 Thumbnail Downloader -->
+        <article
+          class="tool-card"
+          data-category="utilities creators"
+          data-name="youtube thumbnail downloader thumbnail"
+        >
+          <div class="tool-icon">🖼️</div>
+          <h3>YouTube Thumbnail Downloader</h3>
+          <p>
+            Get available YouTube video thumbnail images quickly and easily.
+          </p>
+          <a href="/tools/youtube-thumbnail-downloader.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
 
-    <article class="tool-card" data-name="youtube thumbnail downloader thumbnail">
-      <div class="tool-icon">🖼️</div>
-      <h3>YouTube Thumbnail Downloader</h3>
-      <p>
-        Get available YouTube video thumbnail images quickly and easily.
+        <!-- 2 Thumbnail Resizer -->
+        <article
+          class="tool-card"
+          data-category="utilities creators"
+          data-name="youtube thumbnail resizer resize image"
+        >
+          <div class="tool-icon">📐</div>
+          <h3>YouTube Thumbnail Resizer</h3>
+          <p>
+            Resize your thumbnail images for YouTube-friendly dimensions.
+          </p>
+          <a href="/tools/youtube-thumbnail-resizer.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 3 Title Generator -->
+        <article
+          class="tool-card"
+          data-category="seo generators"
+          data-name="youtube title generator seo titles"
+        >
+          <div class="tool-icon">✍️</div>
+          <h3>YouTube Title Generator</h3>
+          <p>
+            Generate engaging YouTube title ideas based on your video topic.
+          </p>
+          <a href="/tools/youtube-title-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 4 Tag Generator -->
+        <article
+          class="tool-card"
+          data-category="seo generators"
+          data-name="youtube tag generator tags seo"
+        >
+          <div class="tool-icon">🏷️</div>
+          <h3>YouTube Tag Generator</h3>
+          <p>
+            Create relevant tag ideas to organize and optimize your videos.
+          </p>
+          <a href="/tools/youtube-tag-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 5 Hashtag Generator -->
+        <article
+          class="tool-card"
+          data-category="seo generators"
+          data-name="youtube hashtag generator hashtags"
+        >
+          <div class="tool-icon">#️⃣</div>
+          <h3>YouTube Hashtag Generator</h3>
+          <p>
+            Generate relevant hashtag ideas for YouTube videos and Shorts.
+          </p>
+          <a href="/tools/youtube-hashtag-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 6 Description Generator -->
+        <article
+          class="tool-card"
+          data-category="seo generators"
+          data-name="youtube description generator description"
+        >
+          <div class="tool-icon">📝</div>
+          <h3>YouTube Description Generator</h3>
+          <p>
+            Create structured YouTube description ideas for your videos.
+          </p>
+          <a href="/tools/youtube-description-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 7 Timestamp Generator -->
+        <article
+          class="tool-card"
+          data-category="creators utilities generators"
+          data-name="youtube timestamp generator timestamps"
+        >
+          <div class="tool-icon">⏱️</div>
+          <h3>YouTube Timestamp Generator</h3>
+          <p>
+            Create clean video timestamps and chapters from your content.
+          </p>
+          <a href="/tools/youtube-timestamp-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 8 Shorts Ideas Generator -->
+        <article
+          class="tool-card"
+          data-category="creators generators"
+          data-name="youtube shorts ideas generator shorts ideas"
+        >
+          <div class="tool-icon">💡</div>
+          <h3>YouTube Shorts Ideas Generator</h3>
+          <p>
+            Find fresh Shorts content ideas for your next videos.
+          </p>
+          <a href="/tools/youtube-shorts-ideas-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 9 Channel Name Generator -->
+        <article
+          class="tool-card"
+          data-category="creators generators"
+          data-name="youtube channel name generator channel names"
+        >
+          <div class="tool-icon">📺</div>
+          <h3>YouTube Channel Name Generator</h3>
+          <p>
+            Generate memorable channel name ideas based on your niche.
+          </p>
+          <a href="/tools/youtube-channel-name-generator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+        <!-- 10 Earnings Calculator -->
+        <article
+          class="tool-card"
+          data-category="utilities creators"
+          data-name="youtube earnings calculator money calculator"
+        >
+          <div class="tool-icon">💰</div>
+          <h3>YouTube Earnings Calculator</h3>
+          <p>
+            Estimate potential YouTube earnings using views and RPM assumptions.
+          </p>
+          <a href="/tools/youtube-earnings-calculator.html" class="tool-link">
+            Use Tool →
+          </a>
+        </article>
+
+      </div>
+
+      <p
+        id="noResults"
+        style="
+          display:none;
+          text-align:center;
+          color:#64748b;
+          margin-top:30px;
+          font-size:15px;
+        "
+      >
+        No tools found. Try another search or category.
       </p>
-      <a href="/tools/youtube-thumbnail-downloader.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
 
-    <article class="tool-card" data-name="youtube thumbnail resizer resize image">
-      <div class="tool-icon">📐</div>
-      <h3>YouTube Thumbnail Resizer</h3>
-      <p>
-        Resize your thumbnail images for YouTube-friendly dimensions.
-      </p>
-      <a href="/tools/youtube-thumbnail-resizer.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube title generator seo titles">
-      <div class="tool-icon">✍️</div>
-      <h3>YouTube Title Generator</h3>
-      <p>
-        Generate engaging YouTube title ideas based on your video topic.
-      </p>
-      <a href="/tools/youtube-title-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube tag generator tags seo">
-      <div class="tool-icon">🏷️</div>
-      <h3>YouTube Tag Generator</h3>
-      <p>
-        Create relevant tag ideas to organize and optimize your videos.
-      </p>
-      <a href="/tools/youtube-tag-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube hashtag generator hashtags">
-      <div class="tool-icon">#️⃣</div>
-      <h3>YouTube Hashtag Generator</h3>
-      <p>
-        Generate relevant hashtag ideas for YouTube videos and Shorts.
-      </p>
-      <a href="/tools/youtube-hashtag-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube description generator description">
-      <div class="tool-icon">📝</div>
-      <h3>YouTube Description Generator</h3>
-      <p>
-        Create structured YouTube description ideas for your videos.
-      </p>
-      <a href="/tools/youtube-description-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube timestamp generator timestamps">
-      <div class="tool-icon">⏱️</div>
-      <h3>YouTube Timestamp Generator</h3>
-      <p>
-        Create clean video timestamps and chapters from your content.
-      </p>
-      <a href="/tools/youtube-timestamp-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube shorts ideas generator shorts ideas">
-      <div class="tool-icon">💡</div>
-      <h3>YouTube Shorts Ideas Generator</h3>
-      <p>
-        Find fresh Shorts content ideas for your next videos.
-      </p>
-      <a href="/tools/youtube-shorts-ideas-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube channel name generator channel names">
-      <div class="tool-icon">📺</div>
-      <h3>YouTube Channel Name Generator</h3>
-      <p>
-        Generate memorable channel name ideas based on your niche.
-      </p>
-      <a href="/tools/youtube-channel-name-generator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-    <article class="tool-card" data-name="youtube earnings calculator money calculator">
-      <div class="tool-icon">💰</div>
-      <h3>YouTube Earnings Calculator</h3>
-      <p>
-        Estimate potential YouTube earnings using views and RPM assumptions.
-      </p>
-      <a href="/tools/youtube-earnings-calculator.html" class="tool-link">
-        Use Tool →
-      </a>
-    </article>
-
-  </div>
-</div>
-
-
+    </div>
   </section>
 
   <!-- WHY -->
-
   <section class="why" id="why">
     <div class="container">
 
-  <div class="section-heading">
-    <h2>Built for Modern Creators</h2>
-    <p>
-      YouTubeToolly focuses on making everyday creator tasks faster and easier.
-    </p>
-  </div>
+      <div class="section-heading">
+        <h2>Built for Modern Creators</h2>
+        <p>
+          YouTubeToolly focuses on making everyday creator tasks faster and easier.
+        </p>
+      </div>
 
-  <div class="benefits">
+      <div class="benefits">
 
-    <div class="benefit">
-      <div class="benefit-icon">⚡</div>
-      <h3>Fast & Simple</h3>
-      <p>
-        Use practical tools without complicated dashboards or unnecessary steps.
-      </p>
+        <div class="benefit">
+          <div class="benefit-icon">⚡</div>
+          <h3>Fast & Simple</h3>
+          <p>
+            Use practical tools without complicated dashboards or unnecessary steps.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🆓</div>
+          <h3>Free to Use</h3>
+          <p>
+            Our core creator tools are designed to remain free and accessible.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-icon">🎯</div>
+          <h3>Creator Focused</h3>
+          <p>
+            Every tool is designed around common needs of YouTube creators.
+          </p>
+        </div>
+
+      </div>
     </div>
-
-    <div class="benefit">
-      <div class="benefit-icon">🆓</div>
-      <h3>Free to Use</h3>
-      <p>
-        Our core creator tools are designed to remain free and accessible.
-      </p>
-    </div>
-
-    <div class="benefit">
-      <div class="benefit-icon">🎯</div>
-      <h3>Creator Focused</h3>
-      <p>
-        Every tool is designed around common needs of YouTube creators.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-
   </section>
 
   <!-- SEO CONTENT -->
-
   <section class="seo-content" id="about">
     <div class="container seo-box">
 
+      <h2>Free YouTube Tools for Creators</h2>
 
-  <h2>Free YouTube Tools for Creators</h2>
+      <p>
+        YouTubeToolly is a collection of free online tools created to help
+        YouTube creators with everyday content tasks. Whether you are starting
+        a new channel, creating YouTube Shorts, or publishing videos regularly,
+        our tools are designed to make your workflow easier.
+      </p>
 
-  <p>
-    YouTubeToolly is a collection of free online tools created to help
-    YouTube creators with everyday content tasks. Whether you are starting
-    a new channel, creating YouTube Shorts, or publishing videos regularly,
-    our tools are designed to make your workflow easier.
-  </p>
+      <h3>Improve Your YouTube Workflow</h3>
 
-  <h3>Improve Your YouTube Workflow</h3>
+      <p>
+        Creating videos involves more than recording and editing. Creators
+        also need to write titles, descriptions, tags, hashtags, timestamps
+        and other supporting content. YouTubeToolly brings useful creator
+        utilities together in one simple website.
+      </p>
 
-  <p>
-    Creating videos involves more than recording and editing. Creators
-    also need to write titles, descriptions, tags, hashtags, timestamps
-    and other supporting content. YouTubeToolly brings useful creator
-    utilities together in one simple website.
-  </p>
+      <h3>Free YouTube SEO Tools</h3>
 
-  <h3>Free YouTube SEO Tools</h3>
+      <p>
+        Our YouTube SEO tools can help you brainstorm titles, tags, hashtags
+        and descriptions for your videos. They are designed to support your
+        creative process rather than replace your own research and judgment.
+      </p>
 
-  <p>
-    Our YouTube SEO tools can help you brainstorm titles, tags, hashtags
-    and descriptions for your videos. They are designed to support your
-    creative process rather than replace your own research and judgment.
-  </p>
+      <h3>Tools for YouTube Shorts Creators</h3>
 
-  <h3>Tools for YouTube Shorts Creators</h3>
+      <p>
+        Shorts creators can use our idea generators and other utilities to
+        speed up the planning process and find new content concepts.
+      </p>
 
-  <p>
-    Shorts creators can use our idea generators and other utilities to
-    speed up the planning process and find new content concepts.
-  </p>
+      <h3>Built for Creators Everywhere</h3>
 
-  <h3>Built for Creators Everywhere</h3>
+      <p>
+        YouTubeToolly is available online and designed for creators around the
+        world. Our goal is to provide useful, straightforward tools without
+        unnecessary complexity.
+      </p>
 
-  <p>
-    YouTubeToolly is available online and designed for creators around the
-    world. Our goal is to provide useful, straightforward tools without
-    unnecessary complexity.
-  </p>
-
-</div>
-
-
+    </div>
   </section>
 
 </main>
 
 <!-- FOOTER -->
-
 <footer>
   <div class="container">
 
+    <div class="footer-grid">
 
-<div class="footer-grid">
+      <div>
+        <a href="/" class="brand">
+          <div class="brand-icon"></div>
+          YouTube<span>Toolly</span>
+        </a>
 
-  <div>
-    <a href="/" class="brand">
-      <div class="brand-icon"></div>
-      YouTube<span>Toolly</span>
-    </a>
+        <p class="footer-about">
+          Free online tools designed to help YouTube creators
+          plan, optimize and create content more efficiently.
+        </p>
+      </div>
 
-    <p class="footer-about">
-      Free online tools designed to help YouTube creators
-      plan, optimize and create content more efficiently.
+      <div>
+        <h4>Tools</h4>
+        <a href="#tools" data-footer-category="all">All Tools</a>
+        <a href="#tools" data-footer-category="seo">YouTube SEO</a>
+        <a href="#tools" data-footer-category="generators">Generators</a>
+        <a href="#tools" data-footer-category="creators">Creator Tools</a>
+      </div>
+
+      <div>
+        <h4>Website</h4>
+        <a href="/about.html">About</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 YouTubeToolly. All rights reserved.
+    </div>
+
+    <p class="disclaimer">
+      YouTubeToolly is an independent website and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google.
     </p>
-  </div>
-
-  <div>
-    <h4>Tools</h4>
-    <a href="#tools">All Tools</a>
-    <a href="#tools">YouTube SEO</a>
-    <a href="#tools">Generators</a>
-    <a href="#tools">Creator Tools</a>
-  </div>
-
-  <div>
-    <h4>Website</h4>
-    <a href="/about.html">About</a>
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/terms.html">Terms of Service</a>
-    <a href="/contact.html">Contact</a>
-  </div>
-
-</div>
-
-<div class="copyright">
-  © 2026 YouTubeToolly. All rights reserved.
-</div>
-
-<p class="disclaimer">
-  YouTubeToolly is an independent website and is not affiliated with,
-  endorsed by, or sponsored by YouTube or Google.
-</p>
-
 
   </div>
 </footer>
@@ -963,29 +1000,82 @@
 <script>
   const searchInput = document.getElementById("toolSearch");
   const cards = document.querySelectorAll(".tool-card");
+  const categories = document.querySelectorAll(".category");
+  const noResults = document.getElementById("noResults");
 
-  searchInput.addEventListener("input", function () {
-    const query = this.value.toLowerCase().trim();
+  let activeCategory = "all";
+
+  function filterTools() {
+    const query = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
 
     cards.forEach(card => {
       const name = card.dataset.name.toLowerCase();
+      const cardCategories = card.dataset.category.toLowerCase().split(" ");
 
-      if (name.includes(query)) {
+      const matchesSearch = name.includes(query);
+
+      const matchesCategory =
+        activeCategory === "all" ||
+        cardCategories.includes(activeCategory);
+
+      if (matchesSearch && matchesCategory) {
         card.style.display = "flex";
+        visibleCount++;
       } else {
         card.style.display = "none";
       }
     });
+
+    noResults.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  /* Search */
+  searchInput.addEventListener("input", function () {
+    filterTools();
   });
 
-  const categories = document.querySelectorAll(".category");
-
+  /* Categories */
   categories.forEach(button => {
-    button.addEventListener("click", () => {
-      categories.forEach(btn => btn.classList.remove("active"));
-      button.classList.add("active");
+    button.addEventListener("click", function () {
+
+      categories.forEach(btn => {
+        btn.classList.remove("active");
+      });
+
+      this.classList.add("active");
+
+      activeCategory = this.dataset.category;
+
+      filterTools();
     });
   });
+
+  /* Footer category links */
+  const footerCategoryLinks =
+    document.querySelectorAll("[data-footer-category]");
+
+  footerCategoryLinks.forEach(link => {
+    link.addEventListener("click", function () {
+
+      const selectedCategory = this.dataset.footerCategory;
+
+      activeCategory = selectedCategory;
+
+      categories.forEach(button => {
+        button.classList.remove("active");
+
+        if (button.dataset.category === selectedCategory) {
+          button.classList.add("active");
+        }
+      });
+
+      filterTools();
+    });
+  });
+
+  /* Initial state */
+  filterTools();
 </script>
 
 </body>
