@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Tools for Creators | Free Online YouTube Tools - YouTubeToolly</title>
+
+  <meta name="description" content="Free YouTube tools for creators. Generate titles, tags, hashtags, descriptions, timestamps, channel names and more with YouTubeToolly.">
+  <meta name="keywords" content="YouTube tools, YouTube creator tools, YouTube title generator, YouTube tag generator, YouTube hashtag generator, YouTube description generator, YouTube tools free">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YouTubeToolly">
+  <link rel="canonical" href="https://www.youtubetoolly.com/">
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free YouTube Tools for Creators | YouTubeToolly">
+  <meta property="og:description" content="Powerful free tools designed to help YouTube creators create, optimize and grow their channels.">
+  <meta property="og:url" content="https://www.youtubetoolly.com/">
+  <meta property="og:site_name" content="YouTubeToolly">
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free YouTube Tools for Creators | YouTubeToolly">
+  <meta name="twitter:description" content="Free online tools for YouTube creators, including title, tag, hashtag and description generators.">
+
+  <!-- Theme -->
+
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- SoftwareApplication / WebSite Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "YouTubeToolly",
+    "url": "https://www.youtubetoolly.com/",
+    "description": "Free online YouTube tools for creators.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.youtubetoolly.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--dark);
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--dark);
+      display: grid;
+      place-items: center;
+      position: relative;
+      box-shadow: 0 7px 18px rgba(15,23,42,.18);
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      top: 5px;
+      right: 5px;
+      border: 2px solid white;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--dark);
+      color: white !important;
+      padding: 10px 17px;
+      border-radius: 10px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 82px 0 72px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(239,68,68,.10), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(37,99,235,.09), transparent 25%),
+        var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      letter-spacing: -2.8px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    h1 .highlight {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s;
+      display: inline-block;
+    }
+
+    .primary-btn {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 8px 20px rgba(239,68,68,.22);
+    }
+
+    .primary-btn:hover {
+      background: var(--red-dark);
+      transform: translateY(-2px);
+    }
+
+    .secondary-btn {
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--dark);
+    }
+
+    .secondary-btn:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+    }
+
+    /* Search */
+    .search-wrapper {
+      margin-top: 38px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .search-wrapper input {
+      width: 100%;
+      padding: 17px 20px 17px 50px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      outline: none;
+      background: white;
+      box-shadow: var(--shadow);
+      font-size: 15px;
+    }
+
+    .search-wrapper input:focus {
+      border-color: #94a3b8;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 15px;
+      font-size: 19px;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section.tools-section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading h2 {
+      color: var(--dark);
+      font-size: 34px;
+      letter-spacing: -1.2px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 35px;
+    }
+
+    .category {
+      border: 1px solid var(--border);
+      background: white;
+      color: #475569;
+      padding: 9px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .category.active,
+    .category:hover {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    /* Cards */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .tool-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 5px 18px rgba(15,23,42,.035);
+      transition: .22s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: #cbd5e1;
+    }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--soft-blue);
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+
+    .tool-card h3 {
+      color: var(--dark);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .tool-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .tool-link {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .tool-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Why section */
+    .why {
+      background: var(--dark);
+      color: white;
+      padding: 75px 0;
+    }
+
+    .why .section-heading h2 {
+      color: white;
+    }
+
+    .why .section-heading p {
+      color: #94a3b8;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .benefit {
+      border: 1px solid rgba(255,255,255,.1);
+      background: rgba(255,255,255,.045);
+      border-radius: 17px;
+      padding: 25px;
+    }
+
+    .benefit-icon {
+      font-size: 25px;
+      margin-bottom: 13px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 8px;
+    }
+
+    .benefit p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    /* SEO content */
+    .seo-content {
+      padding: 75px 0;
+      background: white;
+    }
+
+    .seo-box {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .seo-box h2 {
+      font-size: 31px;
+      color: var(--dark);
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .seo-box h3 {
+      color: var(--dark);
+      margin: 28px 0 8px;
+      font-size: 20px;
+    }
+
+    .seo-box p {
+      color: #64748b;
+      margin-bottom: 14px;
+    }
+
+    /* Footer */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 35px;
+    }
+
+    footer .brand {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-about {
+      max-width: 430px;
+      font-size: 14px;
+    }
+
+    footer h4 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    footer a {
+      display: block;
+      font-size: 14px;
+      margin: 9px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .disclaimer {
+      max-width: 850px;
+      margin: 12px auto 0;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Mobile */
+    @media (max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      .tools-grid,
+      .benefits {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tools-grid,
+      .benefits,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section.tools-section,
+      .seo-content {
+        padding: 55px 0;
+      }
+
+      .section-heading h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+```
+<a href="/" class="brand" aria-label="YouTubeToolly Home">
+  <div class="brand-icon"></div>
+  YouTube<span>Toolly</span>
+</a>
+
+<nav>
+  <a href="#tools">Tools</a>
+  <a href="#why">Why YouTubeToolly</a>
+  <a href="#about">About</a>
+  <a href="#tools" class="nav-button">Explore Tools</a>
+</nav>
+```
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+```
+  <div class="badge">
+    <span class="badge-dot"></span>
+    Free Tools for YouTube Creators
+  </div>
+
+  <h1>
+    Create Better Videos.<br>
+    <span class="highlight">Grow Your Channel.</span>
+  </h1>
+
+  <p>
+    Powerful free YouTube tools built for creators. Generate better titles,
+    tags, hashtags, descriptions and more — quickly and easily.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#tools" class="primary-btn">Explore Free Tools</a>
+    <a href="#about" class="secondary-btn">Learn More</a>
+  </div>
+
+  <div class="search-wrapper">
+    <span class="search-icon">⌕</span>
+    <input
+      type="search"
+      id="toolSearch"
+      placeholder="Search YouTube tools..."
+      aria-label="Search YouTube tools"
+    >
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- TOOLS -->
+
+  <section class="tools-section" id="tools">
+    <div class="container">
+
+```
+  <div class="section-heading">
+    <h2>Free YouTube Tools</h2>
+    <p>
+      Simple, fast and free tools to help YouTube creators save time
+      and improve their content workflow.
+    </p>
+  </div>
+
+  <div class="categories">
+    <button class="category active">All</button>
+    <button class="category">SEO</button>
+    <button class="category">Generators</button>
+    <button class="category">Creators</button>
+    <button class="category">Utilities</button>
+  </div>
+
+  <div class="tools-grid" id="toolsGrid">
+
+    <article class="tool-card" data-name="youtube thumbnail downloader thumbnail">
+      <div class="tool-icon">🖼️</div>
+      <h3>YouTube Thumbnail Downloader</h3>
+      <p>
+        Get available YouTube video thumbnail images quickly and easily.
+      </p>
+      <a href="/tools/youtube-thumbnail-downloader.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube thumbnail resizer resize image">
+      <div class="tool-icon">📐</div>
+      <h3>YouTube Thumbnail Resizer</h3>
+      <p>
+        Resize your thumbnail images for YouTube-friendly dimensions.
+      </p>
+      <a href="/tools/youtube-thumbnail-resizer.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube title generator seo titles">
+      <div class="tool-icon">✍️</div>
+      <h3>YouTube Title Generator</h3>
+      <p>
+        Generate engaging YouTube title ideas based on your video topic.
+      </p>
+      <a href="/tools/youtube-title-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube tag generator tags seo">
+      <div class="tool-icon">🏷️</div>
+      <h3>YouTube Tag Generator</h3>
+      <p>
+        Create relevant tag ideas to organize and optimize your videos.
+      </p>
+      <a href="/tools/youtube-tag-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube hashtag generator hashtags">
+      <div class="tool-icon">#️⃣</div>
+      <h3>YouTube Hashtag Generator</h3>
+      <p>
+        Generate relevant hashtag ideas for YouTube videos and Shorts.
+      </p>
+      <a href="/tools/youtube-hashtag-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube description generator description">
+      <div class="tool-icon">📝</div>
+      <h3>YouTube Description Generator</h3>
+      <p>
+        Create structured YouTube description ideas for your videos.
+      </p>
+      <a href="/tools/youtube-description-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube timestamp generator timestamps">
+      <div class="tool-icon">⏱️</div>
+      <h3>YouTube Timestamp Generator</h3>
+      <p>
+        Create clean video timestamps and chapters from your content.
+      </p>
+      <a href="/tools/youtube-timestamp-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube shorts ideas generator shorts ideas">
+      <div class="tool-icon">💡</div>
+      <h3>YouTube Shorts Ideas Generator</h3>
+      <p>
+        Find fresh Shorts content ideas for your next videos.
+      </p>
+      <a href="/tools/youtube-shorts-ideas-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube channel name generator channel names">
+      <div class="tool-icon">📺</div>
+      <h3>YouTube Channel Name Generator</h3>
+      <p>
+        Generate memorable channel name ideas based on your niche.
+      </p>
+      <a href="/tools/youtube-channel-name-generator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+    <article class="tool-card" data-name="youtube earnings calculator money calculator">
+      <div class="tool-icon">💰</div>
+      <h3>YouTube Earnings Calculator</h3>
+      <p>
+        Estimate potential YouTube earnings using views and RPM assumptions.
+      </p>
+      <a href="/tools/youtube-earnings-calculator.html" class="tool-link">
+        Use Tool →
+      </a>
+    </article>
+
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- WHY -->
+
+  <section class="why" id="why">
+    <div class="container">
+
+```
+  <div class="section-heading">
+    <h2>Built for Modern Creators</h2>
+    <p>
+      YouTubeToolly focuses on making everyday creator tasks faster and easier.
+    </p>
+  </div>
+
+  <div class="benefits">
+
+    <div class="benefit">
+      <div class="benefit-icon">⚡</div>
+      <h3>Fast & Simple</h3>
+      <p>
+        Use practical tools without complicated dashboards or unnecessary steps.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-icon">🆓</div>
+      <h3>Free to Use</h3>
+      <p>
+        Our core creator tools are designed to remain free and accessible.
+      </p>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-icon">🎯</div>
+      <h3>Creator Focused</h3>
+      <p>
+        Every tool is designed around common needs of YouTube creators.
+      </p>
+    </div>
+
+  </div>
+</div>
+```
+
+  </section>
+
+  <!-- SEO CONTENT -->
+
+  <section class="seo-content" id="about">
+    <div class="container seo-box">
+
+```
+  <h2>Free YouTube Tools for Creators</h2>
+
+  <p>
+    YouTubeToolly is a collection of free online tools created to help
+    YouTube creators with everyday content tasks. Whether you are starting
+    a new channel, creating YouTube Shorts, or publishing videos regularly,
+    our tools are designed to make your workflow easier.
+  </p>
+
+  <h3>Improve Your YouTube Workflow</h3>
+
+  <p>
+    Creating videos involves more than recording and editing. Creators
+    also need to write titles, descriptions, tags, hashtags, timestamps
+    and other supporting content. YouTubeToolly brings useful creator
+    utilities together in one simple website.
+  </p>
+
+  <h3>Free YouTube SEO Tools</h3>
+
+  <p>
+    Our YouTube SEO tools can help you brainstorm titles, tags, hashtags
+    and descriptions for your videos. They are designed to support your
+    creative process rather than replace your own research and judgment.
+  </p>
+
+  <h3>Tools for YouTube Shorts Creators</h3>
+
+  <p>
+    Shorts creators can use our idea generators and other utilities to
+    speed up the planning process and find new content concepts.
+  </p>
+
+  <h3>Built for Creators Everywhere</h3>
+
+  <p>
+    YouTubeToolly is available online and designed for creators around the
+    world. Our goal is to provide useful, straightforward tools without
+    unnecessary complexity.
+  </p>
+
+</div>
+```
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+```
+<div class="footer-grid">
+
+  <div>
+    <a href="/" class="brand">
+      <div class="brand-icon"></div>
+      YouTube<span>Toolly</span>
+    </a>
+
+    <p class="footer-about">
+      Free online tools designed to help YouTube creators
+      plan, optimize and create content more efficiently.
+    </p>
+  </div>
+
+  <div>
+    <h4>Tools</h4>
+    <a href="#tools">All Tools</a>
+    <a href="#tools">YouTube SEO</a>
+    <a href="#tools">Generators</a>
+    <a href="#tools">Creator Tools</a>
+  </div>
+
+  <div>
+    <h4>Website</h4>
+    <a href="/about.html">About</a>
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <a href="/contact.html">Contact</a>
+  </div>
+
+</div>
+
+<div class="copyright">
+  © 2026 YouTubeToolly. All rights reserved.
+</div>
+
+<p class="disclaimer">
+  YouTubeToolly is an independent website and is not affiliated with,
+  endorsed by, or sponsored by YouTube or Google.
+</p>
+```
+
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById("toolSearch");
+  const cards = document.querySelectorAll(".tool-card");
+
+  searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase().trim();
+
+    cards.forEach(card => {
+      const name = card.dataset.name.toLowerCase();
+
+      if (name.includes(query)) {
+        card.style.display = "flex";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+
+  const categories = document.querySelectorAll(".category");
+
+  categories.forEach(button => {
+    button.addEventListener("click", () => {
+      categories.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>
