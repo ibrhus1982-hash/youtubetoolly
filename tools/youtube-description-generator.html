@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Description Generator - Generate Descriptions Free | YouTubeToolly</title>
+
+  <meta name="description" content="Generate engaging YouTube video descriptions for free. Create SEO-friendly descriptions with keywords, hashtags, timestamps and calls to action.">
+  <meta name="keywords" content="YouTube description generator, YouTube description, video description generator, YouTube SEO, YouTube tools, free YouTube tools">
+
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-description-generator.html">
+
+  <meta property="og:title" content="YouTube Description Generator - YouTubeToolly">
+  <meta property="og:description" content="Generate engaging and SEO-friendly YouTube descriptions for free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-description-generator.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style id="n4w0ni">
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--dark);
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 11px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--red);
+      border-radius: 50%;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--red);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 10px;
+      transition: .2s;
+    }
+
+    .nav-button:hover {
+      background: var(--red-dark);
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+      padding: 70px 20px 45px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 62px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      color: var(--dark);
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero h1 .highlight {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* TOOL */
+
+    .tool-section {
+      padding: 10px 0 70px;
+    }
+
+    .tool-card {
+      max-width: 850px;
+      margin: auto;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .tool-card h2 {
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+
+    .tool-subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+
+    .required {
+      color: var(--red);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      outline: none;
+      color: var(--text);
+      background: white;
+      font-size: 14px;
+      transition: .2s;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .08);
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .generate-btn {
+      width: 100%;
+      border: 0;
+      background: var(--red);
+      color: white;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .generate-btn:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    /* MESSAGES */
+
+    .message {
+      display: none;
+      padding: 13px 15px;
+      border-radius: 12px;
+      font-size: 13px;
+      margin-top: 18px;
+    }
+
+    .message.error {
+      background: var(--soft-red);
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+    }
+
+    .message.success {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      color: #15803d;
+    }
+
+    /* RESULTS */
+
+    .results {
+      display: none;
+      margin-top: 30px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    .results-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .results-header h3 {
+      font-size: 18px;
+      color: var(--dark);
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .stat {
+      background: var(--soft-blue);
+      color: var(--blue);
+      border: 1px solid #dbeafe;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .output-wrap {
+      position: relative;
+    }
+
+    #descriptionOutput {
+      min-height: 430px;
+      line-height: 1.7;
+      white-space: pre-wrap;
+    }
+
+    .output-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      gap: 10px;
+    }
+
+    .char-counter {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .copy-all {
+      border: 0;
+      background: var(--dark);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .copy-all:hover {
+      opacity: .9;
+    }
+
+    .keyword-preview {
+      margin-top: 24px;
+    }
+
+    .keyword-preview h4 {
+      font-size: 14px;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 7px 10px;
+      border-radius: 9px;
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    .chip button {
+      border: 0;
+      background: transparent;
+      color: var(--blue);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 0;
+    }
+
+    .result-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .secondary-btn {
+      flex: 1;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .secondary-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* INFO */
+
+    .info-section {
+      padding: 0 0 70px;
+    }
+
+    .info-card {
+      max-width: 850px;
+      margin: auto;
+      background: var(--soft-blue);
+      border: 1px solid #dbeafe;
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .info-card h2 {
+      color: var(--dark);
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .info-card ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .info-card li {
+      margin-bottom: 7px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding: 0 0 80px;
+    }
+
+    .faq-wrap {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-wrap > h2 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      font-size: 14px;
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark);
+      color: #cbd5e1;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand span {
+      color: var(--red);
+    }
+
+    .footer-col h4 {
+      color: white;
+      font-size: 13px;
+      margin-bottom: 13px;
+    }
+
+    .footer-col a {
+      display: block;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .footer-col a:hover {
+      color: white;
+    }
+
+    .footer-description {
+      color: #94a3b8;
+      font-size: 12px;
+      max-width: 340px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 11px;
+    }
+
+    .disclaimer {
+      margin-top: 8px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .container {
+        width: min(100% - 24px, 1100px);
+      }
+
+      .nav {
+        height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 50px 15px 35px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .tool-card {
+        padding: 20px;
+        border-radius: 15px;
+      }
+
+      .results-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .output-footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .copy-all {
+        width: 100%;
+      }
+
+      .result-actions {
+        flex-direction: column;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      #descriptionOutput {
+        min-height: 500px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Description Generator",
+    "url": "https://www.youtubetoolly.com/tools/youtube-description-generator.html",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Web",
+    "description": "Free YouTube description generator for creating engaging and SEO-friendly video descriptions.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="/" class="brand">
+      <div class="brand-icon"></div>
+      YouTube<span>Toolly</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#why">Why Us</a>
+      <a href="/#about">About</a>
+      <a href="/#tools" class="nav-button">Explore Tools</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Free YouTube Creator Tool
+    </div>
+
+    <h1>
+      YouTube Description<br>
+      <span class="highlight">Generator</span>
+    </h1>
+
+    <p>
+      Create engaging, professional and SEO-friendly YouTube video descriptions
+      in seconds. Add keywords, calls to action, hashtags and more.
+    </p>
+
+  </section>
+
+
+  <!-- TOOL -->
+
+  <section class="tool-section">
+
+    <div class="container">
+
+      <div class="tool-card">
+
+        <h2>Generate YouTube Descriptions</h2>
+
+        <p class="tool-subtitle">
+          Enter your video details and generate a ready-to-use YouTube description.
+        </p>
+
+
+        <div class="form-group">
+
+          <label for="videoTitle">
+            Video Title <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="videoTitle"
+            placeholder="e.g. 10 Amazing Facts About Cats"
+            maxlength="150"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="videoTopic">
+            Video Topic
+          </label>
+
+          <textarea
+            id="videoTopic"
+            placeholder="Describe what your video is about..."
+            maxlength="500"
+          ></textarea>
+
+          <div class="hint">
+            Explain the main subject, ideas or information covered in your video.
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="mainKeywords">
+            Main Keywords
+          </label>
+
+          <input
+            type="text"
+            id="mainKeywords"
+            placeholder="e.g. cats, cat facts, cute cats, animal facts"
+            maxlength="300"
+          >
+
+          <div class="hint">
+            Separate keywords with commas.
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="contentType">
+            Content Type
+          </label>
+
+          <select id="contentType">
+
+            <option value="general">
+              General Video
+            </option>
+
+            <option value="tutorial">
+              Tutorial / How-To
+            </option>
+
+            <option value="list">
+              List / Top Tips
+            </option>
+
+            <option value="review">
+              Review
+            </option>
+
+            <option value="facts">
+              Facts / Information
+            </option>
+
+            <option value="story">
+              Story / Experience
+            </option>
+
+            <option value="news">
+              News / Update
+            </option>
+
+            <option value="comparison">
+              Comparison
+            </option>
+
+            <option value="shorts">
+              YouTube Shorts
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button class="generate-btn" id="generateBtn">
+          Generate Description
+        </button>
+
+
+        <div class="message error" id="errorMessage"></div>
+
+        <div class="message success" id="successMessage"></div>
+
+
+        <!-- RESULTS -->
+
+        <div class="results" id="results">
+
+          <div class="results-header">
+
+            <h3>
+              Generated YouTube Description
+            </h3>
+
+            <div class="stats">
+
+              <span class="stat" id="wordCount">
+                0 words
+              </span>
+
+              <span class="stat" id="charCount">
+                0 characters
+              </span>
+
+              <span class="stat" id="paragraphCount">
+                0 paragraphs
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="output-wrap">
+
+            <textarea id="descriptionOutput"></textarea>
+
+          </div>
+
+
+          <div class="output-footer">
+
+            <div class="char-counter" id="outputCounter">
+              0 characters
+            </div>
+
+            <button class="copy-all" id="copyAllBtn">
+              Copy All Description
+            </button>
+
+          </div>
+
+
+          <div class="keyword-preview">
+
+            <h4>
+              Included Keywords
+            </h4>
+
+            <div class="chips" id="keywordChips"></div>
+
+          </div>
+
+
+          <div class="result-actions">
+
+            <button class="secondary-btn" id="generateAgainBtn">
+              Generate Again
+            </button>
+
+            <button class="secondary-btn" id="clearBtn">
+              Clear
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INFO -->
+
+  <section class="info-section">
+
+    <div class="container">
+
+      <div class="info-card">
+
+        <h2>
+          What is a YouTube Description Generator?
+        </h2>
+
+        <p>
+          A YouTube description helps viewers understand your video and gives
+          search engines additional context about your content.
+        </p>
+
+        <p>
+          YouTubeToolly's free description generator creates structured
+          descriptions based on your title, topic, keywords and content type.
+        </p>
+
+        <ul>
+
+          <li>
+            Create professional video descriptions quickly.
+          </li>
+
+          <li>
+            Naturally include your important keywords.
+          </li>
+
+          <li>
+            Add a strong introduction and call to action.
+          </li>
+
+          <li>
+            Include relevant hashtags.
+          </li>
+
+          <li>
+            Create descriptions suitable for different types of videos.
+          </li>
+
+          <li>
+            Edit the generated description before publishing.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
+
+    <div class="container">
+
+      <div class="faq-wrap">
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Is the YouTube Description Generator free?
+          </h3>
+
+          <p>
+            Yes. YouTubeToolly's description generator is completely free to use
+            and does not require an account.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Does the generator use an AI API?
+          </h3>
+
+          <p>
+            No external AI API is required. The description is generated directly
+            in your browser using your entered information.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Can I edit the generated description?
+          </h3>
+
+          <p>
+            Yes. The generated description appears inside an editable text box,
+            so you can change anything before copying it.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            How many keywords should I enter?
+          </h3>
+
+          <p>
+            You can enter several relevant keywords separated by commas.
+            Focus on keywords that accurately describe your video.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Can I generate another description?
+          </h3>
+
+          <p>
+            Yes. Click Generate Again to create another variation using the same
+            video information.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Can I use the generated description on YouTube?
+          </h3>
+
+          <p>
+            Yes. You can copy the generated text and edit it as needed before
+            adding it to your YouTube video.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+          YouTube<span>Toolly</span>
+        </div>
+
+        <p class="footer-description">
+          Free online tools for YouTube creators. Create better titles,
+          tags, hashtags and descriptions faster.
+        </p>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          Creator Tools
+        </h4>
+
+        <a href="/tools/youtube-thumbnail-downloader.html">
+          Thumbnail Downloader
+        </a>
+
+        <a href="/tools/youtube-thumbnail-resizer.html">
+          Thumbnail Resizer
+        </a>
+
+        <a href="/tools/youtube-title-generator.html">
+          Title Generator
+        </a>
+
+        <a href="/tools/youtube-tag-generator.html">
+          Tag Generator
+        </a>
+
+        <a href="/tools/youtube-hashtag-generator.html">
+          Hashtag Generator
+        </a>
+
+        <a href="/tools/youtube-description-generator.html">
+          Description Generator
+        </a>
+
+      </div>
+
+
+      <div class="footer-col">
+
+        <h4>
+          YouTubeToolly
+        </h4>
+
+        <a href="/#tools">
+          All Tools
+        </a>
+
+        <a href="/#why">
+          Why YouTubeToolly
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a href="/">
+          Home
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © <span id="year"></span> YouTubeToolly. All rights reserved.
+
+      <div class="disclaimer">
+        YouTubeToolly is an independent website and is not affiliated with,
+        endorsed by, or sponsored by YouTube or Google.
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const videoTitle = document.getElementById("videoTitle");
+  const videoTopic = document.getElementById("videoTopic");
+  const mainKeywords = document.getElementById("mainKeywords");
+  const contentType = document.getElementById("contentType");
+
+  const generateBtn = document.getElementById("generateBtn");
+  const generateAgainBtn = document.getElementById("generateAgainBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const copyAllBtn = document.getElementById("copyAllBtn");
+
+  const results = document.getElementById("results");
+  const descriptionOutput = document.getElementById("descriptionOutput");
+
+  const errorMessage = document.getElementById("errorMessage");
+  const successMessage = document.getElementById("successMessage");
+
+  const wordCount = document.getElementById("wordCount");
+  const charCount = document.getElementById("charCount");
+  const paragraphCount = document.getElementById("paragraphCount");
+  const outputCounter = document.getElementById("outputCounter");
+  const keywordChips = document.getElementById("keywordChips");
+
+  let generationRound = 0;
+
+
+  /* ------------------------------
+     HELPERS
+  ------------------------------ */
+
+  function cleanText(text) {
+    return text
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+
+  function removePunctuation(text) {
+    return text
+      .replace(/[!"#$%&'()*+,./:;<=>?@[\\\]^_`{|}~]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+
+  function capitalizeFirst(text) {
+    if (!text) return "";
+    return text.charAt(0).toUpperCase() + text.slice(1);
+  }
+
+
+  function getKeywordList() {
+
+    const raw = mainKeywords.value
+      .split(",")
+      .map(item => cleanText(item))
+      .filter(Boolean);
+
+    const titleWords = removePunctuation(videoTitle.value)
+      .split(" ")
+      .filter(word => word.length > 3);
+
+    const unique = [];
+
+    [...raw, ...titleWords].forEach(keyword => {
+
+      const lower = keyword.toLowerCase();
+
+      if (
+        keyword.length > 2 &&
+        !unique.some(item => item.toLowerCase() === lower)
+      ) {
+        unique.push(keyword);
+      }
+
+    });
+
+    return unique.slice(0, 10);
+  }
+
+
+  function shuffle(array) {
+
+    const copy = [...array];
+
+    for (let i = copy.length - 1; i > 0; i--) {
+
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+
+    }
+
+    return copy;
+  }
+
+
+  function getCurrentYear() {
+    return new Date().getFullYear();
+  }
+
+
+  /* ------------------------------
+     DESCRIPTION GENERATION
+  ------------------------------ */
+
+  function buildDescription() {
+
+    const title = cleanText(videoTitle.value);
+    const topic = cleanText(videoTopic.value);
+    const keywords = getKeywordList();
+
+    const mainKeyword =
+      keywords.length > 0
+        ? keywords[0]
+        : title;
+
+    const keywordText =
+      keywords.length > 0
+        ? keywords.join(", ")
+        : mainKeyword;
+
+
+    const type = contentType.value;
+
+
+    const intros = [
+
+      `In this video, we explore ${mainKeyword} and share useful information, ideas and insights that you can use right away.`,
+
+      `Looking for useful information about ${mainKeyword}? In this video, we take a closer look at the topic and explain the most important points.`,
+
+      `Welcome to another video! Today we're talking about ${mainKeyword} and covering the key things you need to know.`,
+
+      `If you're interested in ${mainKeyword}, this video is for you. Let's explore the topic and discover the most useful details together.`
+
+    ];
+
+
+    const shuffledIntros = shuffle(intros);
+
+    const intro =
+      shuffledIntros[generationRound % shuffledIntros.length];
+
+
+    let typeSection = "";
+
+
+    switch (type) {
+
+      case "tutorial":
+
+        typeSection =
+`Whether you're a beginner or simply looking for a better way to do things, this step-by-step video will help you understand the process more clearly.
+
+Follow along with the video and use the tips provided to get better results.`;
+
+        break;
+
+
+      case "list":
+
+        typeSection =
+`In this video, we'll go through the most important tips, ideas and points related to ${mainKeyword}.
+
+Watch until the end so you don't miss any useful information.`;
+
+        break;
+
+
+      case "review":
+
+        typeSection =
+`In this video, we take a closer look at ${mainKeyword}, discuss the important features and share useful observations to help you make a better decision.
+
+Make sure to watch the full video for the complete overview.`;
+
+        break;
+
+
+      case "facts":
+
+        typeSection =
+`Discover interesting facts, useful information and important details about ${mainKeyword}.
+
+We'll look at the topic from different angles and highlight information that you may not know.`;
+
+        break;
+
+
+      case "story":
+
+        typeSection =
+`In this video, we share a story and personal perspective related to ${mainKeyword}.
+
+If you enjoy real experiences, interesting stories and useful lessons, make sure to watch until the end.`;
+
+        break;
+
+
+      case "news":
+
+        typeSection =
+`This video covers important updates and information related to ${mainKeyword}.
+
+Stay until the end for the main details and key points you should know about.`;
+
+        break;
+
+
+      case "comparison":
+
+        typeSection =
+`In this video, we compare the most important aspects of ${mainKeyword} and look at the differences, advantages and things you should consider.
+
+Watch the full video before making your decision.`;
+
+        break;
+
+
+      case "shorts":
+
+        typeSection =
+`This YouTube Short gives you a quick look at ${mainKeyword} in a simple and easy-to-understand format.
+
+If you enjoy short, useful and interesting videos, don't forget to follow for more.`;
+
+        break;
+
+
+      default:
+
+        typeSection =
+`We cover the main points related to ${mainKeyword}, explain useful details and share practical information that can help you better understand the topic.`;
+
+    }
+
+
+    const topicSection = topic
+      ? `\n\nIn this video:\n${capitalizeFirst(topic)}`
+      : "";
+
+
+    const valueSection =
+`\n\nWhy watch this video?\n• Clear and easy-to-understand information\n• Useful tips and ideas\n• Practical insights you can apply\n• Key points explained simply`;
+
+
+    const keywordSection =
+`\n\nTopics covered:\n${keywordText}`;
+
+
+    const ctaVariations = [
+
+`If you found this video helpful, please LIKE the video, leave a COMMENT and SUBSCRIBE to YouTubeToolly for more useful creator tools and content.`,
+
+`Enjoyed the video? Don't forget to LIKE, COMMENT and SUBSCRIBE for more useful videos and tools for creators.`,
+
+`If this video helped you, support the channel by giving it a LIKE, sharing it with others and SUBSCRIBING for more content.`,
+
+`Want more useful content? Hit LIKE, share your thoughts in the COMMENTS and SUBSCRIBE for future videos.`
+
+    ];
+
+
+    const cta =
+      shuffle(ctaVariations)[0];
+
+
+    const hashtagPool = [
+
+      "#YouTube",
+      "#YouTubeTips",
+      "#YouTubeSEO",
+      "#ContentCreator",
+      "#YouTubeCreator",
+      "#VideoMarketing",
+      "#CreatorTips",
+      "#YouTubeTools"
+
+    ];
+
+
+    keywords.slice(0, 3).forEach(keyword => {
+
+      const cleanKeyword = removePunctuation(keyword)
+        .replace(/\s+/g, "");
+
+      if (cleanKeyword) {
+
+        hashtagPool.push(
+          "#" + cleanKeyword
+        );
+
+      }
+
+    });
+
+
+    const hashtags = shuffle(
+      [...new Set(hashtagPool)]
+    ).slice(0, 6);
+
+
+    const description =
+`${title}
+
+${intro}
+
+${typeSection}${topicSection}${valueSection}
+
+${cta}
+
+Keywords: ${keywordText}
+
+${hashtags.join(" ")}`;
+
+
+    return description;
+
+  }
+
+
+  /* ------------------------------
+     DISPLAY RESULTS
+  ------------------------------ */
+
+  function updateStats() {
+
+    const text = descriptionOutput.value.trim();
+
+    const characters = text.length;
+
+    const words =
+      text
+        ? text.split(/\s+/).length
+        : 0;
+
+    const paragraphs =
+      text
+        ? text.split(/\n\s*\n/).filter(Boolean).length
+        : 0;
+
+
+    wordCount.textContent =
+      `${words} words`;
+
+    charCount.textContent =
+      `${characters} characters`;
+
+    paragraphCount.textContent =
+      `${paragraphs} paragraphs`;
+
+    outputCounter.textContent =
+      `${characters} characters`;
+
+  }
+
+
+  function displayKeywordChips() {
+
+    const keywords = getKeywordList();
+
+    keywordChips.innerHTML = "";
+
+    keywords.slice(0, 8).forEach(keyword => {
+
+      const chip = document.createElement("div");
+
+      chip.className = "chip";
+
+      const text = document.createElement("span");
+
+      text.textContent = keyword;
+
+      const button = document.createElement("button");
+
+      button.textContent = "Copy";
+
+      button.addEventListener("click", () => {
+
+        copyText(keyword, button);
+
+      });
+
+      chip.appendChild(text);
+      chip.appendChild(button);
+
+      keywordChips.appendChild(chip);
+
+    });
+
+  }
+
+
+  /* ------------------------------
+     GENERATE
+  ------------------------------ */
+
+  function generateDescription() {
+
+    hideMessages();
+
+    const title = cleanText(videoTitle.value);
+
+    if (!title) {
+
+      showError(
+        "Please enter a video title before generating a description."
+      );
+
+      videoTitle.focus();
+
+      return;
+
+    }
+
+
+    generationRound = 0;
+
+    const description = buildDescription();
+
+    descriptionOutput.value = description;
+
+    displayKeywordChips();
+
+    updateStats();
+
+    results.style.display = "block";
+
+    showSuccess(
+      "Your YouTube description has been generated successfully."
+    );
+
+    results.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }
+
+
+  /* ------------------------------
+     GENERATE AGAIN
+  ------------------------------ */
+
+  function generateAgain() {
+
+    hideMessages();
+
+    const title = cleanText(videoTitle.value);
+
+    if (!title) {
+
+      showError(
+        "Please enter a video title first."
+      );
+
+      return;
+
+    }
+
+
+    generationRound++;
+
+    const description = buildDescription();
+
+    descriptionOutput.value = description;
+
+    displayKeywordChips();
+
+    updateStats();
+
+    showSuccess(
+      "A new description variation has been generated."
+    );
+
+  }
+
+
+  /* ------------------------------
+     COPY
+  ------------------------------ */
+
+  async function copyText(text, button) {
+
+    try {
+
+      await navigator.clipboard.writeText(text);
+
+      const original =
+        button.textContent;
+
+      button.textContent = "Copied!";
+
+      setTimeout(() => {
+
+        button.textContent = original;
+
+      }, 1200);
+
+    } catch (error) {
+
+      showError(
+        "Unable to copy automatically. Please select and copy the text manually."
+      );
+
+    }
+
+  }
+
+
+  copyAllBtn.addEventListener("click", async () => {
+
+    const text =
+      descriptionOutput.value.trim();
+
+    if (!text) return;
+
+
+    try {
+
+      await navigator.clipboard.writeText(text);
+
+      const original =
+        copyAllBtn.textContent;
+
+      copyAllBtn.textContent =
+        "Copied!";
+
+      setTimeout(() => {
+
+        copyAllBtn.textContent =
+          original;
+
+      }, 1500);
+
+
+    } catch (error) {
+
+      showError(
+        "Unable to copy automatically. Please select and copy the description manually."
+      );
+
+    }
+
+  });
+
+
+  /* ------------------------------
+     CLEAR
+  ------------------------------ */
+
+  clearBtn.addEventListener("click", () => {
+
+    videoTitle.value = "";
+    videoTopic.value = "";
+    mainKeywords.value = "";
+
+    contentType.value = "general";
+
+    descriptionOutput.value = "";
+
+    keywordChips.innerHTML = "";
+
+    results.style.display = "none";
+
+    generationRound = 0;
+
+    updateStats();
+
+    hideMessages();
+
+    videoTitle.focus();
+
+  });
+
+
+  /* ------------------------------
+     MESSAGES
+  ------------------------------ */
+
+  function showError(message) {
+
+    errorMessage.textContent = message;
+
+    errorMessage.style.display = "block";
+
+    successMessage.style.display = "none";
+
+  }
+
+
+  function showSuccess(message) {
+
+    successMessage.textContent = message;
+
+    successMessage.style.display = "block";
+
+    errorMessage.style.display = "none";
+
+  }
+
+
+  function hideMessages() {
+
+    errorMessage.style.display = "none";
+
+    successMessage.style.display = "none";
+
+  }
+
+
+  /* ------------------------------
+     EVENTS
+  ------------------------------ */
+
+  generateBtn.addEventListener(
+    "click",
+    generateDescription
+  );
+
+
+  generateAgainBtn.addEventListener(
+    "click",
+    generateAgain
+  );
+
+
+  descriptionOutput.addEventListener(
+    "input",
+    updateStats
+  );
+
+
+  videoTitle.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key === "Enter" &&
+        !event.shiftKey
+      ) {
+
+        event.preventDefault();
+
+        generateDescription();
+
+      }
+
+    }
+  );
+
+
+  /* ------------------------------
+     YEAR
+  ------------------------------ */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  updateStats();
+
+</script>
+
+</body>
+</html>
