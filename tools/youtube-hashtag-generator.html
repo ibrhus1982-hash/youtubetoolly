@@ -1,0 +1,3192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Hashtag Generator - Generate Hashtags Free | YouTubeToolly</title>
+
+  <meta name="description"
+    content="Generate relevant YouTube hashtags for your videos for free. Enter your video title, topic, and keywords to create useful hashtag ideas with YouTubeToolly.">
+
+  <meta name="keywords"
+    content="YouTube hashtag generator, YouTube hashtags generator, video hashtag generator, YouTube SEO hashtags, YouTube hashtag tool, hashtag generator">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="author" content="YouTubeToolly">
+
+  <link rel="canonical"
+    href="https://www.youtubetoolly.com/tools/youtube-hashtag-generator.html">
+
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:title"
+    content="YouTube Hashtag Generator - Generate Hashtags Free | YouTubeToolly">
+
+  <meta property="og:description"
+    content="Generate relevant YouTube hashtags for your videos quickly and easily with YouTubeToolly.">
+
+  <meta property="og:url"
+    content="https://www.youtubetoolly.com/tools/youtube-hashtag-generator.html">
+
+  <meta property="og:site_name" content="YouTubeToolly">
+
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary">
+
+  <meta name="twitter:title"
+    content="YouTube Hashtag Generator - Generate Hashtags Free | YouTubeToolly">
+
+  <meta name="twitter:description"
+    content="Generate useful YouTube hashtags for your videos for free.">
+
+
+  <meta name="theme-color" content="#0f172a">
+
+
+  <!-- Favicon -->
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M25 19L48 32L25 45Z' fill='white'/%3E%3Ccircle cx='48' cy='18' r='7' fill='%23ef4444' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+
+
+  <!-- Google Font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Schema -->
+
+  <script type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Hashtag Generator",
+    "url": "https://www.youtubetoolly.com/tools/youtube-hashtag-generator.html",
+    "description": "Free online tool for generating relevant YouTube video hashtags.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+
+  </script>
+
+
+  <style>
+
+    :root {
+
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+
+      --red: #ef4444;
+      --red-dark: #dc2626;
+
+      --blue: #2563eb;
+
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+
+      --green: #16a34a;
+
+      --shadow:
+        0 10px 30px rgba(15, 23, 42, .07);
+
+      --radius: 18px;
+
+    }
+
+
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+    }
+
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+
+    body {
+
+      font-family: "Inter", sans-serif;
+
+      background: var(--bg);
+
+      color: var(--text);
+
+      line-height: 1.7;
+
+    }
+
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+
+    .container {
+
+      width: min(1180px, 92%);
+
+      margin: auto;
+
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header {
+
+      background: rgba(255, 255, 255, .94);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--border);
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 100;
+
+    }
+
+
+    .nav {
+
+      height: 74px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      font-size: 20px;
+
+      font-weight: 800;
+
+      color: var(--dark);
+
+    }
+
+
+    .brand span {
+
+      color: var(--red);
+
+    }
+
+
+    .brand-icon {
+
+      width: 42px;
+
+      height: 42px;
+
+      border-radius: 13px;
+
+      background: var(--dark);
+
+      position: relative;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+    .brand-icon::before {
+
+      content: "";
+
+      width: 0;
+
+      height: 0;
+
+      border-top: 9px solid transparent;
+
+      border-bottom: 9px solid transparent;
+
+      border-left: 15px solid white;
+
+      margin-left: 3px;
+
+    }
+
+
+    .brand-icon::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 10px;
+
+      height: 10px;
+
+      border-radius: 50%;
+
+      background: var(--red);
+
+      top: 5px;
+
+      right: 5px;
+
+      border: 2px solid white;
+
+    }
+
+
+    nav {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+
+    }
+
+
+    nav a {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      transition: .2s;
+
+    }
+
+
+    nav a:hover {
+
+      color: var(--dark);
+
+    }
+
+
+    .nav-button {
+
+      background: var(--dark);
+
+      color: white !important;
+
+      padding: 10px 16px;
+
+      border-radius: 10px;
+
+    }
+
+
+    .nav-button:hover {
+
+      background: #1e293b;
+
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero {
+
+      padding: 75px 0 65px;
+
+      background:
+
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(239, 68, 68, .08),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 80% 30%,
+          rgba(37, 99, 235, .08),
+          transparent 32%
+        ),
+
+        var(--white);
+
+      border-bottom: 1px solid var(--border);
+
+    }
+
+
+    .hero-content {
+
+      max-width: 850px;
+
+      margin: auto;
+
+      text-align: center;
+
+    }
+
+
+    .badge {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      padding: 8px 13px;
+
+      background: var(--soft-red);
+
+      color: var(--red-dark);
+
+      border: 1px solid #fee2e2;
+
+      border-radius: 999px;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .badge-dot {
+
+      width: 8px;
+
+      height: 8px;
+
+      background: var(--red);
+
+      border-radius: 50%;
+
+    }
+
+
+    h1 {
+
+      font-size: clamp(36px, 6vw, 60px);
+
+      line-height: 1.08;
+
+      letter-spacing: -2.5px;
+
+      color: var(--dark);
+
+      margin-bottom: 20px;
+
+      font-weight: 800;
+
+    }
+
+
+    .highlight {
+
+      color: var(--red);
+
+    }
+
+
+    .hero p {
+
+      max-width: 700px;
+
+      margin: auto;
+
+      color: var(--muted);
+
+      font-size: 17px;
+
+    }
+
+
+    /* ================= TOOL ================= */
+
+    .tool-section {
+
+      padding: 65px 0;
+
+    }
+
+
+    .tool-box {
+
+      max-width: 850px;
+
+      margin: auto;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+
+      padding: 32px;
+
+    }
+
+
+    .tool-title {
+
+      text-align: center;
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .tool-title h2 {
+
+      color: var(--dark);
+
+      font-size: 26px;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .tool-title p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+
+    .field {
+
+      margin-bottom: 18px;
+
+    }
+
+
+    .field label {
+
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--dark);
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    .field input,
+    .field textarea,
+    .field select {
+
+      width: 100%;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 13px 14px;
+
+      font-family: inherit;
+
+      font-size: 14px;
+
+      color: var(--text);
+
+      background: white;
+
+      outline: none;
+
+      transition: .2s;
+
+    }
+
+
+    .field textarea {
+
+      min-height: 110px;
+
+      resize: vertical;
+
+    }
+
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .08);
+
+    }
+
+
+    .generate-button {
+
+      width: 100%;
+
+      border: none;
+
+      background: var(--red);
+
+      color: white;
+
+      padding: 14px 20px;
+
+      border-radius: 12px;
+
+      font-family: inherit;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+      margin-top: 4px;
+
+    }
+
+
+    .generate-button:hover {
+
+      background: var(--red-dark);
+
+      transform: translateY(-1px);
+
+    }
+
+
+    .message {
+
+      display: none;
+
+      padding: 12px 14px;
+
+      border-radius: 10px;
+
+      margin-top: 18px;
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+    }
+
+
+    .message.error {
+
+      background: var(--soft-red);
+
+      color: #b91c1c;
+
+      border: 1px solid #fecaca;
+
+    }
+
+
+    .message.success {
+
+      background: #f0fdf4;
+
+      color: #15803d;
+
+      border: 1px solid #bbf7d0;
+
+    }
+
+
+    /* ================= RESULTS ================= */
+
+    .results {
+
+      display: none;
+
+      margin-top: 28px;
+
+      padding-top: 28px;
+
+      border-top: 1px solid var(--border);
+
+    }
+
+
+    .results-header {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .results-header h3 {
+
+      color: var(--dark);
+
+      font-size: 19px;
+
+    }
+
+
+    .stats {
+
+      display: flex;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+
+    }
+
+
+    .stat {
+
+      background: var(--soft-blue);
+
+      color: var(--blue);
+
+      border: 1px solid #dbeafe;
+
+      border-radius: 9px;
+
+      padding: 6px 10px;
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+    }
+
+
+    #hashtagOutput {
+
+      width: 100%;
+
+      min-height: 125px;
+
+      resize: vertical;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+
+      padding: 14px;
+
+      font-family: inherit;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+      color: var(--text);
+
+      outline: none;
+
+      background: #fff;
+
+    }
+
+
+    #hashtagOutput:focus {
+
+      border-color: var(--blue);
+
+    }
+
+
+    .copy-all {
+
+      width: 100%;
+
+      border: none;
+
+      background: var(--dark);
+
+      color: white;
+
+      padding: 12px 18px;
+
+      border-radius: 10px;
+
+      font-family: inherit;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      margin-top: 10px;
+
+      transition: .2s;
+
+    }
+
+
+    .copy-all:hover {
+
+      background: #1e293b;
+
+    }
+
+
+    .tags-title {
+
+      color: var(--dark);
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      margin: 25px 0 12px;
+
+    }
+
+
+    .tag-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+    }
+
+
+    .tag-chip {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      background: var(--bg);
+
+      border: 1px solid var(--border);
+
+      border-radius: 999px;
+
+      padding: 7px 8px 7px 12px;
+
+      font-size: 12px;
+
+      color: var(--text);
+
+      font-weight: 600;
+
+    }
+
+
+    .tag-chip button {
+
+      border: 1px solid var(--border);
+
+      background: white;
+
+      color: var(--blue);
+
+      border-radius: 7px;
+
+      padding: 3px 7px;
+
+      cursor: pointer;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+    }
+
+
+    .tag-chip button:hover {
+
+      background: var(--soft-blue);
+
+    }
+
+
+    .result-actions {
+
+      display: flex;
+
+      gap: 10px;
+
+      margin-top: 18px;
+
+    }
+
+
+    .secondary-button {
+
+      flex: 1;
+
+      border: 1px solid var(--border);
+
+      background: white;
+
+      color: var(--dark);
+
+      padding: 11px 15px;
+
+      border-radius: 10px;
+
+      font-family: inherit;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .2s;
+
+    }
+
+
+    .secondary-button:hover {
+
+      background: var(--bg);
+
+    }
+
+
+    .secondary-button:active,
+    .generate-button:active,
+    .copy-all:active {
+
+      transform: scale(.98);
+
+    }
+
+
+    /* ================= INFO ================= */
+
+    .info-section {
+
+      padding: 70px 0;
+
+      background: white;
+
+    }
+
+
+    .content-box {
+
+      max-width: 900px;
+
+      margin: auto;
+
+    }
+
+
+    .content-box h2 {
+
+      color: var(--dark);
+
+      font-size: 30px;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .content-box h3 {
+
+      color: var(--dark);
+
+      font-size: 20px;
+
+      margin-top: 30px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .content-box p {
+
+      color: var(--muted);
+
+      margin-bottom: 14px;
+
+    }
+
+
+    .content-box ul {
+
+      margin: 12px 0 18px 22px;
+
+      color: var(--muted);
+
+    }
+
+
+    .content-box li {
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .tip-box {
+
+      background: var(--soft-blue);
+
+      border: 1px solid #dbeafe;
+
+      border-radius: 14px;
+
+      padding: 16px 18px;
+
+      color: #1d4ed8;
+
+      font-size: 14px;
+
+      margin-top: 22px;
+
+    }
+
+
+    /* ================= FAQ ================= */
+
+    .faq-section {
+
+      padding: 70px 0;
+
+      background: var(--bg);
+
+    }
+
+
+    .faq-title {
+
+      text-align: center;
+
+      margin-bottom: 35px;
+
+    }
+
+
+    .faq-title h2 {
+
+      color: var(--dark);
+
+      font-size: 30px;
+
+      margin-bottom: 8px;
+
+    }
+
+
+    .faq-title p {
+
+      color: var(--muted);
+
+    }
+
+
+    .faq-list {
+
+      max-width: 850px;
+
+      margin: auto;
+
+      display: grid;
+
+      gap: 12px;
+
+    }
+
+
+    .faq-item {
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      padding: 20px 22px;
+
+    }
+
+
+    .faq-item h3 {
+
+      color: var(--dark);
+
+      font-size: 16px;
+
+      margin-bottom: 7px;
+
+    }
+
+
+    .faq-item p {
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer {
+
+      background: #020617;
+
+      color: white;
+
+      padding: 55px 0 25px;
+
+    }
+
+
+    .footer-grid {
+
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr;
+
+      gap: 45px;
+
+    }
+
+
+    .footer-brand p {
+
+      color: #94a3b8;
+
+      max-width: 420px;
+
+      margin-top: 14px;
+
+      font-size: 14px;
+
+    }
+
+
+    .footer-title {
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      margin-bottom: 15px;
+
+    }
+
+
+    .footer-links {
+
+      display: grid;
+
+      gap: 9px;
+
+    }
+
+
+    .footer-links a {
+
+      color: #94a3b8;
+
+      font-size: 13px;
+
+    }
+
+
+    .footer-links a:hover {
+
+      color: white;
+
+    }
+
+
+    .copyright {
+
+      border-top: 1px solid #1e293b;
+
+      margin-top: 40px;
+
+      padding-top: 22px;
+
+      color: #64748b;
+
+      font-size: 12px;
+
+      text-align: center;
+
+    }
+
+
+    .disclaimer {
+
+      max-width: 800px;
+
+      margin: 8px auto 0;
+
+      color: #475569;
+
+      font-size: 11px;
+
+      text-align: center;
+
+    }
+
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 700px) {
+
+      .nav {
+
+        height: 68px;
+
+      }
+
+
+      nav {
+
+        display: none;
+
+      }
+
+
+      .hero {
+
+        padding: 55px 0 50px;
+
+      }
+
+
+      h1 {
+
+        letter-spacing: -1.5px;
+
+      }
+
+
+      .hero p {
+
+        font-size: 15px;
+
+      }
+
+
+      .tool-section {
+
+        padding: 45px 0;
+
+      }
+
+
+      .tool-box {
+
+        padding: 22px;
+
+      }
+
+
+      .results-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+      }
+
+
+      .result-actions {
+
+        flex-direction: column;
+
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+      }
+
+
+      .info-section,
+      .faq-section {
+
+        padding: 50px 0;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="/" class="brand">
+
+        <div class="brand-icon"></div>
+
+        YouTube<span>Toolly</span>
+
+      </a>
+
+
+      <nav>
+
+        <a href="/#tools">
+          Tools
+        </a>
+
+        <a href="/#why">
+          Why YouTubeToolly
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a href="/#tools" class="nav-button">
+          Explore Tools
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="badge">
+
+        <span class="badge-dot"></span>
+
+        Free YouTube Creator Tool
+
+      </div>
+
+
+      <h1>
+
+        YouTube Hashtag<br>
+
+        <span class="highlight">
+          Generator
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        Generate relevant YouTube hashtags for your videos quickly and easily.
+        Enter your video title, topic and keywords to create useful hashtag ideas.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= TOOL ================= -->
+
+  <section class="tool-section">
+
+    <div class="container">
+
+      <div class="tool-box">
+
+
+        <div class="tool-title">
+
+          <h2>
+            Generate YouTube Hashtags
+          </h2>
+
+          <p>
+            Enter your video information and create a list of relevant YouTube hashtags.
+          </p>
+
+        </div>
+
+
+        <!-- VIDEO TITLE -->
+
+        <div class="field">
+
+          <label for="videoTitle">
+            Video Title
+          </label>
+
+          <input
+            type="text"
+            id="videoTitle"
+            placeholder="Example: 10 Amazing Facts About Cats"
+            autocomplete="off">
+
+        </div>
+
+
+        <!-- VIDEO TOPIC -->
+
+        <div class="field">
+
+          <label for="videoTopic">
+            Video Topic
+          </label>
+
+          <textarea
+            id="videoTopic"
+            placeholder="Describe your video topic..."></textarea>
+
+        </div>
+
+
+        <!-- KEYWORDS -->
+
+        <div class="field">
+
+          <label for="keywords">
+            Main Keywords
+          </label>
+
+          <input
+            type="text"
+            id="keywords"
+            placeholder="cats, cat facts, cute cats"
+            autocomplete="off">
+
+        </div>
+
+
+        <!-- CONTENT TYPE -->
+
+        <div class="field">
+
+          <label for="contentType">
+            Content Type
+          </label>
+
+          <select id="contentType">
+
+            <option value="general">
+              General Video
+            </option>
+
+            <option value="tutorial">
+              Tutorial / How-To
+            </option>
+
+            <option value="list">
+              List / Top Tips
+            </option>
+
+            <option value="review">
+              Review
+            </option>
+
+            <option value="facts">
+              Facts / Information
+            </option>
+
+            <option value="story">
+              Story / Experience
+            </option>
+
+            <option value="news">
+              News / Update
+            </option>
+
+            <option value="comparison">
+              Comparison
+            </option>
+
+            <option value="shorts">
+              YouTube Shorts
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="generate-button"
+          id="generateButton">
+
+          Generate Hashtags
+
+        </button>
+
+
+        <div
+          class="message error"
+          id="errorMessage">
+        </div>
+
+
+        <div
+          class="message success"
+          id="successMessage">
+        </div>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <div
+          class="results"
+          id="results">
+
+
+          <div class="results-header">
+
+            <h3>
+              Generated YouTube Hashtags
+            </h3>
+
+
+            <div class="stats">
+
+              <div class="stat">
+
+                <span id="hashtagCount">
+                  0
+                </span>
+
+                Hashtags
+
+              </div>
+
+
+              <div class="stat">
+
+                <span id="characterCount">
+                  0
+                </span>
+
+                Characters
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <textarea
+            id="hashtagOutput"
+            spellcheck="false"></textarea>
+
+
+          <button
+            type="button"
+            class="copy-all"
+            id="copyAllButton">
+
+            Copy All Hashtags
+
+          </button>
+
+
+          <div class="tags-title">
+
+            Individual Hashtags
+
+          </div>
+
+
+          <div
+            class="tag-list"
+            id="hashtagList">
+          </div>
+
+
+          <div class="result-actions">
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="generateAgainButton">
+
+              Generate Again
+
+            </button>
+
+
+            <button
+              type="button"
+              class="secondary-button"
+              id="clearButton">
+
+              Clear
+
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= INFO ================= -->
+
+  <section class="info-section" id="about">
+
+    <div class="container">
+
+      <div class="content-box">
+
+        <h2>
+          YouTube Hashtag Generator
+        </h2>
+
+
+        <p>
+
+          YouTubeToolly's YouTube Hashtag Generator helps creators quickly
+          create a useful list of hashtags based on their video title,
+          topic, and keywords.
+
+        </p>
+
+
+        <p>
+
+          The generated hashtags are designed to describe the subject
+          of your video and give you relevant hashtag ideas that you
+          can review and edit before using them on YouTube.
+
+        </p>
+
+
+        <h3>
+          Why Use YouTube Hashtags?
+        </h3>
+
+
+        <p>
+
+          YouTube hashtags can help viewers discover videos related
+          to a particular topic. Relevant hashtags can also provide
+          additional context about the subject of your video.
+
+        </p>
+
+
+        <p>
+
+          Relevance is important. Avoid adding unrelated hashtags
+          simply to increase the number of hashtags in your video.
+
+        </p>
+
+
+        <h3>
+          How to Use the YouTube Hashtag Generator
+        </h3>
+
+
+        <ul>
+
+          <li>
+            Enter your YouTube video title.
+          </li>
+
+          <li>
+            Describe the main topic of your video.
+          </li>
+
+          <li>
+            Add your most important keywords.
+          </li>
+
+          <li>
+            Select the type of content you are creating.
+          </li>
+
+          <li>
+            Click Generate Hashtags.
+          </li>
+
+          <li>
+            Review, edit and copy the generated hashtags.
+          </li>
+
+        </ul>
+
+
+        <h3>
+          Tips for Better YouTube Hashtags
+        </h3>
+
+
+        <ul>
+
+          <li>
+            Use hashtags that accurately describe your video.
+          </li>
+
+          <li>
+            Choose hashtags related to your main topic.
+          </li>
+
+          <li>
+            Use specific phrases when appropriate.
+          </li>
+
+          <li>
+            Include useful variations of your main topic.
+          </li>
+
+          <li>
+            Avoid unrelated or misleading hashtags.
+          </li>
+
+          <li>
+            Review the generated hashtags before using them.
+          </li>
+
+        </ul>
+
+
+        <div class="tip-box">
+
+          <strong>
+            Tip:
+          </strong>
+
+          Focus on relevant hashtags that clearly describe your video
+          instead of using a large number of unrelated hashtags.
+
+        </div>
+
+
+        <h3>
+          Free and Browser-Based
+        </h3>
+
+
+        <p>
+
+          This tool works directly in your browser and does not require
+          an external AI API. Your video information is processed locally
+          by the page and is not uploaded to a server by this tool.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FAQ ================= -->
+
+  <section class="faq-section" id="why">
+
+    <div class="container">
+
+
+      <div class="faq-title">
+
+        <h2>
+          Frequently Asked Questions
+        </h2>
+
+        <p>
+          Everything you need to know about YouTube hashtags.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+
+        <div class="faq-item">
+
+          <h3>
+            What is a YouTube Hashtag Generator?
+          </h3>
+
+          <p>
+            A YouTube Hashtag Generator creates relevant hashtag
+            ideas that can be used to describe and categorize a
+            YouTube video.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            How do I generate YouTube hashtags?
+          </h3>
+
+          <p>
+            Enter your video title, topic and main keywords, choose
+            your content type, and click Generate Hashtags.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Are these hashtags generated by AI?
+          </h3>
+
+          <p>
+            No. This tool uses built-in keyword patterns and templates
+            in your browser to generate hashtag suggestions.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Can I edit the generated hashtags?
+          </h3>
+
+          <p>
+            Yes. The generated hashtags appear in an editable text box,
+            allowing you to change or remove hashtags before copying them.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Should I use every generated hashtag?
+          </h3>
+
+          <p>
+            No. Only use hashtags that are relevant to your video
+            and accurately describe its subject.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Is this YouTube Hashtag Generator free?
+          </h3>
+
+          <p>
+            Yes. YouTubeToolly's YouTube Hashtag Generator is completely
+            free to use.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Does the tool save my information?
+          </h3>
+
+          <p>
+            No. The tool works directly in your browser and does not require
+            you to create an account or submit your video information to a server.
+          </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <h3>
+            Does the YouTube Hashtag Generator work on mobile?
+          </h3>
+
+          <p>
+            Yes. The tool is responsive and works on phones, tablets,
+            laptops and desktop computers.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="/" class="brand">
+
+            <div class="brand-icon"></div>
+
+            YouTube<span>Toolly</span>
+
+          </a>
+
+
+          <p>
+
+            Free and simple online tools for YouTube creators.
+            Create better content, optimize your workflow,
+            and save time.
+
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            Tools
+          </div>
+
+
+          <div class="footer-links">
+
+            <a href="/tools/youtube-thumbnail-downloader.html">
+              Thumbnail Downloader
+            </a>
+
+            <a href="/tools/youtube-thumbnail-resizer.html">
+              Thumbnail Resizer
+            </a>
+
+            <a href="/tools/youtube-title-generator.html">
+              Title Generator
+            </a>
+
+            <a href="/tools/youtube-tag-generator.html">
+              Tag Generator
+            </a>
+
+            <a href="/tools/youtube-hashtag-generator.html">
+              Hashtag Generator
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <div class="footer-title">
+            YouTubeToolly
+          </div>
+
+
+          <div class="footer-links">
+
+            <a href="/#tools">
+              All Tools
+            </a>
+
+            <a href="/#about">
+              About
+            </a>
+
+            <a href="/#why">
+              Why YouTubeToolly
+            </a>
+
+            <a href="/">
+              Home
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 YouTubeToolly. All rights reserved.
+
+      </div>
+
+
+      <div class="disclaimer">
+
+        YouTubeToolly is an independent website and is not affiliated with,
+        endorsed by, or sponsored by YouTube or Google.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    /* ================= ELEMENTS ================= */
+
+    const videoTitle =
+      document.getElementById("videoTitle");
+
+    const videoTopic =
+      document.getElementById("videoTopic");
+
+    const keywordsInput =
+      document.getElementById("keywords");
+
+    const contentType =
+      document.getElementById("contentType");
+
+
+    const generateButton =
+      document.getElementById("generateButton");
+
+    const generateAgainButton =
+      document.getElementById("generateAgainButton");
+
+    const clearButton =
+      document.getElementById("clearButton");
+
+
+    const results =
+      document.getElementById("results");
+
+    const hashtagOutput =
+      document.getElementById("hashtagOutput");
+
+    const hashtagList =
+      document.getElementById("hashtagList");
+
+
+    const hashtagCount =
+      document.getElementById("hashtagCount");
+
+    const characterCount =
+      document.getElementById("characterCount");
+
+
+    const errorMessage =
+      document.getElementById("errorMessage");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+
+    const copyAllButton =
+      document.getElementById("copyAllButton");
+
+
+    /* ================= GENERATION ================= */
+
+    let generationRound = 0;
+
+
+    /* ================= HELPERS ================= */
+
+    function cleanText(text) {
+
+      return String(text || "")
+        .replace(/\s+/g, " ")
+        .replace(/[<>]/g, "")
+        .trim();
+
+    }
+
+
+    function removePunctuation(text) {
+
+      return cleanText(text)
+        .replace(/[^\p{L}\p{N}\s]/gu, "")
+        .replace(/\s+/g, " ")
+        .trim();
+
+    }
+
+
+    function hashtagify(text) {
+
+      const cleaned =
+        removePunctuation(text);
+
+      if (!cleaned) {
+        return "";
+      }
+
+      return "#" +
+        cleaned
+          .split(/\s+/)
+          .join("");
+
+    }
+
+
+    function addHashtag(tags, text) {
+
+      text =
+        cleanText(text);
+
+      if (!text) {
+        return;
+      }
+
+
+      const hashtag =
+        text.startsWith("#")
+          ? "#" + removePunctuation(text.substring(1))
+          : hashtagify(text);
+
+
+      if (!hashtag || hashtag === "#") {
+        return;
+      }
+
+
+      if (hashtag.length < 3) {
+        return;
+      }
+
+
+      if (hashtag.length > 60) {
+        return;
+      }
+
+
+      const exists =
+        tags.some(
+          item =>
+            item.toLowerCase() ===
+            hashtag.toLowerCase()
+        );
+
+
+      if (!exists) {
+
+        tags.push(hashtag);
+
+      }
+
+    }
+
+
+    function getKeywordList() {
+
+      return keywordsInput.value
+
+        .split(",")
+
+        .map(keyword => cleanText(keyword))
+
+        .filter(keyword => keyword.length > 0);
+
+    }
+
+
+    function getMainPhrase(title, topic, keywords) {
+
+      if (keywords.length > 0) {
+
+        return keywords[0];
+
+      }
+
+
+      if (title) {
+
+        const words =
+          removePunctuation(title)
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+        return words
+          .slice(0, 4)
+          .join(" ");
+
+      }
+
+
+      if (topic) {
+
+        const words =
+          removePunctuation(topic)
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+        return words
+          .slice(0, 4)
+          .join(" ");
+
+      }
+
+
+      return "YouTube";
+
+    }
+
+
+    function shuffle(array) {
+
+      const result =
+        [...array];
+
+      for (
+        let i = result.length - 1;
+        i > 0;
+        i--
+      ) {
+
+        const j =
+          Math.floor(
+            Math.random() * (i + 1)
+          );
+
+        [
+          result[i],
+          result[j]
+        ] =
+        [
+          result[j],
+          result[i]
+        ];
+
+      }
+
+      return result;
+
+    }
+
+
+    /* ================= BUILD HASHTAGS ================= */
+
+    function buildHashtags() {
+
+      const title =
+        cleanText(videoTitle.value);
+
+      const topic =
+        cleanText(videoTopic.value);
+
+      const keywords =
+        getKeywordList();
+
+
+      if (
+        !title &&
+        !topic &&
+        keywords.length === 0
+      ) {
+
+        showError(
+          "Please enter your video title, topic, or at least one keyword."
+        );
+
+        return null;
+
+      }
+
+
+      const coreHashtags = [];
+
+      const extraHashtags = [];
+
+
+      const mainPhrase =
+        getMainPhrase(
+          title,
+          topic,
+          keywords
+        );
+
+
+      /* ================= MAIN KEYWORDS ================= */
+
+      keywords.forEach(keyword => {
+
+        addHashtag(
+          coreHashtags,
+          keyword
+        );
+
+      });
+
+
+      /* ================= TITLE ================= */
+
+      if (title) {
+
+        addHashtag(
+          coreHashtags,
+          title
+        );
+
+
+        const titleWords =
+          removePunctuation(title)
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+
+        if (titleWords.length >= 2) {
+
+          addHashtag(
+            extraHashtags,
+            titleWords
+              .slice(0, 2)
+              .join(" ")
+          );
+
+
+          addHashtag(
+            extraHashtags,
+            titleWords
+              .slice(0, 3)
+              .join(" ")
+          );
+
+
+          addHashtag(
+            extraHashtags,
+            titleWords
+              .slice(-2)
+              .join(" ")
+          );
+
+        }
+
+      }
+
+
+      /* ================= TOPIC ================= */
+
+      if (topic) {
+
+        addHashtag(
+          coreHashtags,
+          topic
+        );
+
+
+        const topicWords =
+          removePunctuation(topic)
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+
+        if (topicWords.length >= 2) {
+
+          addHashtag(
+            extraHashtags,
+            topicWords
+              .slice(0, 2)
+              .join(" ")
+          );
+
+
+          addHashtag(
+            extraHashtags,
+            topicWords
+              .slice(0, 3)
+              .join(" ")
+          );
+
+        }
+
+      }
+
+
+      /* ================= KEYWORD VARIATIONS ================= */
+
+      keywords.forEach(keyword => {
+
+        addHashtag(
+          extraHashtags,
+          keyword + " tips"
+        );
+
+        addHashtag(
+          extraHashtags,
+          keyword + " guide"
+        );
+
+        addHashtag(
+          extraHashtags,
+          keyword + " ideas"
+        );
+
+        addHashtag(
+          extraHashtags,
+          keyword + " tutorial"
+        );
+
+        addHashtag(
+          extraHashtags,
+          keyword + " video"
+        );
+
+      });
+
+
+      /* ================= CONTENT TYPE ================= */
+
+      switch (contentType.value) {
+
+
+        case "tutorial":
+
+          [
+            "how to " + mainPhrase,
+            mainPhrase + " tutorial",
+            mainPhrase + " guide",
+            mainPhrase + " tips",
+            "learn " + mainPhrase,
+            "step by step " + mainPhrase
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "list":
+
+          [
+            "best " + mainPhrase,
+            "top " + mainPhrase,
+            mainPhrase + " tips",
+            mainPhrase + " ideas",
+            "top tips",
+            "best tips"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "review":
+
+          [
+            mainPhrase + " review",
+            mainPhrase + " test",
+            mainPhrase + " experience",
+            "honest " + mainPhrase + " review",
+            "is " + mainPhrase + " worth it",
+            mainPhrase + " review " + new Date().getFullYear()
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "facts":
+
+          [
+            mainPhrase + " facts",
+            "interesting " + mainPhrase + " facts",
+            "facts about " + mainPhrase,
+            mainPhrase + " information",
+            "interesting facts",
+            "did you know"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "story":
+
+          [
+            mainPhrase + " story",
+            "my " + mainPhrase + " story",
+            mainPhrase + " experience",
+            "real life story",
+            "personal story"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "news":
+
+          [
+            mainPhrase + " news",
+            mainPhrase + " update",
+            "latest " + mainPhrase,
+            mainPhrase + " updates",
+            "latest news",
+            "breaking news"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "comparison":
+
+          [
+            mainPhrase + " comparison",
+            mainPhrase + " vs",
+            mainPhrase + " differences",
+            "best " + mainPhrase,
+            mainPhrase + " comparison " + new Date().getFullYear(),
+            mainPhrase + " versus"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        case "shorts":
+
+          [
+            mainPhrase + " shorts",
+            "youtube shorts " + mainPhrase,
+            mainPhrase + " short video",
+            "shorts video",
+            "viral shorts",
+            "youtube shorts"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+
+        default:
+
+          [
+            mainPhrase + " tips",
+            mainPhrase + " guide",
+            mainPhrase + " ideas",
+            mainPhrase + " videos",
+            "youtube tips",
+            "youtube creator"
+          ].forEach(tag =>
+            addHashtag(extraHashtags, tag)
+          );
+
+          break;
+
+      }
+
+
+      /* ================= GENERAL HASHTAGS ================= */
+
+      [
+        "YouTube",
+        "YouTube SEO",
+        "YouTube Creator",
+        "YouTube Video",
+        "Content Creator"
+      ].forEach(tag =>
+        addHashtag(extraHashtags, tag)
+      );
+
+
+      /* ================= GENERATION VARIATION ================= */
+
+      if (generationRound % 2 === 0) {
+
+        [
+          mainPhrase + " channel",
+          mainPhrase + " creator",
+          mainPhrase + " content",
+          mainPhrase + " online",
+          "learn " + mainPhrase
+        ].forEach(tag =>
+          addHashtag(extraHashtags, tag)
+        );
+
+      } else {
+
+        [
+          mainPhrase + " explained",
+          mainPhrase + " beginner",
+          mainPhrase + " helpful tips",
+          mainPhrase + " ideas",
+          mainPhrase + " community"
+        ].forEach(tag =>
+          addHashtag(extraHashtags, tag)
+        );
+
+      }
+
+
+      /* ================= FINAL LIST ================= */
+
+      const finalHashtags = [];
+
+
+      /*
+        Always keep the most important
+        user-provided keywords first.
+      */
+
+      coreHashtags.forEach(tag => {
+
+        if (finalHashtags.length < 15) {
+
+          addHashtag(
+            finalHashtags,
+            tag
+          );
+
+        }
+
+      });
+
+
+      /*
+        Shuffle extra hashtags so that
+        Generate Again produces a different
+        combination.
+      */
+
+      const shuffledExtras =
+        shuffle(extraHashtags);
+
+
+      shuffledExtras.forEach(tag => {
+
+        if (finalHashtags.length < 30) {
+
+          addHashtag(
+            finalHashtags,
+            tag
+          );
+
+        }
+
+      });
+
+
+      return finalHashtags.slice(0, 30);
+
+    }
+
+
+    /* ================= DISPLAY ================= */
+
+    function displayResults(hashtags, isAgain = false) {
+
+      if (
+        !hashtags ||
+        hashtags.length === 0
+      ) {
+
+        showError(
+          "No hashtags could be generated. Please add more information."
+        );
+
+        return;
+
+      }
+
+
+      const output =
+        hashtags.join(" ");
+
+
+      hashtagOutput.value =
+        output;
+
+
+      hashtagCount.textContent =
+        hashtags.length;
+
+
+      characterCount.textContent =
+        output.length;
+
+
+      hashtagList.innerHTML =
+        "";
+
+
+      hashtags.forEach(hashtag => {
+
+        const chip =
+          document.createElement("div");
+
+        chip.className =
+          "tag-chip";
+
+
+        const text =
+          document.createElement("span");
+
+        text.textContent =
+          hashtag;
+
+
+        const button =
+          document.createElement("button");
+
+        button.type =
+          "button";
+
+        button.textContent =
+          "Copy";
+
+
+        button.addEventListener(
+          "click",
+          async function () {
+
+            const copied =
+              await copyText(hashtag);
+
+
+            if (copied) {
+
+              button.textContent =
+                "Copied";
+
+
+              setTimeout(
+                function () {
+
+                  button.textContent =
+                    "Copy";
+
+                },
+                1200
+              );
+
+            } else {
+
+              button.textContent =
+                "Failed";
+
+              setTimeout(
+                function () {
+
+                  button.textContent =
+                    "Copy";
+
+                },
+                1200
+              );
+
+            }
+
+          }
+        );
+
+
+        chip.appendChild(text);
+
+        chip.appendChild(button);
+
+        hashtagList.appendChild(chip);
+
+      });
+
+
+      results.style.display =
+        "block";
+
+
+      showSuccess(
+        isAgain
+          ? "A new set of YouTube hashtags has been generated."
+          : "Hashtags generated successfully. Review and edit them before using."
+      );
+
+    }
+
+
+    /* ================= GENERATE ================= */
+
+    function generateHashtags() {
+
+      hideMessages();
+
+
+      generationRound =
+        0;
+
+
+      const hashtags =
+        buildHashtags();
+
+
+      if (!hashtags) {
+        return;
+      }
+
+
+      displayResults(
+        hashtags,
+        false
+      );
+
+
+      results.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+      });
+
+    }
+
+
+    /* ================= GENERATE AGAIN ================= */
+
+    function generateAgain() {
+
+      hideMessages();
+
+
+      generationRound++;
+
+
+      const hashtags =
+        buildHashtags();
+
+
+      if (!hashtags) {
+        return;
+      }
+
+
+      displayResults(
+        hashtags,
+        true
+      );
+
+    }
+
+
+    /* ================= COPY ================= */
+
+    async function copyText(text) {
+
+      if (!text) {
+        return false;
+      }
+
+
+      try {
+
+        if (
+          navigator.clipboard &&
+          window.isSecureContext
+        ) {
+
+          await navigator.clipboard.writeText(
+            text
+          );
+
+          return true;
+
+        }
+
+      } catch (error) {
+
+        /* Fallback below */
+
+      }
+
+
+      try {
+
+        const textarea =
+          document.createElement("textarea");
+
+
+        textarea.value =
+          text;
+
+
+        textarea.style.position =
+          "fixed";
+
+        textarea.style.left =
+          "-9999px";
+
+        textarea.style.top =
+          "0";
+
+
+        document.body.appendChild(
+          textarea
+        );
+
+
+        textarea.focus();
+
+        textarea.select();
+
+
+        const copied =
+          document.execCommand(
+            "copy"
+          );
+
+
+        document.body.removeChild(
+          textarea
+        );
+
+
+        return copied;
+
+      } catch (error) {
+
+        return false;
+
+      }
+
+    }
+
+
+    /* ================= COPY ALL ================= */
+
+    copyAllButton.addEventListener(
+      "click",
+      async function () {
+
+        const text =
+          hashtagOutput.value.trim();
+
+
+        if (!text) {
+
+          showError(
+            "There are no hashtags to copy."
+          );
+
+          return;
+
+        }
+
+
+        const copied =
+          await copyText(text);
+
+
+        if (copied) {
+
+          copyAllButton.textContent =
+            "Copied Successfully";
+
+
+          showSuccess(
+            "All hashtags copied to your clipboard."
+          );
+
+
+          setTimeout(
+            function () {
+
+              copyAllButton.textContent =
+                "Copy All Hashtags";
+
+            },
+            1500
+          );
+
+        } else {
+
+          showError(
+            "Unable to copy the hashtags. Please copy them manually."
+          );
+
+        }
+
+      }
+    );
+
+
+    /* ================= BUTTON EVENTS ================= */
+
+    generateButton.addEventListener(
+      "click",
+      generateHashtags
+    );
+
+
+    generateAgainButton.addEventListener(
+      "click",
+      generateAgain
+    );
+
+
+    /* ================= CLEAR ================= */
+
+    clearButton.addEventListener(
+      "click",
+      function () {
+
+        videoTitle.value =
+          "";
+
+        videoTopic.value =
+          "";
+
+        keywordsInput.value =
+          "";
+
+        contentType.value =
+          "general";
+
+
+        hashtagOutput.value =
+          "";
+
+
+        hashtagList.innerHTML =
+          "";
+
+
+        hashtagCount.textContent =
+          "0";
+
+
+        characterCount.textContent =
+          "0";
+
+
+        results.style.display =
+          "none";
+
+
+        generationRound =
+          0;
+
+
+        copyAllButton.textContent =
+          "Copy All Hashtags";
+
+
+        hideMessages();
+
+
+        videoTitle.focus();
+
+      }
+    );
+
+
+    /* ================= ENTER ================= */
+
+    videoTitle.addEventListener(
+      "keydown",
+      function (event) {
+
+        if (
+          event.key === "Enter"
+        ) {
+
+          event.preventDefault();
+
+          generateHashtags();
+
+        }
+
+      }
+    );
+
+
+    /* ================= OUTPUT EDIT ================= */
+
+    hashtagOutput.addEventListener(
+      "input",
+      function () {
+
+        const hashtags =
+          hashtagOutput.value
+
+            .split(/\s+/)
+
+            .map(
+              hashtag => hashtag.trim()
+            )
+
+            .filter(Boolean);
+
+
+        hashtagCount.textContent =
+          hashtags.length;
+
+
+        characterCount.textContent =
+          hashtagOutput.value.length;
+
+      }
+    );
+
+
+    /* ================= MESSAGES ================= */
+
+    function hideMessages() {
+
+      errorMessage.style.display =
+        "none";
+
+      successMessage.style.display =
+        "none";
+
+    }
+
+
+    function showError(message) {
+
+      errorMessage.textContent =
+        message;
+
+      errorMessage.style.display =
+        "block";
+
+      successMessage.style.display =
+        "none";
+
+    }
+
+
+    function showSuccess(message) {
+
+      successMessage.textContent =
+        message;
+
+      successMessage.style.display =
+        "block";
+
+      errorMessage.style.display =
+        "none";
+
+    }
+
+  </script>
+
+
+</body>
+</html>
