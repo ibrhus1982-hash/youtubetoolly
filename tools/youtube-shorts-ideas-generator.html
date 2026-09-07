@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Shorts Ideas Generator - Free Shorts Ideas | YouTubeToolly</title>
+
+  <meta name="description" content="Generate creative YouTube Shorts ideas for your channel. Get engaging video ideas based on your topic, keywords, audience, and content type with YouTubeToolly.">
+  <meta name="keywords" content="YouTube Shorts ideas, Shorts ideas generator, YouTube video ideas, Shorts content ideas, YouTube content generator">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YouTubeToolly">
+
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-shorts-ideas-generator.html">
+
+  <meta property="og:title" content="YouTube Shorts Ideas Generator - YouTubeToolly">
+  <meta property="og:description" content="Generate creative YouTube Shorts ideas for your channel for free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-shorts-ideas-generator.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YouTube Shorts Ideas Generator - YouTubeToolly">
+  <meta name="twitter:description" content="Generate creative YouTube Shorts ideas for your channel.">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%230f172a'/%3E%3Cpolygon points='40,28 40,72 72,50' fill='white'/%3E%3Ccircle cx='76' cy='24' r='7' fill='%23ff0000'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 74px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .brand-icon {
+      position: relative;
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid #ffffff;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ff0000;
+      border: 2px solid #ffffff;
+      top: 5px;
+      right: 5px;
+    }
+
+    .brand span {
+      color: #ff0000;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #0f172a;
+    }
+
+    nav .nav-button {
+      color: #ffffff;
+      background: #0f172a;
+      padding: 11px 17px;
+      border-radius: 10px;
+    }
+
+    nav .nav-button:hover {
+      background: #1e293b;
+      color: #ffffff;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      padding: 75px 0 65px;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 0, 0, 0.08), transparent 32%),
+        radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.08), transparent 32%),
+        #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 .highlight {
+      color: #ff0000;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    /* ================= TOOL ================= */
+
+    .tool-section {
+      padding: 65px 0;
+      background: #f8fafc;
+    }
+
+    .tool-box {
+      max-width: 850px;
+      margin: auto;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+    }
+
+    .tool-box h2 {
+      text-align: center;
+      font-size: 26px;
+      letter-spacing: -0.7px;
+      margin-bottom: 10px;
+    }
+
+    .tool-subtitle {
+      text-align: center;
+      color: #64748b;
+      margin-bottom: 28px;
+      font-size: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 11px;
+      background: #ffffff;
+      color: #0f172a;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #94a3b8;
+      box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.15);
+    }
+
+    .form-group input::placeholder {
+      color: #94a3b8;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 11px;
+      padding: 13px 18px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      flex: 1;
+      min-width: 190px;
+      background: #ff0000;
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #dc0000;
+    }
+
+    .btn-secondary {
+      background: #0f172a;
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: #1e293b;
+    }
+
+    .btn-light {
+      background: #f1f5f9;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+    }
+
+    .btn-light:hover {
+      background: #e2e8f0;
+    }
+
+    .message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .message.success {
+      display: block;
+      background: #f0fdf4;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+    }
+
+    .message.error {
+      display: block;
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    /* ================= RESULTS ================= */
+
+    .result-box {
+      display: none;
+      margin-top: 28px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 28px;
+    }
+
+    .result-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .result-box h3 {
+      font-size: 20px;
+    }
+
+    .idea-count {
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+      padding: 7px 11px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .ideas-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+    }
+
+    .idea-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      padding: 16px;
+      border: 1px solid #e2e8f0;
+      border-radius: 13px;
+      background: #f8fafc;
+    }
+
+    .idea-number {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: #0f172a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .idea-content {
+      flex: 1;
+    }
+
+    .idea-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .idea-hook {
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    .copy-idea {
+      flex-shrink: 0;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #334155;
+      padding: 8px 10px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .copy-idea:hover {
+      background: #f1f5f9;
+    }
+
+    .result-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    /* ================= INFO ================= */
+
+    .info-section {
+      padding: 70px 0;
+      background: #ffffff;
+    }
+
+    .info-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .info-content h2 {
+      font-size: 30px;
+      letter-spacing: -0.8px;
+      margin-bottom: 18px;
+    }
+
+    .info-content p {
+      color: #64748b;
+      margin-bottom: 20px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .info-card {
+      padding: 22px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      background: #ffffff;
+    }
+
+    .info-card strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 16px;
+    }
+
+    .info-card p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* ================= FAQ ================= */
+
+    .faq-section {
+      padding: 70px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .faq-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-content h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 30px;
+      letter-spacing: -0.8px;
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #020617;
+      color: #ffffff;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 40px;
+    }
+
+    .footer-brand {
+      max-width: 360px;
+    }
+
+    .footer-brand .brand {
+      margin-bottom: 15px;
+    }
+
+    .footer-brand p {
+      color: #94a3b8;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 9px;
+      transition: 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 700px) {
+
+      header,
+      .nav {
+        height: 68px;
+      }
+
+      .container {
+        width: min(94%, 1180px);
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 58px 0 50px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.4px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tool-section {
+        padding: 45px 0;
+      }
+
+      .tool-box {
+        padding: 22px 17px;
+        border-radius: 18px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn,
+      .btn-primary {
+        width: 100%;
+      }
+
+      .result-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .idea-card {
+        gap: 10px;
+      }
+
+      .copy-idea {
+        display: none;
+      }
+
+      .info-section,
+      .faq-section {
+        padding: 50px 0;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Shorts Ideas Generator",
+    "url": "https://www.youtubetoolly.com/tools/youtube-shorts-ideas-generator.html",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any",
+    "description": "Free online tool for generating creative YouTube Shorts ideas.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="/" class="brand">
+        <div class="brand-icon"></div>
+        <div>YouTube<span>Toolly</span></div>
+      </a>
+
+      <nav>
+        <a href="/#tools">Tools</a>
+        <a href="/#why">Why YouTubeToolly</a>
+        <a href="/#about">About</a>
+        <a href="/#tools" class="nav-button">Explore Tools</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="container hero-content">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Free YouTube Creator Tool
+      </div>
+
+      <h1>
+        YouTube <span class="highlight">Shorts Ideas Generator</span>
+      </h1>
+
+      <p>
+        Generate creative and engaging YouTube Shorts ideas based on your topic,
+        keywords, audience, and content style.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= TOOL ================= -->
+
+  <section class="tool-section">
+
+    <div class="container">
+
+      <div class="tool-box">
+
+        <h2>Generate Shorts Ideas</h2>
+
+        <p class="tool-subtitle">
+          Tell us about your content and get fresh Shorts ideas instantly.
+        </p>
+
+
+        <div class="form-group">
+
+          <label for="topic">
+            Channel Topic
+          </label>
+
+          <input
+            type="text"
+            id="topic"
+            placeholder="Example: Cats, Technology, Fitness, Gaming"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="keywords">
+            Main Keywords
+          </label>
+
+          <input
+            type="text"
+            id="keywords"
+            placeholder="Example: funny cats, cat facts, cute cats"
+          >
+
+        </div>
+
+
+        <div class="form-grid">
+
+          <div class="form-group">
+
+            <label for="audience">
+              Target Audience
+            </label>
+
+            <select id="audience">
+
+              <option value="general">
+                General Audience
+              </option>
+
+              <option value="beginners">
+                Beginners
+              </option>
+
+              <option value="teenagers">
+                Teenagers
+              </option>
+
+              <option value="adults">
+                Adults
+              </option>
+
+              <option value="creators">
+                Content Creators
+              </option>
+
+              <option value="business">
+                Business Owners
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="contentType">
+              Content Type
+            </label>
+
+            <select id="contentType">
+
+              <option value="mixed">
+                Mixed Ideas
+              </option>
+
+              <option value="educational">
+                Educational
+              </option>
+
+              <option value="funny">
+                Funny / Entertainment
+              </option>
+
+              <option value="facts">
+                Facts / Trivia
+              </option>
+
+              <option value="tips">
+                Tips & Tricks
+              </option>
+
+              <option value="story">
+                Storytelling
+              </option>
+
+              <option value="questions">
+                Questions / Engagement
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="ideaCount">
+            Number of Ideas
+          </label>
+
+          <select id="ideaCount">
+
+            <option value="10">10 Ideas</option>
+            <option value="15">15 Ideas</option>
+            <option value="20">20 Ideas</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="button-row">
+
+          <button
+            type="button"
+            class="btn btn-light"
+            onclick="clearTool()"
+          >
+            Clear
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="generateIdeas()"
+          >
+            Generate Ideas
+          </button>
+
+        </div>
+
+
+        <div id="message" class="message"></div>
+
+
+        <!-- ================= RESULTS ================= -->
+
+        <div id="resultBox" class="result-box">
+
+          <div class="result-header">
+
+            <h3>Your Shorts Ideas</h3>
+
+            <div class="idea-count">
+              <span id="resultCount">0</span> Ideas
+            </div>
+
+          </div>
+
+
+          <div id="ideasList" class="ideas-list"></div>
+
+
+          <div class="result-actions">
+
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="copyAllIdeas()"
+            >
+              Copy All Ideas
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="generateIdeas()"
+            >
+              Generate Again
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= INFO ================= -->
+
+  <section class="info-section">
+
+    <div class="container info-content">
+
+      <h2>Get More Ideas for Your YouTube Shorts</h2>
+
+      <p>
+        Coming up with new Shorts ideas can be difficult, especially when you
+        publish content regularly. YouTubeToolly helps you generate fresh
+        content ideas based on your specific topic and audience.
+      </p>
+
+      <p>
+        Use the generated ideas as inspiration for your next Short.
+        Combine different hooks, topics, and formats to create content that
+        fits your channel and audience.
+      </p>
+
+
+      <div class="info-grid">
+
+        <div class="info-card">
+
+          <strong>💡 Fresh Ideas</strong>
+
+          <p>
+            Generate new Shorts concepts whenever you need inspiration.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <strong>🎯 Audience Focused</strong>
+
+          <p>
+            Choose an audience and content style to make ideas more relevant.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <strong>🔒 Private</strong>
+
+          <p>
+            Your inputs are processed directly in your browser and are not uploaded.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FAQ ================= -->
+
+  <section class="faq-section">
+
+    <div class="container faq-content">
+
+      <h2>Frequently Asked Questions</h2>
+
+
+      <div class="faq-item">
+
+        <h3>What is a YouTube Shorts idea generator?</h3>
+
+        <p>
+          It is a tool that helps YouTube creators discover ideas and concepts
+          for short-form videos based on their content topic and audience.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>How can I get better Shorts ideas?</h3>
+
+        <p>
+          Enter a specific topic and several relevant keywords. The more
+          specific your topic is, the more focused your ideas can be.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>Are these ideas generated by AI?</h3>
+
+        <p>
+          This free tool uses built-in content patterns and variations directly
+          in your browser. No external AI API is required.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>Can I generate ideas for any YouTube niche?</h3>
+
+        <p>
+          Yes. You can use the generator for topics such as gaming, animals,
+          technology, education, fitness, entertainment, business, and many others.
+        </p>
+
+      </div>
+
+
+      <div class="faq-item">
+
+        <h3>Is the YouTube Shorts Ideas Generator free?</h3>
+
+        <p>
+          Yes. YouTubeToolly's Shorts Ideas Generator is free to use directly
+          in your web browser.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <a href="/" class="brand">
+
+            <div class="brand-icon"></div>
+
+            <div>
+              YouTube<span>Toolly</span>
+            </div>
+
+          </a>
+
+          <p>
+            Free online YouTube tools designed to help creators save time,
+            optimize their videos, and grow their channels.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>Tools</h3>
+
+          <a href="/#tools">
+            All Tools
+          </a>
+
+          <a href="/tools/youtube-thumbnail-downloader.html">
+            Thumbnail Downloader
+          </a>
+
+          <a href="/tools/youtube-thumbnail-resizer.html">
+            Thumbnail Resizer
+          </a>
+
+          <a href="/tools/youtube-title-generator.html">
+            Title Generator
+          </a>
+
+          <a href="/tools/youtube-tag-generator.html">
+            Tag Generator
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>Website</h3>
+
+          <a href="/about.html">
+            About
+          </a>
+
+          <a href="/privacy-policy.html">
+            Privacy Policy
+          </a>
+
+          <a href="/terms.html">
+            Terms
+          </a>
+
+          <a href="/contact.html">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 YouTubeToolly. All rights reserved.
+        </div>
+
+        <div>
+          YouTubeToolly is an independent tool website and is not affiliated with YouTube or Google.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script>
+
+    const ideaTemplates = {
+
+      educational: [
+        "3 things most people don't know about {topic}",
+        "The biggest mistake beginners make with {topic}",
+        "5 quick facts about {topic}",
+        "What happens if you try this with {topic}?",
+        "One simple lesson about {topic} everyone should know",
+        "Stop doing this if you are interested in {topic}",
+        "The easiest way to understand {topic}",
+        "A surprising fact about {topic}",
+        "Before you start {topic}, know this",
+        "The truth about {topic} in 30 seconds"
+      ],
+
+      funny: [
+        "POV: You finally try {topic}",
+        "When someone says they know everything about {topic}",
+        "Things that only {topic} fans understand",
+        "Expectation vs reality: {topic}",
+        "The funniest thing about {topic}",
+        "If {topic} could talk...",
+        "Types of people obsessed with {topic}",
+        "Nobody warned me about this in {topic}",
+        "When your friend discovers {topic}",
+        "The most relatable {topic} moment ever"
+      ],
+
+      facts: [
+        "5 unbelievable facts about {topic}",
+        "You won't believe this fact about {topic}",
+        "The weirdest fact about {topic}",
+        "3 facts about {topic} you probably didn't know",
+        "This fact about {topic} sounds fake but it's true",
+        "The hidden truth about {topic}",
+        "One crazy fact about {topic}",
+        "The rarest thing about {topic}",
+        "What makes {topic} so interesting?",
+        "The surprising history of {topic}"
+      ],
+
+      tips: [
+        "3 quick tips to improve your {topic}",
+        "Do this before you start with {topic}",
+        "The easiest {topic} trick you should know",
+        "Stop making this mistake with {topic}",
+        "One trick that makes {topic} much easier",
+        "How to get better at {topic} quickly",
+        "3 beginner tips for {topic}",
+        "The shortcut nobody tells you about {topic}",
+        "Try this next time you work with {topic}",
+        "A simple hack for {topic}"
+      ],
+
+      story: [
+        "The story behind {topic}",
+        "I discovered something surprising about {topic}",
+        "What happened when I tried {topic}",
+        "The biggest lesson I learned from {topic}",
+        "Nobody expected this to happen with {topic}",
+        "The day everything changed because of {topic}",
+        "A story you won't forget about {topic}",
+        "How I became interested in {topic}",
+        "The surprising beginning of {topic}",
+        "What I wish I knew before discovering {topic}"
+      ],
+
+      questions: [
+        "Can you answer this question about {topic}?",
+        "Would you try this with {topic}?",
+        "What's your favorite thing about {topic}?",
+        "Did you know this about {topic}?",
+        "Which one would you choose for {topic}?",
+        "What would you do in this {topic} situation?",
+        "Can you guess the answer about {topic}?",
+        "How much do you really know about {topic}?",
+        "What's the biggest myth about {topic}?",
+        "Agree or disagree about {topic}?"
+      ]
+
+    };
+
+
+    const hooks = [
+      "Hook: Start with a surprising statement.",
+      "Hook: Ask a question in the first 2 seconds.",
+      "Hook: Use a bold claim to stop viewers scrolling.",
+      "Hook: Show the result before explaining it.",
+      "Hook: Start with a quick challenge.",
+      "Hook: Create curiosity and reveal the answer at the end.",
+      "Hook: Use a relatable situation viewers recognize.",
+      "Hook: Begin with 'Did you know?' and reveal a fact."
+    ];
+
+
+    let lastIdeas = [];
+
+
+    function cleanTopic(value) {
+
+      return value
+        .trim()
+        .replace(/\s+/g, " ");
+
+    }
+
+
+    function getTemplates(type) {
+
+      if (type === "mixed") {
+
+        return [
+          ...ideaTemplates.educational,
+          ...ideaTemplates.funny,
+          ...ideaTemplates.facts,
+          ...ideaTemplates.tips,
+          ...ideaTemplates.story,
+          ...ideaTemplates.questions
+        ];
+
+      }
+
+      return ideaTemplates[type] || ideaTemplates.educational;
+
+    }
+
+
+    function shuffle(array) {
+
+      const copy = [...array];
+
+      for (let i = copy.length - 1; i > 0; i--) {
+
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+
+      }
+
+      return copy;
+
+    }
+
+
+    function generateIdeas() {
+
+      const topic =
+        cleanTopic(document.getElementById("topic").value);
+
+      const keywords =
+        cleanTopic(document.getElementById("keywords").value);
+
+      const audience =
+        document.getElementById("audience").value;
+
+      const contentType =
+        document.getElementById("contentType").value;
+
+      const count =
+        Number(document.getElementById("ideaCount").value);
+
+
+      if (!topic) {
+
+        showMessage(
+          "Please enter your channel topic.",
+          "error"
+        );
+
+        document.getElementById("topic").focus();
+
+        return;
+      }
+
+
+      const templates =
+        shuffle(getTemplates(contentType));
+
+
+      const keywordText =
+        keywords ? keywords.split(",")[0].trim() : topic;
+
+
+      let ideas = [];
+
+      for (let i = 0; i < count; i++) {
+
+        let template =
+          templates[i % templates.length];
+
+        let title =
+          template.replace(
+            "{topic}",
+            keywordText || topic
+          );
+
+
+        if (lastIdeas.includes(title)) {
+
+          const variations = [
+            " in 30 Seconds",
+            " You Need to Know",
+            " That Will Surprise You",
+            " Everyone Should See",
+            " You Should Try Today"
+          ];
+
+          title +=
+            variations[
+              Math.floor(
+                Math.random() * variations.length
+              )
+            ];
+
+        }
+
+
+        const hook =
+          hooks[
+            Math.floor(
+              Math.random() * hooks.length
+            )
+          ];
+
+
+        const audienceText =
+          audience === "general"
+            ? "general viewers"
+            : audience;
+
+
+        ideas.push({
+          title: title,
+          hook: hook + " Target: " + audienceText + "."
+        });
+
+      }
+
+
+      lastIdeas =
+        ideas.map(item => item.title);
+
+
+      renderIdeas(ideas);
+
+      showMessage(
+        "Fresh Shorts ideas generated successfully!",
+        "success"
+      );
+
+    }
+
+
+    function renderIdeas(ideas) {
+
+      const ideasList =
+        document.getElementById("ideasList");
+
+      ideasList.innerHTML = "";
+
+
+      ideas.forEach(function(idea, index) {
+
+        const card =
+          document.createElement("div");
+
+        card.className = "idea-card";
+
+
+        const number =
+          document.createElement("div");
+
+        number.className = "idea-number";
+
+        number.textContent =
+          index + 1;
+
+
+        const content =
+          document.createElement("div");
+
+        content.className = "idea-content";
+
+
+        const title =
+          document.createElement("div");
+
+        title.className = "idea-title";
+
+        title.textContent =
+          idea.title;
+
+
+        const hook =
+          document.createElement("div");
+
+        hook.className = "idea-hook";
+
+        hook.textContent =
+          idea.hook;
+
+
+        content.appendChild(title);
+
+        content.appendChild(hook);
+
+
+        const copyButton =
+          document.createElement("button");
+
+        copyButton.className = "copy-idea";
+
+        copyButton.type = "button";
+
+        copyButton.textContent =
+          "Copy";
+
+
+        copyButton.onclick = function() {
+
+          copyText(
+            idea.title + "\n" + idea.hook,
+            copyButton
+          );
+
+        };
+
+
+        card.appendChild(number);
+
+        card.appendChild(content);
+
+        card.appendChild(copyButton);
+
+
+        ideasList.appendChild(card);
+
+      });
+
+
+      document.getElementById("resultCount").textContent =
+        ideas.length;
+
+
+      document.getElementById("resultBox").style.display =
+        "block";
+
+
+      document.getElementById("resultBox")
+        .scrollIntoView({
+          behavior: "smooth",
+          block: "nearest"
+        });
+
+    }
+
+
+    async function copyText(text, button) {
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        const oldText =
+          button.textContent;
+
+        button.textContent =
+          "Copied!";
+
+        setTimeout(function() {
+          button.textContent = oldText;
+        }, 1200);
+
+      } catch (error) {
+
+        const textarea =
+          document.createElement("textarea");
+
+        textarea.value = text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        textarea.remove();
+
+        button.textContent =
+          "Copied!";
+
+        setTimeout(function() {
+          button.textContent = "Copy";
+        }, 1200);
+
+      }
+
+    }
+
+
+    async function copyAllIdeas() {
+
+      if (!lastIdeas.length) {
+        return;
+      }
+
+
+      const text =
+        lastIdeas
+          .map(function(idea, index) {
+            return (index + 1) + ". " + idea;
+          })
+          .join("\n");
+
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        showMessage(
+          "All ideas copied successfully!",
+          "success"
+        );
+
+      } catch (error) {
+
+        const textarea =
+          document.createElement("textarea");
+
+        textarea.value = text;
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        document.execCommand("copy");
+
+        textarea.remove();
+
+        showMessage(
+          "All ideas copied successfully!",
+          "success"
+        );
+
+      }
+
+    }
+
+
+    function clearTool() {
+
+      document.getElementById("topic").value = "";
+
+      document.getElementById("keywords").value = "";
+
+      document.getElementById("audience").value =
+        "general";
+
+      document.getElementById("contentType").value =
+        "mixed";
+
+      document.getElementById("ideaCount").value =
+        "10";
+
+      document.getElementById("ideasList").innerHTML =
+        "";
+
+      document.getElementById("resultBox").style.display =
+        "none";
+
+      document.getElementById("message").className =
+        "message";
+
+      document.getElementById("message").textContent =
+        "";
+
+      lastIdeas = [];
+
+    }
+
+
+    function showMessage(text, type) {
+
+      const message =
+        document.getElementById("message");
+
+      message.textContent =
+        text;
+
+      message.className =
+        "message " + type;
+
+    }
+
+
+  </script>
+
+</body>
+</html>
