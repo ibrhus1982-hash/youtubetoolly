@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Earnings Calculator - Estimate YouTube Revenue | YouTubeToolly</title>
+
+  <meta name="description" content="Calculate estimated YouTube earnings from views and RPM. Get daily, weekly, monthly, and yearly revenue estimates for your YouTube channel for free.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-earnings-calculator.html">
+
+  <meta property="og:title" content="YouTube Earnings Calculator - YouTubeToolly">
+  <meta property="og:description" content="Estimate your YouTube earnings based on views and RPM with this free calculator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-earnings-calculator.html">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+    }
+
+    .brand span {
+      color: #ef4444;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
+    }
+
+    .play {
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 13px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ef4444;
+      border: 2px solid white;
+      border-radius: 50%;
+      top: 5px;
+      right: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    nav a:hover {
+      color: #ef4444;
+    }
+
+    nav .nav-button {
+      background: #0f172a;
+      color: white;
+      padding: 11px 17px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+
+    nav .nav-button:hover {
+      background: #1e293b;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 75px 0 65px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(239, 68, 68, 0.10), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.10), transparent 30%),
+        #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #fef2f2;
+      color: #dc2626;
+      border: 1px solid #fecaca;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero h1 .highlight {
+      color: #ef4444;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      color: #64748b;
+    }
+
+    /* TOOL */
+    .tool-section {
+      padding: 65px 0;
+      background: #f8fafc;
+    }
+
+    .tool-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+    }
+
+    .tool-box h2 {
+      text-align: center;
+      font-size: 26px;
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 11px;
+      font-size: 16px;
+      color: #0f172a;
+      background: white;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.10);
+    }
+
+    .field-help {
+      display: block;
+      margin-top: 6px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    button {
+      border: none;
+      cursor: pointer;
+      border-radius: 11px;
+      padding: 13px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .primary-btn {
+      background: #ef4444;
+      color: white;
+      flex: 1;
+      min-width: 190px;
+    }
+
+    .primary-btn:hover {
+      background: #dc2626;
+      transform: translateY(-1px);
+    }
+
+    .secondary-btn {
+      background: #0f172a;
+      color: white;
+    }
+
+    .secondary-btn:hover {
+      background: #1e293b;
+    }
+
+    .light-btn {
+      background: #f1f5f9;
+      color: #334155;
+    }
+
+    .light-btn:hover {
+      background: #e2e8f0;
+    }
+
+    .message {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      display: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .message.error {
+      display: block;
+      background: #fef2f2;
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    /* RESULTS */
+    .results {
+      display: none;
+      margin-top: 30px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 28px;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .results-header h3 {
+      font-size: 21px;
+    }
+
+    .results-count {
+      font-size: 13px;
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .earnings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .earning-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      background: #ffffff;
+    }
+
+    .earning-card.main {
+      grid-column: 1 / -1;
+      background: #fef2f2;
+      border-color: #fecaca;
+    }
+
+    .earning-label {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .earning-value {
+      font-size: 28px;
+      line-height: 1.2;
+      font-weight: 800;
+      color: #0f172a;
+      word-break: break-word;
+    }
+
+    .earning-card.main .earning-value {
+      color: #dc2626;
+      font-size: 34px;
+    }
+
+    .earning-note {
+      margin-top: 7px;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    .results-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .tip-box {
+      margin-top: 22px;
+      padding: 15px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .tip-box strong {
+      color: #334155;
+    }
+
+    /* INFO */
+    .info-section {
+      padding: 70px 0;
+    }
+
+    .info-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .info-content h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .info-content h3 {
+      font-size: 21px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .info-content p {
+      color: #64748b;
+      margin-bottom: 15px;
+    }
+
+    .info-content ul {
+      margin: 10px 0 20px 22px;
+      color: #64748b;
+    }
+
+    .info-content li {
+      margin-bottom: 8px;
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 0 0 75px;
+    }
+
+    .faq-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-content h2 {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 18px 0;
+    }
+
+    .faq-item h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #cbd5e1;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .footer-brand {
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand span {
+      color: #ef4444;
+    }
+
+    .footer-about {
+      color: #94a3b8;
+      max-width: 430px;
+      font-size: 14px;
+    }
+
+    .footer-column h4 {
+      color: white;
+      margin-bottom: 14px;
+      font-size: 15px;
+    }
+
+    .footer-column a {
+      display: block;
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    .footer-column a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    /* MOBILE */
+    @media (max-width: 700px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0 50px;
+      }
+
+      .hero h1 {
+        letter-spacing: -1.2px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tool-section {
+        padding: 45px 0;
+      }
+
+      .tool-box {
+        padding: 22px;
+        border-radius: 17px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .primary-btn,
+      .secondary-btn,
+      .light-btn {
+        width: 100%;
+      }
+
+      .earnings-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .earning-card.main {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+
+      <a href="/" class="brand">
+        <div class="brand-icon">
+          <div class="play"></div>
+          <div class="brand-dot"></div>
+        </div>
+        YouTube<span>Toolly</span>
+      </a>
+
+      <nav>
+        <a href="/#tools">Tools</a>
+        <a href="/#why">Why YouTubeToolly</a>
+        <a href="/#about">About</a>
+        <a href="/#tools" class="nav-button">Explore Tools</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Free YouTube Creator Tool
+      </div>
+
+      <h1>
+        YouTube Earnings
+        <span class="highlight">Calculator</span>
+      </h1>
+
+      <p>
+        Estimate your potential YouTube earnings based on your daily views
+        and RPM. Calculate daily, weekly, monthly, and yearly revenue instantly.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- TOOL -->
+  <section class="tool-section">
+    <div class="container">
+
+      <div class="tool-box">
+
+        <h2>Calculate Your YouTube Earnings</h2>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="views">
+              Daily YouTube Views
+            </label>
+
+            <input
+              type="number"
+              id="views"
+              min="1"
+              step="1"
+              placeholder="e.g. 10000"
+            >
+
+            <span class="field-help">
+              Enter your estimated average daily views.
+            </span>
+          </div>
+
+          <div class="field">
+            <label for="rpm">
+              RPM
+            </label>
+
+            <input
+              type="number"
+              id="rpm"
+              min="0.01"
+              step="0.01"
+              placeholder="e.g. 3.50"
+            >
+
+            <span class="field-help">
+              Estimated revenue per 1,000 views.
+            </span>
+          </div>
+
+          <div class="field">
+            <label for="currency">
+              Currency
+            </label>
+
+            <select id="currency">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="GBP">GBP - British Pound</option>
+              <option value="CAD">CAD - Canadian Dollar</option>
+              <option value="AUD">AUD - Australian Dollar</option>
+              <option value="JOD">JOD - Jordanian Dinar</option>
+              <option value="SAR">SAR - Saudi Riyal</option>
+              <option value="AED">AED - UAE Dirham</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="days">
+              Days Per Month
+            </label>
+
+            <input
+              type="number"
+              id="days"
+              min="1"
+              max="31"
+              step="1"
+              value="30"
+            >
+
+            <span class="field-help">
+              Used to calculate your monthly estimate.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="button-row">
+
+          <button
+            class="primary-btn"
+            id="calculateBtn"
+            type="button"
+          >
+            Calculate Earnings
+          </button>
+
+          <button
+            class="light-btn"
+            id="clearBtn"
+            type="button"
+          >
+            Clear
+          </button>
+
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <!-- RESULTS -->
+        <div id="results" class="results">
+
+          <div class="results-header">
+
+            <h3>Estimated YouTube Earnings</h3>
+
+            <span
+              class="results-count"
+              id="resultsCurrency"
+            >
+              USD
+            </span>
+
+          </div>
+
+          <div class="earnings-grid">
+
+            <div class="earning-card main">
+
+              <div class="earning-label">
+                Estimated Daily Earnings
+              </div>
+
+              <div
+                class="earning-value"
+                id="dailyEarnings"
+              >
+                $0.00
+              </div>
+
+              <div class="earning-note">
+                Based on your daily views and RPM.
+              </div>
+
+            </div>
+
+            <div class="earning-card">
+
+              <div class="earning-label">
+                Estimated Weekly Earnings
+              </div>
+
+              <div
+                class="earning-value"
+                id="weeklyEarnings"
+              >
+                $0.00
+              </div>
+
+            </div>
+
+            <div class="earning-card">
+
+              <div class="earning-label">
+                Estimated Monthly Earnings
+              </div>
+
+              <div
+                class="earning-value"
+                id="monthlyEarnings"
+              >
+                $0.00
+              </div>
+
+            </div>
+
+            <div class="earning-card">
+
+              <div class="earning-label">
+                Estimated Yearly Earnings
+              </div>
+
+              <div
+                class="earning-value"
+                id="yearlyEarnings"
+              >
+                $0.00
+              </div>
+
+            </div>
+
+            <div class="earning-card">
+
+              <div class="earning-label">
+                Estimated Monthly Views
+              </div>
+
+              <div
+                class="earning-value"
+                id="monthlyViews"
+              >
+                0
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="results-actions">
+
+            <button
+              class="secondary-btn"
+              id="copyResultsBtn"
+              type="button"
+            >
+              Copy Results
+            </button>
+
+          </div>
+
+          <div class="tip-box">
+            <strong>Important:</strong>
+            These are estimates only. Actual YouTube revenue can vary based
+            on audience location, ad demand, content type, monetized views,
+            seasonality, and other factors.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="info-section" id="about">
+
+    <div class="container info-content">
+
+      <h2>YouTube Earnings Calculator</h2>
+
+      <p>
+        YouTube earnings can vary significantly from one channel to another.
+        This calculator provides a simple estimate based on your average daily
+        views and RPM.
+      </p>
+
+      <p>
+        RPM represents the estimated revenue earned per 1,000 views after
+        YouTube's share and other factors affecting creator revenue.
+      </p>
+
+      <h3>How to use the YouTube Earnings Calculator</h3>
+
+      <ul>
+        <li>Enter your average daily YouTube views.</li>
+        <li>Enter your estimated RPM.</li>
+        <li>Select your preferred currency.</li>
+        <li>Choose the number of days in your estimated month.</li>
+        <li>Click Calculate Earnings.</li>
+      </ul>
+
+      <h3>How are YouTube earnings calculated?</h3>
+
+      <p>
+        The basic estimate uses the following formula:
+      </p>
+
+      <p>
+        <strong>Estimated Earnings = Views ÷ 1,000 × RPM</strong>
+      </p>
+
+      <p>
+        For example, if a channel receives 10,000 daily views and has an RPM
+        of $3, the estimated daily revenue would be approximately $30.
+      </p>
+
+      <h3>Why can actual earnings be different?</h3>
+
+      <p>
+        Actual earnings can change depending on many factors, including the
+        percentage of monetized views, viewer location, advertiser demand,
+        video category, ad formats, seasonality, and the type of content.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+
+    <div class="container faq-content">
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+
+        <h3>Is this YouTube Earnings Calculator free?</h3>
+
+        <p>
+          Yes. YouTubeToolly's earnings calculator is free to use and does
+          not require an account.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>What is RPM on YouTube?</h3>
+
+        <p>
+          RPM is a revenue metric that represents how much a creator earns
+          per 1,000 views, based on the applicable YouTube revenue data.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>Does 1,000 views always equal the same amount of money?</h3>
+
+        <p>
+          No. Revenue per 1,000 views can vary considerably depending on
+          factors such as audience location, content category, advertiser
+          demand, and monetized views.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>Are these earnings guaranteed?</h3>
+
+        <p>
+          No. The calculator provides an estimate and actual earnings may be
+          higher or lower.
+        </p>
+
+      </div>
+
+      <div class="faq-item">
+
+        <h3>Does the calculator send my information to a server?</h3>
+
+        <p>
+          No. The calculations are performed directly in your browser.
+          Your entered values are not sent to an external service.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+            YouTube<span>Toolly</span>
+          </div>
+
+          <p class="footer-about">
+            Free and simple tools for YouTube creators. Create better videos,
+            improve your workflow, and grow your YouTube channel.
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Tools</h4>
+
+          <a href="/#tools">All Tools</a>
+
+          <a href="/tools/youtube-thumbnail-downloader.html">
+            Thumbnail Downloader
+          </a>
+
+          <a href="/tools/youtube-title-generator.html">
+            Title Generator
+          </a>
+
+          <a href="/tools/youtube-tag-generator.html">
+            Tag Generator
+          </a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Website</h4>
+
+          <a href="/about.html">About</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/contact.html">Contact</a>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 YouTubeToolly. All rights reserved.
+        </div>
+
+        <div>
+          YouTubeToolly is an independent tool website and is not affiliated
+          with YouTube or Google.
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    const viewsInput = document.getElementById("views");
+    const rpmInput = document.getElementById("rpm");
+    const currencySelect = document.getElementById("currency");
+    const daysInput = document.getElementById("days");
+
+    const calculateBtn = document.getElementById("calculateBtn");
+    const clearBtn = document.getElementById("clearBtn");
+
+    const results = document.getElementById("results");
+    const message = document.getElementById("message");
+
+    const dailyEarnings = document.getElementById("dailyEarnings");
+    const weeklyEarnings = document.getElementById("weeklyEarnings");
+    const monthlyEarnings = document.getElementById("monthlyEarnings");
+    const yearlyEarnings = document.getElementById("yearlyEarnings");
+    const monthlyViews = document.getElementById("monthlyViews");
+
+    const resultsCurrency = document.getElementById("resultsCurrency");
+    const copyResultsBtn = document.getElementById("copyResultsBtn");
+
+    let lastResults = null;
+
+    const currencySymbols = {
+      USD: "$",
+      EUR: "€",
+      GBP: "£",
+      CAD: "C$",
+      AUD: "A$",
+      JOD: "JOD ",
+      SAR: "SAR ",
+      AED: "AED "
+    };
+
+    function showError(text) {
+
+      message.textContent = text;
+      message.className = "message error";
+
+    }
+
+    function clearMessage() {
+
+      message.textContent = "";
+      message.className = "message";
+
+    }
+
+    function formatNumber(number) {
+
+      return new Intl.NumberFormat("en-US", {
+        maximumFractionDigits: 0
+      }).format(number);
+
+    }
+
+    function formatMoney(number, currency) {
+
+      const symbol = currencySymbols[currency] || currency + " ";
+
+      return symbol + new Intl.NumberFormat("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(number);
+
+    }
+
+    function calculateEarnings() {
+
+      clearMessage();
+
+      const views = Number(viewsInput.value);
+      const rpm = Number(rpmInput.value);
+      const currency = currencySelect.value;
+      const days = Number(daysInput.value);
+
+      if (!Number.isFinite(views) || views <= 0) {
+
+        showError("Please enter a valid number of daily views.");
+
+        viewsInput.focus();
+
+        return;
+      }
+
+      if (!Number.isFinite(rpm) || rpm <= 0) {
+
+        showError("Please enter a valid RPM greater than 0.");
+
+        rpmInput.focus();
+
+        return;
+      }
+
+      if (!Number.isFinite(days) || days < 1 || days > 31) {
+
+        showError("Please enter a number of days between 1 and 31.");
+
+        daysInput.focus();
+
+        return;
+      }
+
+      /*
+        Basic YouTube RPM calculation:
+
+        Earnings = Views / 1000 × RPM
+      */
+
+      const daily = (views / 1000) * rpm;
+
+      const weekly = daily * 7;
+
+      const monthly = daily * days;
+
+      const yearly = daily * 365;
+
+      const monthlyViewTotal = views * days;
+
+      dailyEarnings.textContent =
+        formatMoney(daily, currency);
+
+      weeklyEarnings.textContent =
+        formatMoney(weekly, currency);
+
+      monthlyEarnings.textContent =
+        formatMoney(monthly, currency);
+
+      yearlyEarnings.textContent =
+        formatMoney(yearly, currency);
+
+      monthlyViews.textContent =
+        formatNumber(monthlyViewTotal);
+
+      resultsCurrency.textContent = currency;
+
+      lastResults = {
+        views,
+        rpm,
+        currency,
+        days,
+        daily,
+        weekly,
+        monthly,
+        yearly,
+        monthlyViewTotal
+      };
+
+      results.style.display = "block";
+
+    }
+
+    async function copyResults() {
+
+      if (!lastResults) {
+        return;
+      }
+
+      const r = lastResults;
+
+      const text =
+`YouTube Earnings Estimate
+
+Daily Views: ${formatNumber(r.views)}
+RPM: ${formatMoney(r.rpm, r.currency)}
+Currency: ${r.currency}
+
+Estimated Daily Earnings: ${formatMoney(r.daily, r.currency)}
+Estimated Weekly Earnings: ${formatMoney(r.weekly, r.currency)}
+Estimated Monthly Earnings: ${formatMoney(r.monthly, r.currency)}
+Estimated Yearly Earnings: ${formatMoney(r.yearly, r.currency)}
+
+Estimated Monthly Views: ${formatNumber(r.monthlyViewTotal)}
+
+Note: These figures are estimates only. Actual YouTube revenue may vary.`;
+
+      try {
+
+        await navigator.clipboard.writeText(text);
+
+        const oldText = copyResultsBtn.textContent;
+
+        copyResultsBtn.textContent = "Copied!";
+
+        setTimeout(() => {
+          copyResultsBtn.textContent = oldText;
+        }, 1500);
+
+      } catch (error) {
+
+        const textarea = document.createElement("textarea");
+
+        textarea.value = text;
+        textarea.style.position = "fixed";
+        textarea.style.left = "-9999px";
+
+        document.body.appendChild(textarea);
+
+        textarea.select();
+
+        try {
+          document.execCommand("copy");
+        } catch (e) {
+          // Ignore
+        }
+
+        textarea.remove();
+
+        const oldText = copyResultsBtn.textContent;
+
+        copyResultsBtn.textContent = "Copied!";
+
+        setTimeout(() => {
+          copyResultsBtn.textContent = oldText;
+        }, 1500);
+
+      }
+
+    }
+
+    calculateBtn.addEventListener(
+      "click",
+      calculateEarnings
+    );
+
+    copyResultsBtn.addEventListener(
+      "click",
+      copyResults
+    );
+
+    clearBtn.addEventListener(
+      "click",
+      () => {
+
+        viewsInput.value = "";
+        rpmInput.value = "";
+
+        currencySelect.value = "USD";
+
+        daysInput.value = "30";
+
+        dailyEarnings.textContent = "$0.00";
+        weeklyEarnings.textContent = "$0.00";
+        monthlyEarnings.textContent = "$0.00";
+        yearlyEarnings.textContent = "$0.00";
+        monthlyViews.textContent = "0";
+
+        resultsCurrency.textContent = "USD";
+
+        results.style.display = "none";
+
+        lastResults = null;
+
+        clearMessage();
+
+        viewsInput.focus();
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
