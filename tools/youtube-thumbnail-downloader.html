@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Thumbnail Downloader - Download YouTube Thumbnails Free | YouTubeToolly</title>
+
+  <meta name="description" content="Download YouTube video thumbnails in high quality for free. Enter a YouTube video URL and get available thumbnail images instantly with YouTubeToolly.">
+
+  <meta name="keywords" content="YouTube thumbnail downloader, download YouTube thumbnail, YouTube thumbnail download, YouTube thumbnail image, YouTube thumbnail grabber, free YouTube tools">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YouTubeToolly">
+
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-thumbnail-downloader.html">
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YouTube Thumbnail Downloader - Free | YouTubeToolly">
+  <meta property="og:description" content="Download available YouTube video thumbnails in high quality for free with YouTubeToolly.">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-thumbnail-downloader.html">
+  <meta property="og:site_name" content="YouTubeToolly">
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YouTube Thumbnail Downloader - Free">
+  <meta name="twitter:description" content="Download available YouTube thumbnails quickly and easily with YouTubeToolly.">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Thumbnail Downloader",
+    "url": "https://www.youtubetoolly.com/tools/youtube-thumbnail-downloader.html",
+    "description": "Free online tool for viewing and downloading available YouTube video thumbnails.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <style>
+
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--dark);
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--dark);
+      display: grid;
+      place-items: center;
+      position: relative;
+      box-shadow: 0 7px 18px rgba(15,23,42,.18);
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      top: 5px;
+      right: 5px;
+      border: 2px solid white;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--dark);
+      color: white !important;
+      padding: 10px 17px;
+      border-radius: 10px;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 75px 0 65px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(239,68,68,.10), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(37,99,235,.09), transparent 25%),
+        var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 .highlight {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* Tool */
+
+    .tool-section {
+      padding: 65px 0;
+    }
+
+    .tool-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .tool-box h2 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 26px;
+      margin-bottom: 9px;
+    }
+
+    .tool-box-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .input-group input {
+      flex: 1;
+      min-width: 0;
+      padding: 16px 17px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      outline: none;
+      color: var(--text);
+      background: white;
+    }
+
+    .input-group input:focus {
+      border-color: #94a3b8;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.08);
+    }
+
+    .get-button {
+      border: 0;
+      padding: 0 23px;
+      border-radius: 12px;
+      background: var(--red);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+      white-space: nowrap;
+    }
+
+    .get-button:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .example {
+      margin-top: 11px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-size: 14px;
+    }
+
+    .message.error {
+      display: block;
+      background: var(--soft-red);
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    .message.success {
+      display: block;
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Results */
+
+    .results {
+      display: none;
+      margin-top: 35px;
+    }
+
+    .results-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .thumbnail-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .thumbnail-preview {
+      background: #f1f5f9;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .thumbnail-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .thumbnail-info {
+      padding: 17px;
+    }
+
+    .thumbnail-info h3 {
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .thumbnail-info p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 13px;
+    }
+
+    .thumbnail-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .action-button {
+      flex: 1;
+      text-align: center;
+      padding: 10px 12px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+    }
+
+    .action-button:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .action-button.download {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    .action-button.download:hover {
+      background: #1e293b;
+    }
+
+    /* Info */
+
+    .info-section {
+      padding: 70px 0;
+      background: white;
+    }
+
+    .content-box {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .content-box h2 {
+      color: var(--dark);
+      font-size: 31px;
+      letter-spacing: -1px;
+      margin-bottom: 17px;
+    }
+
+    .content-box h3 {
+      color: var(--dark);
+      font-size: 21px;
+      margin: 30px 0 9px;
+    }
+
+    .content-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .content-box ul {
+      color: var(--muted);
+      padding-left: 22px;
+      margin-bottom: 18px;
+    }
+
+    .content-box li {
+      margin-bottom: 7px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding: 70px 0;
+      background: var(--bg);
+    }
+
+    .faq-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 31px;
+      margin-bottom: 35px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 35px;
+    }
+
+    footer .brand {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-about {
+      max-width: 430px;
+      font-size: 14px;
+    }
+
+    footer h4 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    footer a {
+      display: block;
+      font-size: 14px;
+      margin: 9px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .disclaimer {
+      max-width: 850px;
+      margin: 12px auto 0;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 58px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tool-section,
+      .info-section,
+      .faq-section {
+        padding: 50px 0;
+      }
+
+      .tool-box {
+        padding: 22px;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      .get-button {
+        padding: 14px;
+      }
+
+      .thumbnail-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="/" class="brand" aria-label="YouTubeToolly Home">
+      <div class="brand-icon"></div>
+      YouTube<span>Toolly</span>
+    </a>
+
+    <nav>
+      <a href="/#tools">Tools</a>
+      <a href="/#why">Why YouTubeToolly</a>
+      <a href="/#about">About</a>
+      <a href="/#tools" class="nav-button">Explore Tools</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Free YouTube Creator Tool
+      </div>
+
+      <h1>
+        YouTube Thumbnail<br>
+        <span class="highlight">Downloader</span>
+      </h1>
+
+      <p>
+        Get available thumbnail images from YouTube videos quickly and easily.
+        Enter a YouTube video URL below to view available thumbnail sizes.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- TOOL -->
+
+  <section class="tool-section">
+    <div class="container">
+
+      <div class="tool-box">
+
+        <h2>Download YouTube Thumbnail</h2>
+
+        <p class="tool-box-subtitle">
+          Paste a YouTube video link to find available thumbnail images.
+        </p>
+
+        <div class="input-group">
+
+          <input
+            type="text"
+            id="youtubeUrl"
+            placeholder="Paste YouTube video URL here..."
+            aria-label="YouTube video URL"
+            autocomplete="off"
+          >
+
+          <button class="get-button" id="getThumbnail">
+            Get Thumbnail
+          </button>
+
+        </div>
+
+        <p class="example">
+          Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+        </p>
+
+        <div id="message" class="message"></div>
+
+        <div id="results" class="results">
+
+          <h2 class="results-title">
+            Available Thumbnail Images
+          </h2>
+
+          <div class="thumbnail-list">
+
+            <!-- Max Resolution -->
+
+            <div class="thumbnail-card">
+
+              <div class="thumbnail-preview">
+                <img id="maxImage" alt="YouTube video thumbnail - maximum available resolution">
+              </div>
+
+              <div class="thumbnail-info">
+
+                <h3>Maximum Resolution</h3>
+
+                <p>
+                  Best available quality when supported by the video.
+                </p>
+
+                <div class="thumbnail-actions">
+
+                  <a
+                    id="maxOpen"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open
+                  </a>
+
+                  <button
+                    id="maxDownload"
+                    class="action-button download"
+                  >
+                    Download
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- High Quality -->
+
+            <div class="thumbnail-card">
+
+              <div class="thumbnail-preview">
+                <img id="hqImage" alt="YouTube video thumbnail - high quality">
+              </div>
+
+              <div class="thumbnail-info">
+
+                <h3>High Quality</h3>
+
+                <p>
+                  Reliable high-quality thumbnail option.
+                </p>
+
+                <div class="thumbnail-actions">
+
+                  <a
+                    id="hqOpen"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open
+                  </a>
+
+                  <button
+                    id="hqDownload"
+                    class="action-button download"
+                  >
+                    Download
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Standard -->
+
+            <div class="thumbnail-card">
+
+              <div class="thumbnail-preview">
+                <img id="standardImage" alt="YouTube video thumbnail - standard quality">
+              </div>
+
+              <div class="thumbnail-info">
+
+                <h3>Standard Quality</h3>
+
+                <p>
+                  Standard thumbnail image for general use.
+                </p>
+
+                <div class="thumbnail-actions">
+
+                  <a
+                    id="standardOpen"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open
+                  </a>
+
+                  <button
+                    id="standardDownload"
+                    class="action-button download"
+                  >
+                    Download
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- Medium -->
+
+            <div class="thumbnail-card">
+
+              <div class="thumbnail-preview">
+                <img id="mediumImage" alt="YouTube video thumbnail - medium quality">
+              </div>
+
+              <div class="thumbnail-info">
+
+                <h3>Medium Quality</h3>
+
+                <p>
+                  Smaller thumbnail suitable for previews.
+                </p>
+
+                <div class="thumbnail-actions">
+
+                  <a
+                    id="mediumOpen"
+                    class="action-button"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open
+                  </a>
+
+                  <button
+                    id="mediumDownload"
+                    class="action-button download"
+                  >
+                    Download
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFORMATION -->
+
+  <section class="info-section">
+
+    <div class="container content-box">
+
+      <h2>
+        YouTube Thumbnail Downloader
+      </h2>
+
+      <p>
+        YouTubeToolly's YouTube Thumbnail Downloader is a simple online tool
+        that helps you find available thumbnail images associated with a
+        YouTube video.
+      </p>
+
+      <p>
+        Instead of manually searching for a video's thumbnail image, simply
+        paste the YouTube video URL into the tool and select the available
+        image quality you want to view or download.
+      </p>
+
+      <h3>How to Download a YouTube Thumbnail</h3>
+
+      <p>
+        Using the thumbnail downloader takes only a few seconds:
+      </p>
+
+      <ul>
+        <li>Copy the URL of the YouTube video.</li>
+        <li>Paste the URL into the input box above.</li>
+        <li>Click the "Get Thumbnail" button.</li>
+        <li>Choose the thumbnail quality you want.</li>
+        <li>Open or download the available image.</li>
+      </ul>
+
+      <h3>Supported YouTube URLs</h3>
+
+      <p>
+        The tool can recognize common YouTube video URL formats, including
+        standard YouTube links, shortened youtu.be links and YouTube Shorts
+        URLs.
+      </p>
+
+      <h3>Why Use a YouTube Thumbnail Downloader?</h3>
+
+      <p>
+        YouTube thumbnails are useful for creators, designers, researchers
+        and anyone who needs to reference or preview a video's thumbnail.
+        This tool provides a quick way to access available thumbnail images
+        without complicated software.
+      </p>
+
+      <h3>Free YouTube Creator Tools</h3>
+
+      <p>
+        YouTubeToolly provides a growing collection of free tools designed
+        for YouTube creators. Explore our other tools to help with titles,
+        tags, hashtags, descriptions, timestamps and content ideas.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
+
+    <div class="container">
+
+      <h2 class="faq-title">
+        Frequently Asked Questions
+      </h2>
+
+      <div class="faq">
+
+        <div class="faq-item">
+
+          <h3>
+            Is the YouTube Thumbnail Downloader free?
+          </h3>
+
+          <p>
+            Yes. YouTubeToolly provides this thumbnail tool free of charge.
+          </p>
+
+        </div>
+
+        <div class="faq-item">
+
+          <h3>
+            How do I download a YouTube thumbnail?
+          </h3>
+
+          <p>
+            Paste the YouTube video URL into the tool and click "Get
+            Thumbnail". Available thumbnail options will then be displayed.
+          </p>
+
+        </div>
+
+        <div class="faq-item">
+
+          <h3>
+            Can I use a YouTube Shorts URL?
+          </h3>
+
+          <p>
+            Yes. YouTube Shorts URLs are supported when a valid video ID can
+            be identified from the URL.
+          </p>
+
+        </div>
+
+        <div class="faq-item">
+
+          <h3>
+            Does every YouTube video have a maximum-resolution thumbnail?
+          </h3>
+
+          <p>
+            Not necessarily. Thumbnail availability and resolution can vary
+            between videos. The tool attempts to display available thumbnail
+            images.
+          </p>
+
+        </div>
+
+        <div class="faq-item">
+
+          <h3>
+            Do I need to install software?
+          </h3>
+
+          <p>
+            No. The tool works directly in your web browser and does not
+            require additional software.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a href="/" class="brand">
+
+          <div class="brand-icon"></div>
+
+          YouTube<span>Toolly</span>
+
+        </a>
+
+        <p class="footer-about">
+          Free online tools designed to help YouTube creators
+          plan, optimize and create content more efficiently.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h4>Tools</h4>
+
+        <a href="/#tools">All Tools</a>
+        <a href="/#tools">YouTube SEO</a>
+        <a href="/#tools">Generators</a>
+        <a href="/#tools">Creator Tools</a>
+
+      </div>
+
+      <div>
+
+        <h4>Website</h4>
+
+        <a href="/about.html">About</a>
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+        <a href="/contact.html">Contact</a>
+
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 YouTubeToolly. All rights reserved.
+    </div>
+
+    <p class="disclaimer">
+      YouTubeToolly is an independent website and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google.
+    </p>
+
+  </div>
+
+</footer>
+
+<script>
+
+  const youtubeUrl = document.getElementById("youtubeUrl");
+  const getThumbnail = document.getElementById("getThumbnail");
+  const message = document.getElementById("message");
+  const results = document.getElementById("results");
+
+  function showMessage(text, type) {
+
+    message.textContent = text;
+    message.className = "message " + type;
+
+  }
+
+  function hideMessage() {
+
+    message.textContent = "";
+    message.className = "message";
+
+  }
+
+  function extractVideoId(url) {
+
+    try {
+
+      const parsedUrl = new URL(url.trim());
+
+      const hostname = parsedUrl.hostname.toLowerCase();
+
+      /* Standard YouTube URL */
+
+      if (
+        hostname === "youtube.com" ||
+        hostname === "www.youtube.com" ||
+        hostname === "m.youtube.com"
+      ) {
+
+        const videoId = parsedUrl.searchParams.get("v");
+
+        if (videoId) {
+          return videoId;
+        }
+
+        /* Shorts */
+
+        const shortsMatch = parsedUrl.pathname.match(
+          /^\/shorts\/([a-zA-Z0-9_-]{11})/
+        );
+
+        if (shortsMatch) {
+          return shortsMatch[1];
+        }
+
+        /* Embed */
+
+        const embedMatch = parsedUrl.pathname.match(
+          /^\/embed\/([a-zA-Z0-9_-]{11})/
+        );
+
+        if (embedMatch) {
+          return embedMatch[1];
+        }
+
+      }
+
+      /* Short youtu.be URL */
+
+      if (
+        hostname === "youtu.be" ||
+        hostname === "www.youtu.be"
+      ) {
+
+        const id = parsedUrl.pathname
+          .split("/")
+          .filter(Boolean)[0];
+
+        if (id) {
+          return id;
+        }
+
+      }
+
+      return null;
+
+    } catch (error) {
+
+      return null;
+
+    }
+
+  }
+
+  function setThumbnail(imageId, imageUrl, openId, downloadId) {
+
+    const image = document.getElementById(imageId);
+    const openLink = document.getElementById(openId);
+    const downloadButton = document.getElementById(downloadId);
+
+    image.src = imageUrl;
+    openLink.href = imageUrl;
+
+    downloadButton.onclick = function () {
+
+      downloadImage(imageUrl, imageId);
+
+    };
+
+  }
+
+  function downloadImage(url, imageId) {
+
+    const image = document.getElementById(imageId);
+
+    if (!image || !image.complete) {
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+      return;
+
+    }
+
+    try {
+
+      const canvas = document.createElement("canvas");
+
+      canvas.width = image.naturalWidth;
+      canvas.height = image.naturalHeight;
+
+      const ctx = canvas.getContext("2d");
+
+      ctx.drawImage(image, 0, 0);
+
+      canvas.toBlob(function (blob) {
+
+        if (!blob) {
+
+          window.open(url, "_blank", "noopener,noreferrer");
+
+          return;
+
+        }
+
+        const blobUrl = URL.createObjectURL(blob);
+
+        const link = document.createElement("a");
+
+        link.href = blobUrl;
+        link.download = "youtube-thumbnail.jpg";
+
+        document.body.appendChild(link);
+
+        link.click();
+
+        link.remove();
+
+        setTimeout(function () {
+
+          URL.revokeObjectURL(blobUrl);
+
+        }, 1000);
+
+      }, "image/jpeg", 0.95);
+
+    } catch (error) {
+
+      window.open(url, "_blank", "noopener,noreferrer");
+
+    }
+
+  }
+
+  function resetImage(imageId) {
+
+    const image = document.getElementById(imageId);
+
+    image.onerror = function () {
+
+      this.style.display = "none";
+
+      const parent = this.closest(".thumbnail-preview");
+
+      if (parent) {
+
+        parent.innerHTML =
+          '<span style="color:#64748b;font-size:13px;padding:20px;text-align:center;">This thumbnail size is not available for this video.</span>';
+
+      }
+
+    };
+
+  }
+
+  getThumbnail.addEventListener("click", function () {
+
+    const input = youtubeUrl.value.trim();
+
+    hideMessage();
+
+    results.style.display = "none";
+
+    if (!input) {
+
+      showMessage(
+        "Please enter a YouTube video URL.",
+        "error"
+      );
+
+      return;
+
+    }
+
+    const videoId = extractVideoId(input);
+
+    if (!videoId) {
+
+      showMessage(
+        "Please enter a valid YouTube video URL.",
+        "error"
+      );
+
+      return;
+
+    }
+
+    /* YouTube thumbnail URLs */
+
+    const maxUrl =
+      "https://i.ytimg.com/vi/" + videoId + "/maxresdefault.jpg";
+
+    const hqUrl =
+      "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
+
+    const standardUrl =
+      "https://i.ytimg.com/vi/" + videoId + "/sddefault.jpg";
+
+    const mediumUrl =
+      "https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg";
+
+    /* Reset images */
+
+    document.getElementById("maxImage").style.display = "block";
+    document.getElementById("hqImage").style.display = "block";
+    document.getElementById("standardImage").style.display = "block";
+    document.getElementById("mediumImage").style.display = "block";
+
+    document.getElementById("maxImage").src = "";
+    document.getElementById("hqImage").src = "";
+    document.getElementById("standardImage").src = "";
+    document.getElementById("mediumImage").src = "";
+
+    setThumbnail(
+      "maxImage",
+      maxUrl,
+      "maxOpen",
+      "maxDownload"
+    );
+
+    setThumbnail(
+      "hqImage",
+      hqUrl,
+      "hqOpen",
+      "hqDownload"
+    );
+
+    setThumbnail(
+      "standardImage",
+      standardUrl,
+      "standardOpen",
+      "standardDownload"
+    );
+
+    setThumbnail(
+      "mediumImage",
+      mediumUrl,
+      "mediumOpen",
+      "mediumDownload"
+    );
+
+    resetImage("maxImage");
+    resetImage("hqImage");
+    resetImage("standardImage");
+    resetImage("mediumImage");
+
+    results.style.display = "block";
+
+    showMessage(
+      "Thumbnail images found. Choose the quality you want.",
+      "success"
+    );
+
+    results.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  });
+
+  youtubeUrl.addEventListener("keydown", function (event) {
+
+    if (event.key === "Enter") {
+
+      getThumbnail.click();
+
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
