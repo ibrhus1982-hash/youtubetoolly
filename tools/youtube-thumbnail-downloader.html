@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,6 @@
   <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-thumbnail-downloader.html">
 
   <!-- Open Graph -->
-
   <meta property="og:type" content="website">
   <meta property="og:title" content="YouTube Thumbnail Downloader - Free | YouTubeToolly">
   <meta property="og:description" content="Download available YouTube video thumbnails in high quality for free with YouTubeToolly.">
@@ -24,7 +24,6 @@
   <meta property="og:site_name" content="YouTubeToolly">
 
   <!-- Twitter -->
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="YouTube Thumbnail Downloader - Free">
   <meta name="twitter:description" content="Download available YouTube thumbnails quickly and easily with YouTubeToolly.">
@@ -32,17 +31,14 @@
   <meta name="theme-color" content="#0f172a">
 
   <!-- Favicon -->
-
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
 
   <!-- Fonts -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Schema -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -447,6 +443,11 @@
       background: #1e293b;
     }
 
+    .action-button:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
     /* Info */
 
     .info-section {
@@ -622,6 +623,10 @@
         grid-template-columns: 1fr;
       }
 
+      .thumbnail-actions {
+        flex-direction: column;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 28px;
@@ -700,7 +705,7 @@
             autocomplete="off"
           >
 
-          <button class="get-button" id="getThumbnail">
+          <button class="get-button" id="getThumbnail" type="button">
             Get Thumbnail
           </button>
 
@@ -725,7 +730,10 @@
             <div class="thumbnail-card">
 
               <div class="thumbnail-preview">
-                <img id="maxImage" alt="YouTube video thumbnail - maximum available resolution">
+                <img
+                  id="maxImage"
+                  alt="YouTube video thumbnail - maximum available resolution"
+                >
               </div>
 
               <div class="thumbnail-info">
@@ -750,6 +758,7 @@
 
                   <button
                     id="maxDownload"
+                    type="button"
                     class="action-button download"
                   >
                     Download
@@ -766,7 +775,10 @@
             <div class="thumbnail-card">
 
               <div class="thumbnail-preview">
-                <img id="hqImage" alt="YouTube video thumbnail - high quality">
+                <img
+                  id="hqImage"
+                  alt="YouTube video thumbnail - high quality"
+                >
               </div>
 
               <div class="thumbnail-info">
@@ -791,6 +803,7 @@
 
                   <button
                     id="hqDownload"
+                    type="button"
                     class="action-button download"
                   >
                     Download
@@ -807,7 +820,10 @@
             <div class="thumbnail-card">
 
               <div class="thumbnail-preview">
-                <img id="standardImage" alt="YouTube video thumbnail - standard quality">
+                <img
+                  id="standardImage"
+                  alt="YouTube video thumbnail - standard quality"
+                >
               </div>
 
               <div class="thumbnail-info">
@@ -832,6 +848,7 @@
 
                   <button
                     id="standardDownload"
+                    type="button"
                     class="action-button download"
                   >
                     Download
@@ -848,7 +865,10 @@
             <div class="thumbnail-card">
 
               <div class="thumbnail-preview">
-                <img id="mediumImage" alt="YouTube video thumbnail - medium quality">
+                <img
+                  id="mediumImage"
+                  alt="YouTube video thumbnail - medium quality"
+                >
               </div>
 
               <div class="thumbnail-info">
@@ -873,6 +893,7 @@
 
                   <button
                     id="mediumDownload"
+                    type="button"
                     class="action-button download"
                   >
                     Download
@@ -1112,12 +1133,18 @@
   const message = document.getElementById("message");
   const results = document.getElementById("results");
 
+
+  /* =========================
+     Messages
+  ========================= */
+
   function showMessage(text, type) {
 
     message.textContent = text;
     message.className = "message " + type;
 
   }
+
 
   function hideMessage() {
 
@@ -1126,15 +1153,21 @@
 
   }
 
+
+  /* =========================
+     Extract YouTube Video ID
+  ========================= */
+
   function extractVideoId(url) {
 
     try {
 
       const parsedUrl = new URL(url.trim());
-
       const hostname = parsedUrl.hostname.toLowerCase();
 
-      /* Standard YouTube URL */
+      /*
+        Standard YouTube URLs
+      */
 
       if (
         hostname === "youtube.com" ||
@@ -1144,49 +1177,92 @@
 
         const videoId = parsedUrl.searchParams.get("v");
 
-        if (videoId) {
+        if (
+          videoId &&
+          /^[a-zA-Z0-9_-]{11}$/.test(videoId)
+        ) {
+
           return videoId;
+
         }
 
-        /* Shorts */
 
-        const shortsMatch = parsedUrl.pathname.match(
-          /^\/shorts\/([a-zA-Z0-9_-]{11})/
-        );
+        /*
+          Shorts
+        */
+
+        const shortsMatch =
+          parsedUrl.pathname.match(
+            /^\/shorts\/([a-zA-Z0-9_-]{11})/
+          );
 
         if (shortsMatch) {
+
           return shortsMatch[1];
+
         }
 
-        /* Embed */
 
-        const embedMatch = parsedUrl.pathname.match(
-          /^\/embed\/([a-zA-Z0-9_-]{11})/
-        );
+        /*
+          Embed
+        */
+
+        const embedMatch =
+          parsedUrl.pathname.match(
+            /^\/embed\/([a-zA-Z0-9_-]{11})/
+          );
 
         if (embedMatch) {
+
           return embedMatch[1];
+
+        }
+
+
+        /*
+          Live
+        */
+
+        const liveMatch =
+          parsedUrl.pathname.match(
+            /^\/live\/([a-zA-Z0-9_-]{11})/
+          );
+
+        if (liveMatch) {
+
+          return liveMatch[1];
+
         }
 
       }
 
-      /* Short youtu.be URL */
+
+      /*
+        youtu.be
+      */
 
       if (
         hostname === "youtu.be" ||
         hostname === "www.youtu.be"
       ) {
 
-        const id = parsedUrl.pathname
-          .split("/")
-          .filter(Boolean)[0];
+        const id =
+          parsedUrl.pathname
+            .split("/")
+            .filter(Boolean)[0];
 
-        if (id) {
+        if (
+          id &&
+          /^[a-zA-Z0-9_-]{11}$/.test(id)
+        ) {
+
           return id;
+
         }
 
       }
 
+
       return null;
 
     } catch (error) {
@@ -1197,94 +1273,309 @@
 
   }
 
-  function setThumbnail(imageId, imageUrl, openId, downloadId) {
 
-    const image = document.getElementById(imageId);
-    const openLink = document.getElementById(openId);
-    const downloadButton = document.getElementById(downloadId);
+  /* =========================
+     Download Thumbnail
+  ========================= */
 
-    image.src = imageUrl;
-    openLink.href = imageUrl;
+  async function downloadImage(url, imageId, button) {
 
-    downloadButton.onclick = function () {
+    const originalText = button.textContent;
 
-      downloadImage(imageUrl, imageId);
+    button.disabled = true;
+    button.textContent = "Downloading...";
 
-    };
 
-  }
-
-  function downloadImage(url, imageId) {
-
-    const image = document.getElementById(imageId);
-
-    if (!image || !image.complete) {
-
-      window.open(url, "_blank", "noopener,noreferrer");
-
-      return;
-
-    }
+    /*
+      Method 1:
+      Try direct fetch and create a Blob.
+    */
 
     try {
 
-      const canvas = document.createElement("canvas");
+      const response = await fetch(url, {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache"
+      });
 
-      canvas.width = image.naturalWidth;
-      canvas.height = image.naturalHeight;
 
-      const ctx = canvas.getContext("2d");
+      if (!response.ok) {
 
-      ctx.drawImage(image, 0, 0);
+        throw new Error("Image request failed");
 
-      canvas.toBlob(function (blob) {
+      }
 
-        if (!blob) {
 
-          window.open(url, "_blank", "noopener,noreferrer");
+      const blob = await response.blob();
 
-          return;
 
-        }
+      if (!blob || blob.size === 0) {
 
-        const blobUrl = URL.createObjectURL(blob);
+        throw new Error("Empty image");
 
-        const link = document.createElement("a");
+      }
 
-        link.href = blobUrl;
-        link.download = "youtube-thumbnail.jpg";
 
-        document.body.appendChild(link);
+      const blobUrl =
+        URL.createObjectURL(blob);
 
-        link.click();
 
-        link.remove();
+      const link =
+        document.createElement("a");
 
-        setTimeout(function () {
 
-          URL.revokeObjectURL(blobUrl);
+      link.href = blobUrl;
+      link.download = "youtube-thumbnail.jpg";
+      link.style.display = "none";
 
-        }, 1000);
 
-      }, "image/jpeg", 0.95);
+      document.body.appendChild(link);
+
+      link.click();
+
+      link.remove();
+
+
+      setTimeout(function () {
+
+        URL.revokeObjectURL(blobUrl);
+
+      }, 3000);
+
+
+      showMessage(
+        "Thumbnail downloaded successfully.",
+        "success"
+      );
+
+
+      button.disabled = false;
+      button.textContent = originalText;
+
+      return;
 
     } catch (error) {
 
-      window.open(url, "_blank", "noopener,noreferrer");
+      /*
+        Method 2:
+        Try using the image element and canvas.
+      */
+
+    }
+
+
+    try {
+
+      const image =
+        document.getElementById(imageId);
+
+
+      if (
+        image &&
+        image.complete &&
+        image.naturalWidth > 0
+      ) {
+
+        const canvas =
+          document.createElement("canvas");
+
+
+        canvas.width = image.naturalWidth;
+        canvas.height = image.naturalHeight;
+
+
+        const ctx =
+          canvas.getContext("2d");
+
+
+        if (ctx) {
+
+          ctx.drawImage(
+            image,
+            0,
+            0
+          );
+
+
+          const blob =
+            await new Promise(function(resolve) {
+
+              canvas.toBlob(
+                resolve,
+                "image/jpeg",
+                0.95
+              );
+
+            });
+
+
+          if (blob) {
+
+            const blobUrl =
+              URL.createObjectURL(blob);
+
+
+            const link =
+              document.createElement("a");
+
+
+            link.href = blobUrl;
+            link.download = "youtube-thumbnail.jpg";
+            link.style.display = "none";
+
+
+            document.body.appendChild(link);
+
+            link.click();
+
+            link.remove();
+
+
+            setTimeout(function () {
+
+              URL.revokeObjectURL(blobUrl);
+
+            }, 3000);
+
+
+            showMessage(
+              "Thumbnail downloaded successfully.",
+              "success"
+            );
+
+
+            button.disabled = false;
+            button.textContent = originalText;
+
+            return;
+
+          }
+
+        }
+
+      }
+
+    } catch (error) {
+
+      /*
+        Continue to final fallback.
+      */
+
+    }
+
+
+    /*
+      Method 3:
+      Final fallback.
+
+      Open the original image in a new tab.
+      This guarantees that the user can access the
+      original thumbnail even when the browser blocks
+      programmatic cross-origin downloading.
+    */
+
+    button.disabled = false;
+    button.textContent = originalText;
+
+
+    const newWindow =
+      window.open(
+        url,
+        "_blank",
+        "noopener,noreferrer"
+      );
+
+
+    if (newWindow) {
+
+      showMessage(
+        "The image was opened in a new tab. Right-click the image and choose 'Save image as' to save it.",
+        "success"
+      );
+
+    } else {
+
+      showMessage(
+        "Your browser blocked the new tab. Please allow pop-ups for YouTubeToolly and try again.",
+        "error"
+      );
 
     }
 
   }
 
-  function resetImage(imageId) {
 
-    const image = document.getElementById(imageId);
+  /* =========================
+     Set Thumbnail
+  ========================= */
+
+  function setThumbnail(
+    imageId,
+    imageUrl,
+    openId,
+    downloadId
+  ) {
+
+    const image =
+      document.getElementById(imageId);
+
+    const openLink =
+      document.getElementById(openId);
+
+    const downloadButton =
+      document.getElementById(downloadId);
+
+
+    /*
+      Reset image state.
+    */
+
+    image.style.display = "block";
+    image.removeAttribute("src");
+
+
+    /*
+      Set image source.
+    */
+
+    image.src = imageUrl;
+
+
+    /*
+      Open link.
+    */
+
+    openLink.href = imageUrl;
+
+
+    /*
+      Download button.
+    */
+
+    downloadButton.onclick = function () {
+
+      downloadImage(
+        imageUrl,
+        imageId,
+        downloadButton
+      );
+
+    };
+
+
+    /*
+      Handle unavailable thumbnails.
+    */
 
     image.onerror = function () {
 
-      this.style.display = "none";
+      image.style.display = "none";
 
-      const parent = this.closest(".thumbnail-preview");
+
+      const parent =
+        image.closest(".thumbnail-preview");
+
 
       if (parent) {
 
@@ -1293,126 +1584,217 @@
 
       }
 
+
+      /*
+        Disable download button.
+      */
+
+      downloadButton.disabled = true;
+
+    };
+
+
+    /*
+      Restore download button if image loads.
+    */
+
+    image.onload = function () {
+
+      downloadButton.disabled = false;
+
     };
 
   }
 
-  getThumbnail.addEventListener("click", function () {
 
-    const input = youtubeUrl.value.trim();
+  /* =========================
+     Get Thumbnail
+  ========================= */
 
-    hideMessage();
+  getThumbnail.addEventListener(
+    "click",
+    function () {
 
-    results.style.display = "none";
+      const input =
+        youtubeUrl.value.trim();
 
-    if (!input) {
 
-      showMessage(
-        "Please enter a YouTube video URL.",
-        "error"
+      hideMessage();
+
+      results.style.display = "none";
+
+
+      /*
+        Empty input
+      */
+
+      if (!input) {
+
+        showMessage(
+          "Please enter a YouTube video URL.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      /*
+        Extract video ID
+      */
+
+      const videoId =
+        extractVideoId(input);
+
+
+      if (!videoId) {
+
+        showMessage(
+          "Please enter a valid YouTube video URL.",
+          "error"
+        );
+
+        return;
+
+      }
+
+
+      /*
+        YouTube thumbnail URLs
+      */
+
+      const maxUrl =
+        "https://i.ytimg.com/vi/" +
+        videoId +
+        "/maxresdefault.jpg";
+
+
+      const hqUrl =
+        "https://i.ytimg.com/vi/" +
+        videoId +
+        "/hqdefault.jpg";
+
+
+      const standardUrl =
+        "https://i.ytimg.com/vi/" +
+        videoId +
+        "/sddefault.jpg";
+
+
+      const mediumUrl =
+        "https://i.ytimg.com/vi/" +
+        videoId +
+        "/mqdefault.jpg";
+
+
+      /*
+        Enable download buttons again.
+      */
+
+      document.getElementById(
+        "maxDownload"
+      ).disabled = false;
+
+
+      document.getElementById(
+        "hqDownload"
+      ).disabled = false;
+
+
+      document.getElementById(
+        "standardDownload"
+      ).disabled = false;
+
+
+      document.getElementById(
+        "mediumDownload"
+      ).disabled = false;
+
+
+      /*
+        Set thumbnails.
+      */
+
+      setThumbnail(
+        "maxImage",
+        maxUrl,
+        "maxOpen",
+        "maxDownload"
       );
 
-      return;
 
-    }
-
-    const videoId = extractVideoId(input);
-
-    if (!videoId) {
-
-      showMessage(
-        "Please enter a valid YouTube video URL.",
-        "error"
+      setThumbnail(
+        "hqImage",
+        hqUrl,
+        "hqOpen",
+        "hqDownload"
       );
 
-      return;
+
+      setThumbnail(
+        "standardImage",
+        standardUrl,
+        "standardOpen",
+        "standardDownload"
+      );
+
+
+      setThumbnail(
+        "mediumImage",
+        mediumUrl,
+        "mediumOpen",
+        "mediumDownload"
+      );
+
+
+      /*
+        Show results.
+      */
+
+      results.style.display = "block";
+
+
+      showMessage(
+        "Thumbnail images found. Choose the quality you want.",
+        "success"
+      );
+
+
+      /*
+        Scroll to results.
+      */
+
+      results.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
 
     }
+  );
 
-    /* YouTube thumbnail URLs */
 
-    const maxUrl =
-      "https://i.ytimg.com/vi/" + videoId + "/maxresdefault.jpg";
+  /* =========================
+     Enter Key
+  ========================= */
 
-    const hqUrl =
-      "https://i.ytimg.com/vi/" + videoId + "/hqdefault.jpg";
+  youtubeUrl.addEventListener(
+    "keydown",
+    function (event) {
 
-    const standardUrl =
-      "https://i.ytimg.com/vi/" + videoId + "/sddefault.jpg";
+      if (event.key === "Enter") {
 
-    const mediumUrl =
-      "https://i.ytimg.com/vi/" + videoId + "/mqdefault.jpg";
+        event.preventDefault();
 
-    /* Reset images */
+        getThumbnail.click();
 
-    document.getElementById("maxImage").style.display = "block";
-    document.getElementById("hqImage").style.display = "block";
-    document.getElementById("standardImage").style.display = "block";
-    document.getElementById("mediumImage").style.display = "block";
-
-    document.getElementById("maxImage").src = "";
-    document.getElementById("hqImage").src = "";
-    document.getElementById("standardImage").src = "";
-    document.getElementById("mediumImage").src = "";
-
-    setThumbnail(
-      "maxImage",
-      maxUrl,
-      "maxOpen",
-      "maxDownload"
-    );
-
-    setThumbnail(
-      "hqImage",
-      hqUrl,
-      "hqOpen",
-      "hqDownload"
-    );
-
-    setThumbnail(
-      "standardImage",
-      standardUrl,
-      "standardOpen",
-      "standardDownload"
-    );
-
-    setThumbnail(
-      "mediumImage",
-      mediumUrl,
-      "mediumOpen",
-      "mediumDownload"
-    );
-
-    resetImage("maxImage");
-    resetImage("hqImage");
-    resetImage("standardImage");
-    resetImage("mediumImage");
-
-    results.style.display = "block";
-
-    showMessage(
-      "Thumbnail images found. Choose the quality you want.",
-      "success"
-    );
-
-    results.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-
-  });
-
-  youtubeUrl.addEventListener("keydown", function (event) {
-
-    if (event.key === "Enter") {
-
-      getThumbnail.click();
+      }
 
     }
-
-  });
+  );
 
 </script>
 
 </body>
 </html>
+
