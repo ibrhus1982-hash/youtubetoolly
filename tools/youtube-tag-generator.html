@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,39 +21,60 @@
   <link rel="canonical"
     href="https://www.youtubetoolly.com/tools/youtube-tag-generator.html">
 
+
   <!-- Open Graph -->
+
   <meta property="og:type" content="website">
+
   <meta property="og:title"
     content="YouTube Tag Generator - Generate SEO Tags Free | YouTubeToolly">
+
   <meta property="og:description"
     content="Generate relevant YouTube tags for your videos quickly and easily with YouTubeToolly.">
+
   <meta property="og:url"
     content="https://www.youtubetoolly.com/tools/youtube-tag-generator.html">
+
   <meta property="og:site_name" content="YouTubeToolly">
 
+
   <!-- Twitter -->
+
   <meta name="twitter:card" content="summary">
+
   <meta name="twitter:title"
     content="YouTube Tag Generator - Generate SEO Tags Free | YouTubeToolly">
+
   <meta name="twitter:description"
     content="Generate useful YouTube tags for your videos for free.">
 
+
   <meta name="theme-color" content="#0f172a">
 
+
   <!-- Favicon -->
+
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M25 19L48 32L25 45Z' fill='white'/%3E%3Ccircle cx='48' cy='18' r='7' fill='%23ef4444' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
 
+
   <!-- Google Font -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
+
   <!-- Schema -->
-  <script type="application/ld+json" id="q5twg9">
+
+  <script type="application/ld+json">
+
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -67,676 +89,1220 @@
       "priceCurrency": "USD"
     }
   }
+
   </script>
 
-  <style id="dyfknw">
+
+  <style>
 
     :root {
+
       --bg: #f8fafc;
       --white: #ffffff;
       --dark: #0f172a;
       --text: #1e293b;
       --muted: #64748b;
       --border: #e2e8f0;
+
       --red: #ef4444;
       --red-dark: #dc2626;
+
       --blue: #2563eb;
+
       --soft-red: #fef2f2;
       --soft-blue: #eff6ff;
+
       --green: #16a34a;
-      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+
+      --shadow:
+        0 10px 30px rgba(15, 23, 42, .07);
+
       --radius: 18px;
+
     }
+
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
+
 
     html {
+
       scroll-behavior: smooth;
+
     }
+
 
     body {
+
       font-family: "Inter", sans-serif;
+
       background: var(--bg);
+
       color: var(--text);
+
       line-height: 1.7;
+
     }
+
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
 
+
     .container {
+
       width: min(1180px, 92%);
+
       margin: auto;
+
     }
+
 
     /* ================= HEADER ================= */
 
     header {
+
       background: rgba(255, 255, 255, .94);
+
       backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--border);
+
       position: sticky;
+
       top: 0;
+
       z-index: 100;
+
     }
+
 
     .nav {
+
       height: 74px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
     }
+
 
     .brand {
+
       display: flex;
+
       align-items: center;
+
       gap: 11px;
+
       font-size: 20px;
+
       font-weight: 800;
+
       color: var(--dark);
+
     }
+
 
     .brand span {
+
       color: var(--red);
+
     }
+
 
     .brand-icon {
+
       width: 42px;
+
       height: 42px;
+
       border-radius: 13px;
+
       background: var(--dark);
+
       position: relative;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
     }
+
 
     .brand-icon::before {
+
       content: "";
+
       width: 0;
+
       height: 0;
+
       border-top: 9px solid transparent;
+
       border-bottom: 9px solid transparent;
+
       border-left: 15px solid white;
+
       margin-left: 3px;
+
     }
+
 
     .brand-icon::after {
+
       content: "";
+
       position: absolute;
+
       width: 10px;
+
       height: 10px;
+
       border-radius: 50%;
+
       background: var(--red);
+
       top: 5px;
+
       right: 5px;
+
       border: 2px solid white;
+
     }
+
 
     nav {
+
       display: flex;
+
       align-items: center;
+
       gap: 28px;
+
     }
+
 
     nav a {
+
       color: var(--muted);
+
       font-size: 14px;
+
       font-weight: 600;
+
       transition: .2s;
+
     }
+
 
     nav a:hover {
+
       color: var(--dark);
+
     }
+
 
     .nav-button {
+
       background: var(--dark);
+
       color: white !important;
+
       padding: 10px 16px;
+
       border-radius: 10px;
+
     }
 
+
     .nav-button:hover {
+
       background: #1e293b;
+
     }
+
 
     /* ================= HERO ================= */
 
     .hero {
+
       padding: 75px 0 65px;
+
       background:
-        radial-gradient(circle at 20% 20%,
+
+        radial-gradient(
+          circle at 20% 20%,
           rgba(239, 68, 68, .08),
-          transparent 32%),
-        radial-gradient(circle at 80% 30%,
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 80% 30%,
           rgba(37, 99, 235, .08),
-          transparent 32%),
+          transparent 32%
+        ),
+
         var(--white);
+
       border-bottom: 1px solid var(--border);
+
     }
+
 
     .hero-content {
+
       max-width: 850px;
+
       margin: auto;
+
       text-align: center;
+
     }
+
 
     .badge {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 8px;
+
       padding: 8px 13px;
+
       background: var(--soft-red);
+
       color: var(--red-dark);
+
       border: 1px solid #fee2e2;
+
       border-radius: 999px;
+
       font-size: 13px;
+
       font-weight: 700;
+
       margin-bottom: 22px;
+
     }
+
 
     .badge-dot {
+
       width: 8px;
+
       height: 8px;
+
       background: var(--red);
+
       border-radius: 50%;
+
     }
+
 
     h1 {
+
       font-size: clamp(36px, 6vw, 60px);
+
       line-height: 1.08;
+
       letter-spacing: -2.5px;
+
       color: var(--dark);
+
       margin-bottom: 20px;
+
       font-weight: 800;
+
     }
+
 
     .highlight {
+
       color: var(--red);
+
     }
 
+
     .hero p {
+
       max-width: 700px;
+
       margin: auto;
+
       color: var(--muted);
+
       font-size: 17px;
+
     }
+
 
     /* ================= TOOL ================= */
 
     .tool-section {
+
       padding: 65px 0;
+
     }
+
 
     .tool-box {
+
       max-width: 850px;
+
       margin: auto;
+
       background: var(--white);
+
       border: 1px solid var(--border);
+
       border-radius: 22px;
+
       box-shadow: var(--shadow);
+
       padding: 32px;
+
     }
+
 
     .tool-title {
+
       text-align: center;
+
       margin-bottom: 28px;
+
     }
+
 
     .tool-title h2 {
+
       color: var(--dark);
+
       font-size: 26px;
+
       margin-bottom: 7px;
+
     }
+
 
     .tool-title p {
+
       color: var(--muted);
+
       font-size: 14px;
+
     }
+
 
     .field {
+
       margin-bottom: 18px;
+
     }
 
+
     .field label {
+
       display: block;
+
       margin-bottom: 8px;
+
       color: var(--dark);
+
       font-size: 14px;
+
       font-weight: 700;
+
     }
+
 
     .field input,
     .field textarea,
     .field select {
+
       width: 100%;
+
       border: 1px solid var(--border);
+
       border-radius: 12px;
+
       padding: 13px 14px;
+
       font-family: inherit;
+
       font-size: 14px;
+
       color: var(--text);
+
       background: white;
+
       outline: none;
+
       transition: .2s;
+
     }
 
+
     .field textarea {
+
       min-height: 110px;
+
       resize: vertical;
+
     }
+
 
     .field input:focus,
     .field textarea:focus,
     .field select:focus {
+
       border-color: var(--blue);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, .08);
+
+      box-shadow:
+        0 0 0 3px rgba(37, 99, 235, .08);
+
     }
+
 
     .generate-button {
+
       width: 100%;
+
       border: none;
+
       background: var(--red);
+
       color: white;
+
       padding: 14px 20px;
+
       border-radius: 12px;
+
       font-family: inherit;
+
       font-size: 15px;
+
       font-weight: 700;
+
       cursor: pointer;
+
       transition: .2s;
+
       margin-top: 4px;
+
     }
+
 
     .generate-button:hover {
+
       background: var(--red-dark);
+
       transform: translateY(-1px);
+
     }
+
 
     .message {
+
       display: none;
+
       padding: 12px 14px;
+
       border-radius: 10px;
+
       margin-top: 18px;
+
       font-size: 14px;
+
       font-weight: 600;
+
     }
+
 
     .message.error {
+
       background: var(--soft-red);
+
       color: #b91c1c;
+
       border: 1px solid #fecaca;
+
     }
 
+
     .message.success {
+
       background: #f0fdf4;
+
       color: #15803d;
+
       border: 1px solid #bbf7d0;
+
     }
+
 
     /* ================= RESULTS ================= */
 
     .results {
+
       display: none;
+
       margin-top: 28px;
+
       padding-top: 28px;
+
       border-top: 1px solid var(--border);
+
     }
+
 
     .results-header {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 15px;
+
       margin-bottom: 15px;
+
     }
+
 
     .results-header h3 {
+
       color: var(--dark);
+
       font-size: 19px;
+
     }
+
 
     .stats {
+
       display: flex;
+
       gap: 10px;
+
       flex-wrap: wrap;
+
     }
+
 
     .stat {
+
       background: var(--soft-blue);
+
       color: var(--blue);
+
       border: 1px solid #dbeafe;
+
       border-radius: 9px;
+
       padding: 6px 10px;
+
       font-size: 12px;
+
       font-weight: 700;
+
     }
 
-    .output-box {
-      position: relative;
-    }
 
     #tagOutput {
+
       width: 100%;
+
       min-height: 125px;
+
       resize: vertical;
+
       border: 1px solid var(--border);
+
       border-radius: 12px;
+
       padding: 14px;
+
       font-family: inherit;
+
       font-size: 14px;
+
       line-height: 1.7;
+
       color: var(--text);
+
       outline: none;
+
       background: #fff;
+
     }
+
 
     #tagOutput:focus {
+
       border-color: var(--blue);
+
     }
+
 
     .copy-all {
+
       width: 100%;
+
       border: none;
+
       background: var(--dark);
+
       color: white;
+
       padding: 12px 18px;
+
       border-radius: 10px;
+
       font-family: inherit;
+
       font-size: 14px;
+
       font-weight: 700;
+
       cursor: pointer;
+
       margin-top: 10px;
+
       transition: .2s;
+
     }
+
 
     .copy-all:hover {
+
       background: #1e293b;
+
     }
+
 
     .tags-title {
+
       color: var(--dark);
+
       font-size: 15px;
+
       font-weight: 700;
+
       margin: 25px 0 12px;
+
     }
+
 
     .tag-list {
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 9px;
+
     }
+
 
     .tag-chip {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 7px;
+
       background: var(--bg);
+
       border: 1px solid var(--border);
+
       border-radius: 999px;
+
       padding: 7px 8px 7px 12px;
+
       font-size: 12px;
+
       color: var(--text);
+
       font-weight: 600;
+
     }
+
 
     .tag-chip button {
-      border: none;
-      background: white;
+
       border: 1px solid var(--border);
+
+      background: white;
+
       color: var(--blue);
+
       border-radius: 7px;
+
       padding: 3px 7px;
+
       cursor: pointer;
+
       font-size: 11px;
+
       font-weight: 700;
+
     }
+
 
     .tag-chip button:hover {
+
       background: var(--soft-blue);
+
     }
+
 
     .result-actions {
+
       display: flex;
+
       gap: 10px;
+
       margin-top: 18px;
+
     }
+
 
     .secondary-button {
+
       flex: 1;
+
       border: 1px solid var(--border);
+
       background: white;
+
       color: var(--dark);
+
       padding: 11px 15px;
+
       border-radius: 10px;
+
       font-family: inherit;
+
       font-size: 13px;
+
       font-weight: 700;
+
       cursor: pointer;
+
       transition: .2s;
+
     }
 
+
     .secondary-button:hover {
+
       background: var(--bg);
+
     }
+
+
+    .secondary-button:active,
+    .generate-button:active,
+    .copy-all:active {
+
+      transform: scale(.98);
+
+    }
+
 
     /* ================= INFO ================= */
 
     .info-section {
+
       padding: 70px 0;
+
       background: white;
+
     }
+
 
     .content-box {
+
       max-width: 900px;
+
       margin: auto;
+
     }
+
 
     .content-box h2 {
+
       color: var(--dark);
+
       font-size: 30px;
+
       margin-bottom: 15px;
+
     }
+
 
     .content-box h3 {
+
       color: var(--dark);
+
       font-size: 20px;
+
       margin-top: 30px;
+
       margin-bottom: 10px;
+
     }
+
 
     .content-box p {
+
       color: var(--muted);
+
       margin-bottom: 14px;
+
     }
+
 
     .content-box ul {
+
       margin: 12px 0 18px 22px;
+
       color: var(--muted);
+
     }
+
 
     .content-box li {
+
       margin-bottom: 8px;
+
     }
 
+
     .tip-box {
+
       background: var(--soft-blue);
+
       border: 1px solid #dbeafe;
+
       border-radius: 14px;
+
       padding: 16px 18px;
+
       color: #1d4ed8;
+
       font-size: 14px;
+
       margin-top: 22px;
+
     }
+
 
     /* ================= FAQ ================= */
 
     .faq-section {
+
       padding: 70px 0;
+
       background: var(--bg);
+
     }
+
 
     .faq-title {
+
       text-align: center;
+
       margin-bottom: 35px;
+
     }
+
 
     .faq-title h2 {
+
       color: var(--dark);
+
       font-size: 30px;
+
       margin-bottom: 8px;
+
     }
+
 
     .faq-title p {
+
       color: var(--muted);
+
     }
+
 
     .faq-list {
+
       max-width: 850px;
+
       margin: auto;
+
       display: grid;
+
       gap: 12px;
+
     }
+
 
     .faq-item {
+
       background: white;
+
       border: 1px solid var(--border);
+
       border-radius: 14px;
+
       padding: 20px 22px;
+
     }
+
 
     .faq-item h3 {
+
       color: var(--dark);
+
       font-size: 16px;
+
       margin-bottom: 7px;
+
     }
 
+
     .faq-item p {
+
       color: var(--muted);
+
       font-size: 14px;
+
     }
+
 
     /* ================= FOOTER ================= */
 
     footer {
+
       background: #020617;
+
       color: white;
+
       padding: 55px 0 25px;
+
     }
+
 
     .footer-grid {
+
       display: grid;
+
       grid-template-columns: 2fr 1fr 1fr;
+
       gap: 45px;
+
     }
+
 
     .footer-brand p {
+
       color: #94a3b8;
+
       max-width: 420px;
+
       margin-top: 14px;
+
       font-size: 14px;
+
     }
+
 
     .footer-title {
+
       font-size: 14px;
+
       font-weight: 700;
+
       margin-bottom: 15px;
+
     }
+
 
     .footer-links {
+
       display: grid;
+
       gap: 9px;
+
     }
+
 
     .footer-links a {
+
       color: #94a3b8;
+
       font-size: 13px;
+
     }
+
 
     .footer-links a:hover {
+
       color: white;
+
     }
+
 
     .copyright {
+
       border-top: 1px solid #1e293b;
+
       margin-top: 40px;
+
       padding-top: 22px;
+
       color: #64748b;
+
       font-size: 12px;
+
       text-align: center;
+
     }
 
+
     .disclaimer {
+
       max-width: 800px;
+
       margin: 8px auto 0;
+
       color: #475569;
+
       font-size: 11px;
+
       text-align: center;
+
     }
+
 
     /* ================= MOBILE ================= */
 
     @media (max-width: 700px) {
 
       .nav {
+
         height: 68px;
+
       }
+
 
       nav {
+
         display: none;
+
       }
+
 
       .hero {
+
         padding: 55px 0 50px;
+
       }
+
 
       h1 {
+
         letter-spacing: -1.5px;
+
       }
+
 
       .hero p {
+
         font-size: 15px;
+
       }
+
 
       .tool-section {
+
         padding: 45px 0;
+
       }
+
 
       .tool-box {
+
         padding: 22px;
+
       }
+
 
       .results-header {
+
         align-items: flex-start;
+
         flex-direction: column;
+
       }
+
 
       .result-actions {
+
         flex-direction: column;
+
       }
 
+
       .footer-grid {
+
         grid-template-columns: 1fr;
+
         gap: 30px;
+
       }
+
 
       .info-section,
       .faq-section {
+
         padding: 50px 0;
+
       }
+
     }
 
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- ================= HEADER ================= -->
 
@@ -752,13 +1318,20 @@
 
       </a>
 
+
       <nav>
 
-        <a href="/#tools">Tools</a>
+        <a href="/#tools">
+          Tools
+        </a>
 
-        <a href="/#why">Why YouTubeToolly</a>
+        <a href="/#why">
+          Why YouTubeToolly
+        </a>
 
-        <a href="/#about">About</a>
+        <a href="/#about">
+          About
+        </a>
 
         <a href="/#tools" class="nav-button">
           Explore Tools
@@ -778,18 +1351,30 @@
     <div class="container hero-content">
 
       <div class="badge">
+
         <span class="badge-dot"></span>
+
         Free YouTube Creator Tool
+
       </div>
 
+
       <h1>
+
         YouTube Tag<br>
-        <span class="highlight">Generator</span>
+
+        <span class="highlight">
+          Generator
+        </span>
+
       </h1>
 
+
       <p>
+
         Generate relevant YouTube tags for your videos quickly and easily.
         Enter your video title, topic and keywords to create useful tag ideas.
+
       </p>
 
     </div>
@@ -804,6 +1389,7 @@
     <div class="container">
 
       <div class="tool-box">
+
 
         <div class="tool-title">
 
@@ -919,6 +1505,7 @@
 
 
         <button
+          type="button"
           class="generate-button"
           id="generateButton">
 
@@ -945,20 +1532,35 @@
           class="results"
           id="results">
 
+
           <div class="results-header">
 
             <h3>
               Generated YouTube Tags
             </h3>
 
+
             <div class="stats">
 
               <div class="stat">
-                <span id="tagCount">0</span> Tags
+
+                <span id="tagCount">
+                  0
+                </span>
+
+                Tags
+
               </div>
 
+
               <div class="stat">
-                <span id="characterCount">0</span> Characters
+
+                <span id="characterCount">
+                  0
+                </span>
+
+                Characters
+
               </div>
 
             </div>
@@ -966,16 +1568,13 @@
           </div>
 
 
-          <div class="output-box">
-
-            <textarea
-              id="tagOutput"
-              spellcheck="false"></textarea>
-
-          </div>
+          <textarea
+            id="tagOutput"
+            spellcheck="false"></textarea>
 
 
           <button
+            type="button"
             class="copy-all"
             id="copyAllButton">
 
@@ -985,7 +1584,9 @@
 
 
           <div class="tags-title">
+
             Individual Tags
+
           </div>
 
 
@@ -998,6 +1599,7 @@
           <div class="result-actions">
 
             <button
+              type="button"
               class="secondary-button"
               id="generateAgainButton">
 
@@ -1005,7 +1607,9 @@
 
             </button>
 
+
             <button
+              type="button"
               class="secondary-button"
               id="clearButton">
 
@@ -1036,16 +1640,22 @@
           YouTube Tag Generator
         </h2>
 
+
         <p>
+
           YouTubeToolly's YouTube Tag Generator helps creators quickly
           create a useful list of tags based on their video title,
           topic, and keywords.
+
         </p>
 
+
         <p>
+
           The generated tags are designed to help describe the subject
           of your video and give you relevant keyword ideas that you
           can review and edit before adding them to YouTube.
+
         </p>
 
 
@@ -1053,22 +1663,29 @@
           Why Use YouTube Tags?
         </h3>
 
+
         <p>
+
           YouTube tags can help describe the content and topic of a video.
           Relevant tags can provide additional context about what your
           video is about, especially when your topic can be described
           using different words or phrases.
+
         </p>
 
+
         <p>
+
           The most important thing is relevance. Avoid adding unrelated
           keywords simply to increase the number of tags.
+
         </p>
 
 
         <h3>
           How to Use the YouTube Tag Generator
         </h3>
+
 
         <ul>
 
@@ -1103,6 +1720,7 @@
           Tips for Better YouTube Tags
         </h3>
 
+
         <ul>
 
           <li>
@@ -1134,7 +1752,10 @@
 
         <div class="tip-box">
 
-          <strong>Tip:</strong>
+          <strong>
+            Tip:
+          </strong>
+
           Choose relevant tags instead of trying to fill your tag list
           with as many keywords as possible.
 
@@ -1145,10 +1766,13 @@
           Free and Browser-Based
         </h3>
 
+
         <p>
+
           This tool works directly in your browser and does not require
           an external AI API. Your video information is processed locally
           by the page and is not uploaded to a server by this tool.
+
         </p>
 
       </div>
@@ -1163,6 +1787,7 @@
   <section class="faq-section" id="why">
 
     <div class="container">
+
 
       <div class="faq-title">
 
@@ -1291,7 +1916,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -1318,10 +1942,13 @@
 
           </a>
 
+
           <p>
+
             Free and simple online tools for YouTube creators.
             Create better content, optimize your workflow,
             and save time.
+
           </p>
 
         </div>
@@ -1332,6 +1959,7 @@
           <div class="footer-title">
             Tools
           </div>
+
 
           <div class="footer-links">
 
@@ -1362,6 +1990,7 @@
             YouTubeToolly
           </div>
 
+
           <div class="footer-links">
 
             <a href="/#tools">
@@ -1383,7 +2012,6 @@
           </div>
 
         </div>
-
 
       </div>
 
@@ -1411,35 +2039,69 @@
 
   <script>
 
-    const videoTitle = document.getElementById("videoTitle");
-    const videoTopic = document.getElementById("videoTopic");
-    const keywordsInput = document.getElementById("keywords");
-    const contentType = document.getElementById("contentType");
+    /* ================= ELEMENTS ================= */
 
-    const generateButton = document.getElementById("generateButton");
+    const videoTitle =
+      document.getElementById("videoTitle");
 
-    const results = document.getElementById("results");
-    const tagOutput = document.getElementById("tagOutput");
-    const tagList = document.getElementById("tagList");
+    const videoTopic =
+      document.getElementById("videoTopic");
 
-    const tagCount = document.getElementById("tagCount");
-    const characterCount = document.getElementById("characterCount");
+    const keywordsInput =
+      document.getElementById("keywords");
 
-    const errorMessage = document.getElementById("errorMessage");
-    const successMessage = document.getElementById("successMessage");
+    const contentType =
+      document.getElementById("contentType");
 
-    const copyAllButton = document.getElementById("copyAllButton");
+
+    const generateButton =
+      document.getElementById("generateButton");
+
     const generateAgainButton =
       document.getElementById("generateAgainButton");
+
     const clearButton =
       document.getElementById("clearButton");
+
+
+    const results =
+      document.getElementById("results");
+
+    const tagOutput =
+      document.getElementById("tagOutput");
+
+    const tagList =
+      document.getElementById("tagList");
+
+
+    const tagCount =
+      document.getElementById("tagCount");
+
+    const characterCount =
+      document.getElementById("characterCount");
+
+
+    const errorMessage =
+      document.getElementById("errorMessage");
+
+    const successMessage =
+      document.getElementById("successMessage");
+
+
+    const copyAllButton =
+      document.getElementById("copyAllButton");
+
+
+    /* ================= GENERATION ROUND ================= */
+
+    let generationRound = 0;
 
 
     /* ================= HELPERS ================= */
 
     function cleanText(text) {
 
-      return text
+      return String(text || "")
         .replace(/\s+/g, " ")
         .replace(/[<>]/g, "")
         .trim();
@@ -1447,19 +2109,9 @@
     }
 
 
-    function removePunctuation(text) {
+    function addTag(tags, tag) {
 
-      return text
-        .replace(/[|{}[\]<>]/g, "")
-        .replace(/\s+/g, " ")
-        .trim();
-
-    }
-
-
-    function addTag(array, tag) {
-
-      tag = removePunctuation(cleanText(tag));
+      tag = cleanText(tag);
 
       if (!tag) {
         return;
@@ -1469,12 +2121,20 @@
         return;
       }
 
-      const exists = array.some(
-        item => item.toLowerCase() === tag.toLowerCase()
-      );
+      if (tag.length > 100) {
+        tag = tag.substring(0, 100).trim();
+      }
+
+      const exists =
+        tags.some(
+          item =>
+            item.toLowerCase() === tag.toLowerCase()
+        );
 
       if (!exists) {
-        array.push(tag);
+
+        tags.push(tag);
+
       }
 
     }
@@ -1482,12 +2142,13 @@
 
     function getKeywordList() {
 
-      const raw = keywordsInput.value
-        .split(",")
-        .map(item => cleanText(item))
-        .filter(Boolean);
+      return keywordsInput.value
 
-      return raw;
+        .split(",")
+
+        .map(keyword => cleanText(keyword))
+
+        .filter(keyword => keyword.length > 0);
 
     }
 
@@ -1495,50 +2156,638 @@
     function getMainPhrase(title, topic, keywords) {
 
       if (keywords.length > 0) {
+
         return keywords[0];
+
       }
+
 
       if (title) {
 
-        const words = title
-          .replace(/[^\p{L}\p{N}\s]/gu, "")
-          .split(/\s+/)
-          .filter(word => word.length > 2);
+        const words =
+          title
+            .replace(/[^\p{L}\p{N}\s]/gu, "")
+            .split(/\s+/)
+            .filter(word => word.length > 2);
 
-        return words.slice(0, 4).join(" ");
+        return words
+          .slice(0, 4)
+          .join(" ");
 
       }
+
 
       if (topic) {
 
-        const words = topic
-          .replace(/[^\p{L}\p{N}\s]/gu, "")
-          .split(/\s+/)
-          .filter(word => word.length > 2);
+        const words =
+          topic
+            .replace(/[^\p{L}\p{N}\s]/gu, "")
+            .split(/\s+/)
+            .filter(word => word.length > 2);
 
-        return words.slice(0, 4).join(" ");
+        return words
+          .slice(0, 4)
+          .join(" ");
 
       }
+
 
       return "YouTube";
 
     }
 
 
-    /* ================= GENERATOR ================= */
+    function shuffle(array) {
 
-    function generateTags() {
+      const result =
+        [...array];
 
-      hideMessages();
+      for (
+        let i = result.length - 1;
+        i > 0;
+        i--
+      ) {
 
-      const title = cleanText(videoTitle.value);
-      const topic = cleanText(videoTopic.value);
-      const keywords = getKeywordList();
+        const j =
+          Math.floor(Math.random() * (i + 1));
 
-      if (!title && !topic && keywords.length === 0) {
+        [
+          result[i],
+          result[j]
+        ] =
+        [
+          result[j],
+          result[i]
+        ];
+
+      }
+
+      return result;
+
+    }
+
+
+    /* ================= GENERATE TAGS ================= */
+
+    function buildTags() {
+
+      const title =
+        cleanText(videoTitle.value);
+
+      const topic =
+        cleanText(videoTopic.value);
+
+      const keywords =
+        getKeywordList();
+
+
+      if (
+        !title &&
+        !topic &&
+        keywords.length === 0
+      ) {
 
         showError(
           "Please enter your video title, topic, or at least one keyword."
+        );
+
+        return null;
+
+      }
+
+
+      const tags = [];
+
+
+      const mainPhrase =
+        getMainPhrase(
+          title,
+          topic,
+          keywords
+        );
+
+
+      /* ================= KEYWORDS ================= */
+
+      keywords.forEach(keyword => {
+
+        addTag(tags, keyword);
+
+        addTag(
+          tags,
+          keyword + " tips"
+        );
+
+        addTag(
+          tags,
+          keyword + " guide"
+        );
+
+        addTag(
+          tags,
+          keyword + " ideas"
+        );
+
+        addTag(
+          tags,
+          keyword + " video"
+        );
+
+      });
+
+
+      /* ================= TITLE ================= */
+
+      if (title) {
+
+        addTag(tags, title);
+
+
+        const titleWords =
+          title
+            .replace(/[^\p{L}\p{N}\s]/gu, "")
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+
+        if (titleWords.length >= 2) {
+
+          addTag(
+            tags,
+            titleWords
+              .slice(0, 2)
+              .join(" ")
+          );
+
+
+          addTag(
+            tags,
+            titleWords
+              .slice(0, 3)
+              .join(" ")
+          );
+
+
+          addTag(
+            tags,
+            titleWords
+              .slice(-2)
+              .join(" ")
+          );
+
+        }
+
+      }
+
+
+      /* ================= TOPIC ================= */
+
+      if (topic) {
+
+        addTag(tags, topic);
+
+
+        const topicWords =
+          topic
+            .replace(/[^\p{L}\p{N}\s]/gu, "")
+            .split(/\s+/)
+            .filter(word => word.length > 2);
+
+
+        if (topicWords.length >= 2) {
+
+          addTag(
+            tags,
+            topicWords
+              .slice(0, 2)
+              .join(" ")
+          );
+
+
+          addTag(
+            tags,
+            topicWords
+              .slice(0, 3)
+              .join(" ")
+          );
+
+        }
+
+      }
+
+
+      /* ================= CONTENT TYPE ================= */
+
+      switch (contentType.value) {
+
+
+        case "tutorial":
+
+          addTag(
+            tags,
+            "how to " + mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " tutorial"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " guide"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " tips"
+          );
+
+          addTag(
+            tags,
+            "step by step " + mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " how to"
+          );
+
+          break;
+
+
+        case "list":
+
+          addTag(
+            tags,
+            "best " + mainPhrase
+          );
+
+          addTag(
+            tags,
+            "top " + mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " tips"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " ideas"
+          );
+
+          addTag(
+            tags,
+            "best tips"
+          );
+
+          addTag(
+            tags,
+            "top tips"
+          );
+
+          break;
+
+
+        case "review":
+
+          addTag(
+            tags,
+            mainPhrase + " review"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " test"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " experience"
+          );
+
+          addTag(
+            tags,
+            "honest " +
+            mainPhrase +
+            " review"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " review 2026"
+          );
+
+          break;
+
+
+        case "facts":
+
+          addTag(
+            tags,
+            mainPhrase + " facts"
+          );
+
+          addTag(
+            tags,
+            "interesting " +
+            mainPhrase +
+            " facts"
+          );
+
+          addTag(
+            tags,
+            "facts about " +
+            mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " information"
+          );
+
+          addTag(
+            tags,
+            "interesting facts"
+          );
+
+          addTag(
+            tags,
+            "did you know"
+          );
+
+          break;
+
+
+        case "story":
+
+          addTag(
+            tags,
+            mainPhrase + " story"
+          );
+
+          addTag(
+            tags,
+            "my " +
+            mainPhrase +
+            " story"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " experience"
+          );
+
+          addTag(
+            tags,
+            "real life story"
+          );
+
+          break;
+
+
+        case "news":
+
+          addTag(
+            tags,
+            mainPhrase + " news"
+          );
+
+          addTag(
+            tags,
+            mainPhrase + " update"
+          );
+
+          addTag(
+            tags,
+            "latest " +
+            mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " updates"
+          );
+
+          addTag(
+            tags,
+            "latest news"
+          );
+
+          break;
+
+
+        case "comparison":
+
+          addTag(
+            tags,
+            mainPhrase +
+            " comparison"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " vs"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " differences"
+          );
+
+          addTag(
+            tags,
+            "best " +
+            mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " comparison 2026"
+          );
+
+          break;
+
+
+        case "shorts":
+
+          addTag(
+            tags,
+            mainPhrase +
+            " shorts"
+          );
+
+          addTag(
+            tags,
+            "youtube shorts " +
+            mainPhrase
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " short video"
+          );
+
+          addTag(
+            tags,
+            "shorts video"
+          );
+
+          addTag(
+            tags,
+            "viral shorts"
+          );
+
+          addTag(
+            tags,
+            "youtube shorts"
+          );
+
+          break;
+
+
+        default:
+
+          addTag(
+            tags,
+            mainPhrase +
+            " tips"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " guide"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " ideas"
+          );
+
+          addTag(
+            tags,
+            mainPhrase +
+            " videos"
+          );
+
+          addTag(
+            tags,
+            "YouTube tips"
+          );
+
+          break;
+
+      }
+
+
+      /* ================= GENERAL TAGS ================= */
+
+      addTag(
+        tags,
+        "YouTube"
+      );
+
+      addTag(
+        tags,
+        "YouTube SEO"
+      );
+
+      addTag(
+        tags,
+        "YouTube tags"
+      );
+
+      addTag(
+        tags,
+        "YouTube video"
+      );
+
+
+      /* ================= VARIATION ================= */
+
+      const variations = [];
+
+
+      if (generationRound % 2 === 0) {
+
+        variations.push(
+          mainPhrase + " channel"
+        );
+
+        variations.push(
+          mainPhrase + " creator"
+        );
+
+        variations.push(
+          mainPhrase + " content"
+        );
+
+        variations.push(
+          mainPhrase + " online"
+        );
+
+      } else {
+
+        variations.push(
+          "learn " + mainPhrase
+        );
+
+        variations.push(
+          mainPhrase + " explained"
+        );
+
+        variations.push(
+          mainPhrase + " beginner guide"
+        );
+
+        variations.push(
+          mainPhrase + " helpful tips"
+        );
+
+      }
+
+
+      variations.forEach(tag => {
+
+        addTag(tags, tag);
+
+      });
+
+
+      /*
+        Shuffle only after all relevant tags
+        have been generated.
+      */
+
+      const shuffled =
+        shuffle(tags);
+
+
+      return shuffled.slice(0, 30);
+
+    }
+
+
+    /* ================= DISPLAY ================= */
+
+    function displayResults(tags) {
+
+      if (!tags || tags.length === 0) {
+
+        showError(
+          "No tags could be generated. Please add more information."
         );
 
         return;
@@ -1546,291 +2795,83 @@
       }
 
 
-      const tags = [];
+      const output =
+        tags.join(", ");
 
-      const mainPhrase =
-        getMainPhrase(title, topic, keywords);
 
+      tagOutput.value =
+        output;
 
-      /* Main keywords */
 
-      keywords.forEach(keyword => {
+      tagCount.textContent =
+        tags.length;
 
-        addTag(tags, keyword);
 
-        addTag(tags, keyword + " tips");
+      characterCount.textContent =
+        output.length;
 
-        addTag(tags, keyword + " guide");
 
-        addTag(tags, keyword + " ideas");
-
-      });
-
-
-      /* Video title */
-
-      if (title) {
-
-        addTag(tags, title);
-
-        const titleWords = title
-          .replace(/[^\p{L}\p{N}\s]/gu, "")
-          .split(/\s+/)
-          .filter(word => word.length > 2);
-
-        if (titleWords.length >= 2) {
-
-          addTag(
-            tags,
-            titleWords.slice(0, 2).join(" ")
-          );
-
-          addTag(
-            tags,
-            titleWords.slice(0, 3).join(" ")
-          );
-
-          addTag(
-            tags,
-            titleWords.slice(-2).join(" ")
-          );
-
-        }
-
-      }
-
-
-      /* Topic */
-
-      if (topic) {
-
-        addTag(tags, topic);
-
-        const topicWords = topic
-          .replace(/[^\p{L}\p{N}\s]/gu, "")
-          .split(/\s+/)
-          .filter(word => word.length > 2);
-
-        if (topicWords.length >= 2) {
-
-          addTag(
-            tags,
-            topicWords.slice(0, 3).join(" ")
-          );
-
-        }
-
-      }
-
-
-      /* Content type */
-
-      switch (contentType.value) {
-
-        case "tutorial":
-
-          addTag(tags, "how to " + mainPhrase);
-
-          addTag(tags, mainPhrase + " tutorial");
-
-          addTag(tags, mainPhrase + " guide");
-
-          addTag(tags, mainPhrase + " tips");
-
-          addTag(tags, "step by step " + mainPhrase);
-
-          break;
-
-
-        case "list":
-
-          addTag(tags, "best " + mainPhrase);
-
-          addTag(tags, "top " + mainPhrase);
-
-          addTag(tags, mainPhrase + " tips");
-
-          addTag(tags, mainPhrase + " ideas");
-
-          addTag(tags, "best tips");
-
-          break;
-
-
-        case "review":
-
-          addTag(tags, mainPhrase + " review");
-
-          addTag(tags, mainPhrase + " test");
-
-          addTag(tags, mainPhrase + " experience");
-
-          addTag(tags, "honest " + mainPhrase + " review");
-
-          addTag(tags, mainPhrase + " review 2026");
-
-          break;
-
-
-        case "facts":
-
-          addTag(tags, mainPhrase + " facts");
-
-          addTag(tags, "interesting " + mainPhrase + " facts");
-
-          addTag(tags, "facts about " + mainPhrase);
-
-          addTag(tags, mainPhrase + " information");
-
-          addTag(tags, "interesting facts");
-
-          break;
-
-
-        case "story":
-
-          addTag(tags, mainPhrase + " story");
-
-          addTag(tags, "my " + mainPhrase + " story");
-
-          addTag(tags, mainPhrase + " experience");
-
-          addTag(tags, "real life story");
-
-          break;
-
-
-        case "news":
-
-          addTag(tags, mainPhrase + " news");
-
-          addTag(tags, mainPhrase + " update");
-
-          addTag(tags, "latest " + mainPhrase);
-
-          addTag(tags, mainPhrase + " updates");
-
-          addTag(tags, "latest news");
-
-          break;
-
-
-        case "comparison":
-
-          addTag(tags, mainPhrase + " comparison");
-
-          addTag(tags, mainPhrase + " vs");
-
-          addTag(tags, mainPhrase + " differences");
-
-          addTag(tags, "best " + mainPhrase);
-
-          addTag(tags, mainPhrase + " comparison 2026");
-
-          break;
-
-
-        case "shorts":
-
-          addTag(tags, mainPhrase + " shorts");
-
-          addTag(tags, "youtube shorts " + mainPhrase);
-
-          addTag(tags, mainPhrase + " short video");
-
-          addTag(tags, "shorts video");
-
-          addTag(tags, "viral shorts");
-
-          break;
-
-
-        default:
-
-          addTag(tags, mainPhrase + " tips");
-
-          addTag(tags, mainPhrase + " guide");
-
-          addTag(tags, mainPhrase + " ideas");
-
-          addTag(tags, mainPhrase + " videos");
-
-          addTag(tags, "YouTube tips");
-
-          break;
-
-      }
-
-
-      /* General YouTube tags */
-
-      addTag(tags, "YouTube");
-
-      addTag(tags, "YouTube SEO");
-
-      addTag(tags, "YouTube tags");
-
-      addTag(tags, "YouTube video");
-
-
-      /* Limit tags */
-
-      const finalTags = tags.slice(0, 30);
-
-
-      renderResults(finalTags);
-
-    }
-
-
-    /* ================= RENDER ================= */
-
-    function renderResults(tags) {
-
-      const output = tags.join(", ");
-
-      tagOutput.value = output;
-
-      tagCount.textContent = tags.length;
-
-      characterCount.textContent = output.length;
-
-      tagList.innerHTML = "";
+      tagList.innerHTML =
+        "";
 
 
       tags.forEach(tag => {
 
-        const chip = document.createElement("div");
+        const chip =
+          document.createElement("div");
 
-        chip.className = "tag-chip";
-
-        const text = document.createElement("span");
-
-        text.textContent = tag;
+        chip.className =
+          "tag-chip";
 
 
-        const button = document.createElement("button");
+        const text =
+          document.createElement("span");
 
-        button.type = "button";
+        text.textContent =
+          tag;
 
-        button.textContent = "Copy";
 
-        button.addEventListener("click", function () {
+        const button =
+          document.createElement("button");
 
-          copyText(tag);
+        button.type =
+          "button";
 
-          button.textContent = "Copied";
+        button.textContent =
+          "Copy";
 
-          setTimeout(() => {
 
-            button.textContent = "Copy";
+        button.addEventListener(
+          "click",
+          async function () {
 
-          }, 1200);
+            const copied =
+              await copyText(tag);
 
-        });
+
+            if (copied) {
+
+              button.textContent =
+                "Copied";
+
+              setTimeout(
+                function () {
+
+                  button.textContent =
+                    "Copy";
+
+                },
+                1200
+              );
+
+            }
+
+          }
+        );
 
 
         chip.appendChild(text);
+
         chip.appendChild(button);
 
         tagList.appendChild(chip);
@@ -1838,17 +2879,79 @@
       });
 
 
-      results.style.display = "block";
+      results.style.display =
+        "block";
+
 
       showSuccess(
         "Tags generated successfully. Review and edit them before using."
       );
 
+    }
+
+
+    /* ================= GENERATE ================= */
+
+    function generateTags() {
+
+      hideMessages();
+
+      generationRound = 0;
+
+      const tags =
+        buildTags();
+
+
+      if (!tags) {
+        return;
+      }
+
+
+      displayResults(tags);
+
 
       results.scrollIntoView({
+
         behavior: "smooth",
+
         block: "start"
+
       });
+
+    }
+
+
+    /* ================= GENERATE AGAIN ================= */
+
+    function generateAgain() {
+
+      hideMessages();
+
+
+      /*
+        Increase the generation round so that
+        Generate Again produces a different
+        combination and ordering.
+      */
+
+      generationRound++;
+
+
+      const tags =
+        buildTags();
+
+
+      if (!tags) {
+        return;
+      }
+
+
+      displayResults(tags);
+
+
+      showSuccess(
+        "A new set of YouTube tags has been generated."
+      );
 
     }
 
@@ -1857,74 +2960,144 @@
 
     async function copyText(text) {
 
+      if (!text) {
+        return false;
+      }
+
+
       try {
 
-        await navigator.clipboard.writeText(text);
+        if (
+          navigator.clipboard &&
+          window.isSecureContext
+        ) {
 
-        return true;
+          await navigator.clipboard.writeText(
+            text
+          );
+
+          return true;
+
+        }
 
       } catch (error) {
+
+        /* Fallback below */
+
+      }
+
+
+      try {
 
         const textarea =
           document.createElement("textarea");
 
-        textarea.value = text;
 
-        textarea.style.position = "fixed";
-        textarea.style.opacity = "0";
+        textarea.value =
+          text;
 
-        document.body.appendChild(textarea);
+
+        textarea.style.position =
+          "fixed";
+
+        textarea.style.left =
+          "-9999px";
+
+        textarea.style.top =
+          "0";
+
+
+        document.body.appendChild(
+          textarea
+        );
+
+
+        textarea.focus();
 
         textarea.select();
 
-        try {
 
-          document.execCommand("copy");
+        const copied =
+          document.execCommand(
+            "copy"
+          );
 
-          document.body.removeChild(textarea);
 
-          return true;
+        document.body.removeChild(
+          textarea
+        );
 
-        } catch (e) {
 
-          document.body.removeChild(textarea);
+        return copied;
 
-          return false;
+      } catch (error) {
 
-        }
+        return false;
 
       }
 
     }
 
 
-    copyAllButton.addEventListener("click", async function () {
+    /* ================= COPY ALL ================= */
 
-      const success =
-        await copyText(tagOutput.value);
+    copyAllButton.addEventListener(
+      "click",
+      async function () {
 
-      if (success) {
+        const text =
+          tagOutput.value.trim();
 
-        const original =
-          copyAllButton.textContent;
 
-        copyAllButton.textContent =
-          "Copied Successfully";
+        if (!text) {
 
-        showSuccess("All tags copied to your clipboard.");
+          showError(
+            "There are no tags to copy."
+          );
 
-        setTimeout(() => {
+          return;
 
-          copyAllButton.textContent = original;
+        }
 
-        }, 1500);
+
+        const copied =
+          await copyText(text);
+
+
+        if (copied) {
+
+          copyAllButton.textContent =
+            "Copied Successfully";
+
+
+          showSuccess(
+            "All tags copied to your clipboard."
+          );
+
+
+          setTimeout(
+            function () {
+
+              copyAllButton.textContent =
+                "Copy All Tags";
+
+            },
+            1500
+          );
+
+        } else {
+
+          showError(
+            "Unable to copy the tags. Please copy them manually."
+          );
+
+        }
 
       }
+    );
 
-    });
 
-
-    /* ================= EVENTS ================= */
+    /* ================= BUTTON EVENTS ================= */
 
     generateButton.addEventListener(
       "click",
@@ -1934,31 +3107,55 @@
 
     generateAgainButton.addEventListener(
       "click",
-      generateTags
+      generateAgain
     );
 
+
+    /* ================= CLEAR ================= */
 
     clearButton.addEventListener(
       "click",
       function () {
 
-        videoTitle.value = "";
-        videoTopic.value = "";
-        keywordsInput.value = "";
+        videoTitle.value =
+          "";
 
-        contentType.value = "general";
+        videoTopic.value =
+          "";
 
-        tagOutput.value = "";
+        keywordsInput.value =
+          "";
 
-        tagList.innerHTML = "";
+        contentType.value =
+          "general";
 
-        tagCount.textContent = "0";
 
-        characterCount.textContent = "0";
+        tagOutput.value =
+          "";
 
-        results.style.display = "none";
+
+        tagList.innerHTML =
+          "";
+
+
+        tagCount.textContent =
+          "0";
+
+
+        characterCount.textContent =
+          "0";
+
+
+        results.style.display =
+          "none";
+
+
+        generationRound =
+          0;
+
 
         hideMessages();
+
 
         videoTitle.focus();
 
@@ -1966,13 +3163,14 @@
     );
 
 
+    /* ================= ENTER ================= */
+
     videoTitle.addEventListener(
       "keydown",
       function (event) {
 
         if (
-          event.key === "Enter" &&
-          !event.shiftKey
+          event.key === "Enter"
         ) {
 
           event.preventDefault();
@@ -1985,47 +3183,27 @@
     );
 
 
-    /* ================= MESSAGES ================= */
-
-    function hideMessages() {
-
-      errorMessage.style.display = "none";
-
-      successMessage.style.display = "none";
-
-    }
-
-
-    function showError(message) {
-
-      errorMessage.textContent = message;
-
-      errorMessage.style.display = "block";
-
-    }
-
-
-    function showSuccess(message) {
-
-      successMessage.textContent = message;
-
-      successMessage.style.display = "block";
-
-    }
-
-
-    /* ================= UPDATE STATS ================= */
+    /* ================= OUTPUT EDIT ================= */
 
     tagOutput.addEventListener(
       "input",
       function () {
 
-        const tags = tagOutput.value
-          .split(",")
-          .map(tag => tag.trim())
-          .filter(Boolean);
+        const tags =
+          tagOutput.value
 
-        tagCount.textContent = tags.length;
+            .split(",")
+
+            .map(
+              tag => tag.trim()
+            )
+
+            .filter(Boolean);
+
+
+        tagCount.textContent =
+          tags.length;
+
 
         characterCount.textContent =
           tagOutput.value.length;
@@ -2033,7 +3211,49 @@
       }
     );
 
+
+    /* ================= MESSAGES ================= */
+
+    function hideMessages() {
+
+      errorMessage.style.display =
+        "none";
+
+      successMessage.style.display =
+        "none";
+
+    }
+
+
+    function showError(message) {
+
+      errorMessage.textContent =
+        message;
+
+      errorMessage.style.display =
+        "block";
+
+      successMessage.style.display =
+        "none";
+
+    }
+
+
+    function showSuccess(message) {
+
+      successMessage.textContent =
+        message;
+
+      successMessage.style.display =
+        "block";
+
+      errorMessage.style.display =
+        "none";
+
+    }
+
   </script>
+
 
 </body>
 </html>
