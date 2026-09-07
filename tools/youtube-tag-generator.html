@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Tag Generator - Generate SEO Tags Free | YouTubeToolly</title>
+
+  <meta name="description"
+    content="Generate relevant YouTube tags for your videos for free. Create useful SEO-friendly tags based on your video topic, title, and keywords with YouTubeToolly.">
+
+  <meta name="keywords"
+    content="YouTube tag generator, YouTube tags generator, video tags generator, YouTube SEO tags, YouTube keyword generator, YouTube SEO tool">
+
+  <meta name="author" content="YouTubeToolly">
+
+  <link rel="canonical"
+    href="https://www.youtubetoolly.com/tools/youtube-tag-generator.html">
+
+  <meta property="og:title"
+    content="YouTube Tag Generator - Generate SEO Tags Free | YouTubeToolly">
+  <meta property="og:description"
+    content="Generate relevant YouTube tags for your videos quickly and easily with this free YouTube Tag Generator.">
+  <meta property="og:type" content="website">
+  <meta property="og:url"
+    content="https://www.youtubetoolly.com/tools/youtube-tag-generator.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title"
+    content="YouTube Tag Generator - YouTubeToolly">
+  <meta name="twitter:description"
+    content="Generate relevant YouTube tags for your videos for free.">
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M26 20l22 12-22 12V20z' fill='white'/%3E%3Ccircle cx='19' cy='45' r='6' fill='%23ef4444'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--dark);
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--dark);
+      display: grid;
+      place-items: center;
+      position: relative;
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 13px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--dark);
+    }
+
+    .nav-button {
+      background: var(--red);
+      color: white !important;
+      padding: 10px 16px;
+      border-radius: 10px;
+    }
+
+    .nav-button:hover {
+      background: var(--red-dark);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 72px 0 55px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .badge::before {
+      content: "●";
+      font-size: 9px;
+    }
+
+    h1 {
+      margin: 18px auto 16px;
+      max-width: 850px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      color: var(--dark);
+    }
+
+    h1 span {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* TOOL */
+
+    .tool-section {
+      padding-bottom: 65px;
+    }
+
+    .tool-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+    }
+
+    .tool-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .tool-header h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      color: var(--dark);
+    }
+
+    .tool-header p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-family: inherit;
+      font-size: 15px;
+      color: var(--text);
+      background: white;
+      outline: none;
+      transition: .2s ease;
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, .10);
+    }
+
+    .field-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 6px;
+    }
+
+    .generate-wrap {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .generate-btn {
+      border: 0;
+      background: var(--red);
+      color: white;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .generate-btn:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .error {
+      display: none;
+      margin-top: 15px;
+      padding: 12px 15px;
+      border-radius: 10px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    /* RESULTS */
+
+    .results {
+      display: none;
+      margin-top: 28px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    .results-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .results-top h3 {
+      margin: 0;
+      color: var(--dark);
+      font-size: 21px;
+    }
+
+    .stats {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      padding: 7px 10px;
+      background: var(--soft-blue);
+      color: var(--blue);
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .output-box {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .output-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 15px;
+      background: #f8fafc;
+      border-bottom: 1px solid var(--border);
+      gap: 10px;
+    }
+
+    .output-header strong {
+      font-size: 14px;
+      color: var(--dark);
+    }
+
+    .copy-btn {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    #tagOutput {
+      min-height: 155px;
+      border: 0;
+      border-radius: 0;
+      display: block;
+      padding: 16px;
+      background: white;
+      line-height: 1.8;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 18px;
+      border-top: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 11px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .chip-copy {
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 12px;
+      padding: 0;
+    }
+
+    .chip-copy:hover {
+      color: var(--blue);
+    }
+
+    .result-actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .secondary-btn {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .secondary-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+
+    /* INFO */
+
+    .info-section {
+      padding: 0 0 65px;
+    }
+
+    .info-card {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card h2 {
+      margin-top: 0;
+      color: var(--dark);
+      font-size: 28px;
+    }
+
+    .info-card h3 {
+      color: var(--dark);
+      margin-top: 30px;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+    }
+
+    .info-card li {
+      color: var(--muted);
+      margin: 8px 0;
+    }
+
+    .info-box {
+      background: var(--soft-blue);
+      border-left: 4px solid var(--blue);
+      padding: 15px 17px;
+      border-radius: 10px;
+      margin-top: 22px;
+      color: #1e40af;
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding-bottom: 70px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 8px;
+      color: var(--dark);
+      font-size: 32px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .faq-grid {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+      color: var(--dark);
+      font-size: 16px;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 45px 0 25px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .footer-brand span {
+      color: var(--red);
+    }
+
+    .footer-description {
+      max-width: 480px;
+      color: #94a3b8;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      margin-top: 30px;
+      padding-top: 20px;
+      color: #64748b;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 22px, 1100px);
+      }
+
+      .nav {
+        height: 65px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 55px 0 40px;
+      }
+
+      h1 {
+        font-size: 42px;
+        letter-spacing: -1.8px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .tool-card {
+        padding: 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .results-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+
+      .info-card {
+        padding: 23px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "YouTube Tag Generator",
+    "url": "https://www.youtubetoolly.com/tools/youtube-tag-generator.html",
+    "description": "Free YouTube Tag Generator for creating relevant and SEO-friendly video tags.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="/" class="brand">
+      <div class="brand-icon"></div>
+      YouTube<span>Toolly</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="/#tools">Tools</a>
+      <a href="/#why">Why YouTubeToolly</a>
+      <a href="/#about">About</a>
+      <a href="/#tools" class="nav-button">Explore Tools</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="badge">Free YouTube Creator Tool</div>
+
+      <h1>
+        YouTube Tag <span>Generator</span>
+      </h1>
+
+      <p>
+        Generate relevant YouTube tags for your videos in seconds.
+        Add your video topic, title, and keywords to create useful
+        tags that help describe your content.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- TOOL -->
+
+  <section class="tool-section">
+    <div class="container">
+
+      <div class="tool-card">
+
+        <div class="tool-header">
+          <h2>Generate YouTube Tags</h2>
+          <p>
+            Enter your video information and create a list of relevant tags.
+          </p>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="field full">
+            <label for="videoTitle">Video Title</label>
+
+            <input
+              type="text"
+              id="videoTitle"
+              maxlength="200"
+              placeholder="Example: 10 Amazing Facts About Cats">
+          </div>
+
+
+          <div class="field full">
+            <label for="videoTopic">Video Topic</label>
+
+            <textarea
+              id="videoTopic"
+              maxlength="500"
+              placeholder="Describe your video topic. Example: interesting facts about cats, cat behavior, cute cats and things cat owners should know."></textarea>
+
+            <div class="field-note">
+              Describe the main subject of your video for more relevant tags.
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label for="keywords">Main Keywords</label>
+
+            <input
+              type="text"
+              id="keywords"
+              maxlength="300"
+              placeholder="cats, cat facts, cute cats">
+
+            <div class="field-note">
+              Separate keywords with commas.
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label for="contentType">Content Type</label>
+
+            <select id="contentType">
+              <option value="general">General Video</option>
+              <option value="tutorial">Tutorial / How-To</option>
+              <option value="list">List / Top Tips</option>
+              <option value="review">Review</option>
+              <option value="facts">Facts / Information</option>
+              <option value="story">Story / Experience</option>
+              <option value="news">News / Update</option>
+              <option value="comparison">Comparison</option>
+              <option value="shorts">YouTube Shorts</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <div class="generate-wrap">
+          <button class="generate-btn" id="generateBtn">
+            Generate Tags
+          </button>
+        </div>
+
+        <div class="error" id="errorBox"></div>
+
+
+        <!-- RESULTS -->
+
+        <div class="results" id="results">
+
+          <div class="results-top">
+
+            <h3>Generated YouTube Tags</h3>
+
+            <div class="stats">
+              <div class="stat" id="tagCount">0 Tags</div>
+              <div class="stat" id="characterCount">0 Characters</div>
+            </div>
+
+          </div>
+
+
+          <div class="output-box">
+
+            <div class="output-header">
+
+              <strong>Tags</strong>
+
+              <button class="copy-btn" id="copyAllBtn">
+                Copy All Tags
+              </button>
+
+            </div>
+
+            <textarea id="tagOutput" readonly></textarea>
+
+            <div class="tag-list" id="tagList"></div>
+
+          </div>
+
+
+          <div class="result-actions">
+
+            <button class="secondary-btn" id="regenerateBtn">
+              Generate Again
+            </button>
+
+            <button class="secondary-btn" id="clearBtn">
+              Clear
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- INFORMATION -->
+
+  <section class="info-section" id="why">
+
+    <div class="container">
+
+      <div class="info-card">
+
+        <h2>YouTube Tag Generator</h2>
+
+        <p>
+          YouTubeToolly's YouTube Tag Generator helps creators quickly
+          create a useful list of tags based on their video title,
+          topic, and keywords.
+        </p>
+
+        <h3>Why Use YouTube Tags?</h3>
+
+        <p>
+          Tags can help describe the subject of a video and provide
+          additional context about the content. Relevant tags are more
+          useful than adding a large number of unrelated keywords.
+        </p>
+
+        <h3>How to Use the YouTube Tag Generator</h3>
+
+        <ol>
+          <li>Enter your YouTube video title.</li>
+          <li>Describe the main topic of your video.</li>
+          <li>Add your most important keywords.</li>
+          <li>Select the type of content.</li>
+          <li>Click "Generate Tags".</li>
+          <li>Review, edit, and copy the generated tags.</li>
+        </ol>
+
+        <h3>Tips for Better YouTube Tags</h3>
+
+        <ul>
+          <li>Use tags that accurately describe your video.</li>
+          <li>Include important words from your video topic.</li>
+          <li>Use specific phrases instead of only broad terms.</li>
+          <li>Consider common variations of your main topic.</li>
+          <li>Avoid unrelated or misleading keywords.</li>
+          <li>Review the generated tags before publishing your video.</li>
+        </ul>
+
+        <div class="info-box">
+          <strong>Tip:</strong>
+          Use your main topic and the most relevant search phrases
+          rather than trying to fill your video with as many tags as possible.
+        </div>
+
+        <h3>Free and Browser-Based</h3>
+
+        <p>
+          YouTubeToolly generates tags directly in your browser.
+          No external AI API is required and the information you enter
+          is not uploaded to our server by this tool.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FAQ -->
+
+  <section class="faq-section">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about YouTube tags.</p>
+      </div>
+
+      <div class="faq-grid">
+
+        <div class="faq-item">
+          <h3>What is a YouTube Tag Generator?</h3>
+          <p>
+            It is a tool that creates a list of relevant words and phrases
+            that can be used as tags for a YouTube video.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I generate YouTube tags?</h3>
+          <p>
+            Enter your video title, topic, and keywords, choose your content
+            type, and click Generate Tags.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Are these tags generated by AI?</h3>
+          <p>
+            No. This tool uses built-in browser-based templates and keyword
+            combinations. It does not require an external AI API.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I edit the generated tags?</h3>
+          <p>
+            Yes. The generated tag list can be copied and edited before
+            you add it to your YouTube video.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Should I use every generated tag?</h3>
+          <p>
+            Not necessarily. Choose the tags that are genuinely relevant
+            to your video's subject and remove anything that does not fit.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is the YouTube Tag Generator free?</h3>
+          <p>
+            Yes. YouTubeToolly's YouTube Tag Generator is free to use.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does this tool save my video information?</h3>
+          <p>
+            No. The generator works directly in your browser and does not
+            require you to upload your video or create an account.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use this tool on mobile?</h3>
+          <p>
+            Yes. The tool is responsive and can be used on phones,
+            tablets, and desktop computers.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+
+        <div class="footer-brand">
+          YouTube<span>Toolly</span>
+        </div>
+
+        <div class="footer-description">
+          Free and simple tools for YouTube creators.
+          Generate titles, tags, thumbnails, and other useful
+          content directly in your browser.
+        </div>
+
+      </div>
+
+
+      <div class="footer-links">
+        <a href="/#tools">Tools</a>
+        <a href="/#why">Why YouTubeToolly</a>
+        <a href="/#about">About</a>
+        <a href="/#tools">Explore Tools</a>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      © 2026 YouTubeToolly. All rights reserved.
+      <br><br>
+
+      YouTubeToolly is an independent website and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const videoTitle = document.getElementById("videoTitle");
+  const videoTopic = document.getElementById("videoTopic");
+  const keywordsInput = document.getElementById("keywords");
+  const contentType = document.getElementById("contentType");
+
+  const generateBtn = document.getElementById("generateBtn");
+  const regenerateBtn = document.getElementById("regenerateBtn");
+  const clearBtn = document.getElementById("clearBtn");
+
+  const results = document.getElementById("results");
+  const tagOutput = document.getElementById("tagOutput");
+  const tagList = document.getElementById("tagList");
+
+  const tagCount = document.getElementById("tagCount");
+  const characterCount = document.getElementById("characterCount");
+
+  const copyAllBtn = document.getElementById("copyAllBtn");
+  const errorBox = document.getElementById("errorBox");
+
+
+  function cleanText(text) {
+    return text
+      .replace(/[^\p{L}\p{N}\s-]/gu, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+
+  function titleWords(text) {
+
+    const stopWords = new Set([
+      "the", "and", "for", "with", "this", "that",
+      "from", "your", "you", "how", "what", "why",
+      "are", "about", "into", "best", "top",
+      "a", "an", "of", "to", "in", "on",
+      "is", "my", "new", "video"
+    ]);
+
+    return cleanText(text)
+      .split(" ")
+      .filter(word =>
+        word.length > 2 &&
+        !stopWords.has(word.toLowerCase())
+      );
+  }
+
+
+  function uniqueTags(tags) {
+
+    const seen = new Set();
+
+    return tags
+      .map(tag => cleanText(tag))
+      .filter(tag => {
+        if (!tag) return false;
+
+        const key = tag.toLowerCase();
+
+        if (seen.has(key)) return false;
+
+        seen.add(key);
+        return true;
+      });
+  }
+
+
+  function generateTags() {
+
+    errorBox.style.display = "none";
+
+    const title = videoTitle.value.trim();
+    const topic = videoTopic.value.trim();
+    const keywordText = keywordsInput.value.trim();
+    const type = contentType.value;
+
+    if (!title && !topic && !keywordText) {
+
+      errorBox.textContent =
+        "Please enter a video title, topic, or at least one keyword.";
+
+      errorBox.style.display = "block";
+
+      results.style.display = "none";
+
+      return;
+    }
+
+
+    const tags = [];
+
+    const mainTopic = cleanText(topic || title);
+
+    const words = titleWords(title);
+    const topicWords = titleWords(topic);
+
+    const keywordList = keywordText
+      .split(",")
+      .map(k => cleanText(k))
+      .filter(Boolean);
+
+
+    /* Main keywords */
+
+    keywordList.forEach(keyword => {
+      tags.push(keyword);
+    });
+
+
+    /* Main title */
+
+    if (cleanText(title)) {
+      tags.push(cleanText(title));
+    }
+
+
+    /* Main topic */
+
+    if (mainTopic) {
+      tags.push(mainTopic);
+    }
+
+
+    /* Title word combinations */
+
+    if (words.length >= 2) {
+
+      for (let i = 0; i < words.length - 1; i++) {
+
+        tags.push(
+          words[i] + " " + words[i + 1]
+        );
+
+      }
+    }
+
+
+    /* Topic word combinations */
+
+    if (topicWords.length >= 2) {
+
+      for (let i = 0; i < topicWords.length - 1; i++) {
+
+        tags.push(
+          topicWords[i] + " " + topicWords[i + 1]
+        );
+
+      }
+    }
+
+
+    /* Content-specific tags */
+
+    const topicShort = topicWords.slice(0, 3).join(" ");
+
+    if (topicShort) {
+
+      switch (type) {
+
+        case "tutorial":
+          tags.push(
+            "how to " + topicShort,
+            topicShort + " tutorial",
+            topicShort + " guide",
+            "how to learn " + topicShort,
+            topicShort + " tips"
+          );
+          break;
+
+        case "list":
+          tags.push(
+            "best " + topicShort,
+            "top " + topicShort,
+            topicShort + " tips",
+            topicShort + " ideas",
+            "best tips " + topicShort
+          );
+          break;
+
+        case "review":
+          tags.push(
+            topicShort + " review",
+            topicShort + " test",
+            topicShort + " experience",
+            "honest " + topicShort + " review",
+            topicShort + " guide"
+          );
+          break;
+
+        case "facts":
+          tags.push(
+            topicShort + " facts",
+            "interesting " + topicShort + " facts",
+            "facts about " + topicShort,
+            "amazing " + topicShort + " facts",
+            topicShort + " information"
+          );
+          break;
+
+        case "story":
+          tags.push(
+            topicShort + " story",
+            "my " + topicShort + " story",
+            topicShort + " experience",
+            "story about " + topicShort,
+            topicShort + " experience"
+          );
+          break;
+
+        case "news":
+          tags.push(
+            topicShort + " news",
+            topicShort + " update",
+            "latest " + topicShort,
+            topicShort + " latest news",
+            topicShort + " updates"
+          );
+          break;
+
+        case "comparison":
+          tags.push(
+            topicShort + " comparison",
+            topicShort + " vs",
+            topicShort + " differences",
+            "best " + topicShort,
+            topicShort + " comparison guide"
+          );
+          break;
+
+        case "shorts":
+          tags.push(
+            topicShort + " shorts",
+            "youtube shorts " + topicShort,
+            topicShort + " short video",
+            "shorts about " + topicShort,
+            topicShort + " viral shorts"
+          );
+          break;
+
+        default:
+          tags.push(
+            topicShort + " tips",
+            topicShort + " guide",
+            topicShort + " ideas",
+            topicShort + " videos"
+          );
+      }
+    }
+
+
+    /* Keyword variations */
+
+    keywordList.forEach(keyword => {
+
+      tags.push(
+        keyword + " tips",
+        keyword + " guide",
+        keyword + " tutorial"
+      );
+
+    });
+
+
+    /* Keep the list useful */
+
+    let finalTags = uniqueTags(tags);
+
+    finalTags = finalTags
+      .filter(tag => tag.length >= 2)
+      .slice(0, 30);
+
+
+    if (!finalTags.length) {
+
+      errorBox.textContent =
+        "Not enough information to generate tags. Please add more details.";
+
+      errorBox.style.display = "block";
+
+      return;
+    }
+
+
+    const output = finalTags.join(", ");
+
+    tagOutput.value = output;
+
+    tagCount.textContent =
+      finalTags.length + " Tags";
+
+    characterCount.textContent =
+      output.length + " Characters";
+
+
+    tagList.innerHTML = "";
+
+    finalTags.forEach(tag => {
+
+      const chip = document.createElement("div");
+
+      chip.className = "tag-chip";
+
+      const text = document.createElement("span");
+
+      text.textContent = tag;
+
+      const button = document.createElement("button");
+
+      button.className = "chip-copy";
+      button.textContent = "Copy";
+      button.type = "button";
+
+      button.addEventListener("click", () => {
+        copyText(tag, button);
+      });
+
+      chip.appendChild(text);
+      chip.appendChild(button);
+
+      tagList.appendChild(chip);
+
+    });
+
+
+    results.style.display = "block";
+
+    results.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }
+
+
+  function copyText(text, button) {
+
+    if (navigator.clipboard) {
+
+      navigator.clipboard.writeText(text)
+        .then(() => {
+
+          const oldText = button.textContent;
+
+          button.textContent = "Copied!";
+
+          setTimeout(() => {
+            button.textContent = oldText;
+          }, 1200);
+
+        })
+        .catch(() => fallbackCopy(text, button));
+
+    } else {
+
+      fallbackCopy(text, button);
+
+    }
+
+  }
+
+
+  function fallbackCopy(text, button) {
+
+    const temp = document.createElement("textarea");
+
+    temp.value = text;
+
+    document.body.appendChild(temp);
+
+    temp.select();
+
+    try {
+      document.execCommand("copy");
+
+      const oldText = button.textContent;
+
+      button.textContent = "Copied!";
+
+      setTimeout(() => {
+        button.textContent = oldText;
+      }, 1200);
+
+    } catch (error) {
+
+      alert("Unable to copy. Please copy the text manually.");
+
+    }
+
+    document.body.removeChild(temp);
+
+  }
+
+
+  generateBtn.addEventListener("click", generateTags);
+
+  regenerateBtn.addEventListener("click", generateTags);
+
+
+  copyAllBtn.addEventListener("click", () => {
+
+    if (!tagOutput.value) return;
+
+    copyText(tagOutput.value, copyAllBtn);
+
+    const oldText = copyAllBtn.textContent;
+
+    copyAllBtn.textContent = "Copied!";
+
+    setTimeout(() => {
+      copyAllBtn.textContent = oldText;
+    }, 1200);
+
+  });
+
+
+  clearBtn.addEventListener("click", () => {
+
+    videoTitle.value = "";
+    videoTopic.value = "";
+    keywordsInput.value = "";
+
+    results.style.display = "none";
+
+    errorBox.style.display = "none";
+
+    tagOutput.value = "";
+    tagList.innerHTML = "";
+
+    videoTitle.focus();
+
+  });
+
+
+  videoTitle.addEventListener("keydown", event => {
+
+    if (event.key === "Enter") {
+      generateTags();
+    }
+
+  });
+
+</script>
+
+</body>
+</html>
