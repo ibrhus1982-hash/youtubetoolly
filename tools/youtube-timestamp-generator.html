@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>YouTube Timestamp Generator - Create Video Timestamps Free | YouTubeToolly</title>
 
   <meta name="description" content="Create clean YouTube timestamps for your video description. Add chapters, organize your video sections, and copy ready-to-use timestamps instantly with YouTubeToolly.">
+
   <meta name="keywords" content="YouTube timestamp generator, YouTube chapters, timestamp maker, video timestamps, YouTube description timestamps">
+
   <meta name="robots" content="index, follow">
+
   <meta name="author" content="YouTubeToolly">
 
   <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-timestamp-generator.html">
 
   <meta property="og:title" content="YouTube Timestamp Generator - YouTubeToolly">
+
   <meta property="og:description" content="Create YouTube timestamps and chapters quickly and easily for your video description.">
+
   <meta property="og:type" content="website">
+
   <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-timestamp-generator.html">
 
   <meta name="twitter:card" content="summary">
+
   <meta name="twitter:title" content="YouTube Timestamp Generator - YouTubeToolly">
+
   <meta name="twitter:description" content="Create ready-to-use YouTube timestamps and chapters for free.">
 
   <meta name="theme-color" content="#ffffff">
 
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='25' fill='%230f172a'/%3E%3Cpolygon points='40,28 40,72 72,50' fill='white'/%3E%3Ccircle cx='76' cy='24' r='7' fill='%23ff0000'/%3E%3C/svg%3E">
 
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family: "Inter", Arial, sans-serif;
@@ -48,10 +66,12 @@
       line-height: 1.6;
     }
 
+
     a {
       color: inherit;
       text-decoration: none;
     }
+
 
     button,
     input,
@@ -59,10 +79,12 @@
       font: inherit;
     }
 
+
     .container {
       width: min(1180px, 92%);
       margin: auto;
     }
+
 
     /* ================= HEADER ================= */
 
@@ -77,12 +99,14 @@
       border-bottom: 1px solid #e5e7eb;
     }
 
+
     .nav {
       height: 74px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
+
 
     .brand {
       display: flex;
@@ -92,6 +116,7 @@
       font-weight: 800;
       letter-spacing: -0.6px;
     }
+
 
     .brand-icon {
       position: relative;
@@ -105,6 +130,7 @@
       box-shadow: 0 8px 20px rgba(15, 23, 42, 0.18);
     }
 
+
     .brand-icon::before {
       content: "";
       width: 0;
@@ -114,6 +140,7 @@
       border-left: 14px solid #ffffff;
       margin-left: 3px;
     }
+
 
     .brand-icon::after {
       content: "";
@@ -127,15 +154,18 @@
       right: 5px;
     }
 
+
     .brand span {
       color: #ff0000;
     }
+
 
     nav {
       display: flex;
       align-items: center;
       gap: 28px;
     }
+
 
     nav a {
       font-size: 14px;
@@ -144,9 +174,11 @@
       transition: 0.2s ease;
     }
 
+
     nav a:hover {
       color: #0f172a;
     }
+
 
     nav .nav-button {
       color: #ffffff;
@@ -155,10 +187,12 @@
       border-radius: 10px;
     }
 
+
     nav .nav-button:hover {
       background: #1e293b;
       color: #ffffff;
     }
+
 
     /* ================= HERO ================= */
 
@@ -171,11 +205,13 @@
       border-bottom: 1px solid #e5e7eb;
     }
 
+
     .hero-content {
       max-width: 850px;
       margin: auto;
       text-align: center;
     }
+
 
     .badge {
       display: inline-flex;
@@ -191,12 +227,14 @@
       margin-bottom: 20px;
     }
 
+
     .badge-dot {
       width: 7px;
       height: 7px;
       background: #ef4444;
       border-radius: 50%;
     }
+
 
     .hero h1 {
       font-size: clamp(36px, 6vw, 60px);
@@ -206,9 +244,11 @@
       margin-bottom: 22px;
     }
 
+
     .hero h1 .highlight {
       color: #ff0000;
     }
+
 
     .hero p {
       max-width: 700px;
@@ -217,12 +257,14 @@
       font-size: 18px;
     }
 
+
     /* ================= TOOL ================= */
 
     .tool-section {
       padding: 65px 0;
       background: #f8fafc;
     }
+
 
     .tool-box {
       max-width: 850px;
@@ -234,12 +276,14 @@
       box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
     }
 
+
     .tool-box h2 {
       text-align: center;
       font-size: 26px;
       letter-spacing: -0.7px;
       margin-bottom: 10px;
     }
+
 
     .tool-subtitle {
       text-align: center;
@@ -248,6 +292,7 @@
       font-size: 15px;
     }
 
+
     .chapter-list {
       display: flex;
       flex-direction: column;
@@ -255,12 +300,14 @@
       margin-bottom: 20px;
     }
 
+
     .chapter-row {
       display: grid;
       grid-template-columns: 130px 1fr auto;
       gap: 10px;
       align-items: center;
     }
+
 
     .chapter-row input {
       width: 100%;
@@ -273,14 +320,17 @@
       transition: 0.2s ease;
     }
 
+
     .chapter-row input:focus {
       border-color: #94a3b8;
       box-shadow: 0 0 0 3px rgba(148, 163, 184, 0.15);
     }
 
+
     .chapter-row input::placeholder {
       color: #94a3b8;
     }
+
 
     .remove-btn {
       width: 43px;
@@ -295,9 +345,11 @@
       transition: 0.2s ease;
     }
 
+
     .remove-btn:hover {
       background: #fee2e2;
     }
+
 
     .button-row {
       display: flex;
@@ -305,6 +357,7 @@
       gap: 10px;
       margin-top: 18px;
     }
+
 
     .btn {
       border: none;
@@ -315,6 +368,7 @@
       transition: 0.2s ease;
     }
 
+
     .btn-primary {
       flex: 1;
       min-width: 190px;
@@ -322,18 +376,22 @@
       color: #ffffff;
     }
 
+
     .btn-primary:hover {
       background: #dc0000;
     }
+
 
     .btn-secondary {
       background: #0f172a;
       color: #ffffff;
     }
 
+
     .btn-secondary:hover {
       background: #1e293b;
     }
+
 
     .btn-light {
       background: #f1f5f9;
@@ -341,9 +399,11 @@
       border: 1px solid #e2e8f0;
     }
 
+
     .btn-light:hover {
       background: #e2e8f0;
     }
+
 
     .message {
       display: none;
@@ -354,6 +414,7 @@
       font-weight: 600;
     }
 
+
     .message.success {
       display: block;
       background: #f0fdf4;
@@ -361,12 +422,14 @@
       border: 1px solid #bbf7d0;
     }
 
+
     .message.error {
       display: block;
       background: #fef2f2;
       color: #b91c1c;
       border: 1px solid #fecaca;
     }
+
 
     /* ================= RESULT ================= */
 
@@ -377,10 +440,12 @@
       padding-top: 28px;
     }
 
+
     .result-box h3 {
       font-size: 20px;
       margin-bottom: 14px;
     }
+
 
     .result-text {
       width: 100%;
@@ -397,12 +462,14 @@
       line-height: 1.8;
     }
 
+
     .result-stats {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 14px;
     }
+
 
     .stat {
       background: #f8fafc;
@@ -413,12 +480,14 @@
       color: #475569;
     }
 
+
     .result-actions {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 15px;
     }
+
 
     /* ================= INFO ================= */
 
@@ -427,10 +496,12 @@
       background: #ffffff;
     }
 
+
     .info-content {
       max-width: 850px;
       margin: auto;
     }
+
 
     .info-content h2 {
       font-size: 30px;
@@ -438,10 +509,12 @@
       margin-bottom: 18px;
     }
 
+
     .info-content p {
       color: #64748b;
       margin-bottom: 20px;
     }
+
 
     .info-grid {
       display: grid;
@@ -450,6 +523,7 @@
       margin-top: 30px;
     }
 
+
     .info-card {
       padding: 22px;
       border: 1px solid #e2e8f0;
@@ -457,16 +531,19 @@
       background: #ffffff;
     }
 
+
     .info-card strong {
       display: block;
       margin-bottom: 7px;
       font-size: 16px;
     }
 
+
     .info-card p {
       margin: 0;
       font-size: 14px;
     }
+
 
     /* ================= FAQ ================= */
 
@@ -476,10 +553,12 @@
       border-top: 1px solid #e2e8f0;
     }
 
+
     .faq-content {
       max-width: 850px;
       margin: auto;
     }
+
 
     .faq-content h2 {
       text-align: center;
@@ -487,6 +566,7 @@
       margin-bottom: 30px;
       letter-spacing: -0.8px;
     }
+
 
     .faq-item {
       background: #ffffff;
@@ -496,15 +576,18 @@
       margin-bottom: 12px;
     }
 
+
     .faq-item h3 {
       font-size: 16px;
       margin-bottom: 8px;
     }
 
+
     .faq-item p {
       color: #64748b;
       font-size: 14px;
     }
+
 
     /* ================= FOOTER ================= */
 
@@ -514,6 +597,7 @@
       padding: 55px 0 25px;
     }
 
+
     .footer-grid {
       display: grid;
       grid-template-columns: 2fr 1fr 1fr;
@@ -521,13 +605,16 @@
       padding-bottom: 40px;
     }
 
+
     .footer-brand {
       max-width: 360px;
     }
 
+
     .footer-brand .brand {
       margin-bottom: 15px;
     }
+
 
     .footer-brand p {
       color: #94a3b8;
@@ -535,10 +622,12 @@
       line-height: 1.8;
     }
 
+
     .footer-column h3 {
       font-size: 14px;
       margin-bottom: 15px;
     }
+
 
     .footer-column a {
       display: block;
@@ -548,9 +637,11 @@
       transition: 0.2s ease;
     }
 
+
     .footer-column a:hover {
       color: #ffffff;
     }
+
 
     .footer-bottom {
       border-top: 1px solid #1e293b;
@@ -563,6 +654,7 @@
       font-size: 12px;
     }
 
+
     /* ================= MOBILE ================= */
 
     @media (max-width: 700px) {
@@ -572,82 +664,103 @@
         height: 68px;
       }
 
+
       .container {
         width: min(94%, 1180px);
       }
+
 
       nav {
         display: none;
       }
 
+
       .hero {
         padding: 58px 0 50px;
       }
+
 
       .hero h1 {
         letter-spacing: -1.4px;
       }
 
+
       .hero p {
         font-size: 16px;
       }
 
+
       .tool-section {
         padding: 45px 0;
       }
+
 
       .tool-box {
         padding: 22px 17px;
         border-radius: 18px;
       }
 
+
       .chapter-row {
         grid-template-columns: 1fr auto;
       }
+
 
       .chapter-row .time-input {
         grid-column: 1;
       }
 
+
       .chapter-row .title-input {
         grid-column: 1;
       }
+
 
       .chapter-row .remove-btn {
         grid-column: 2;
         grid-row: 1 / span 2;
       }
 
+
       .button-row {
         flex-direction: column;
       }
+
 
       .btn,
       .btn-primary {
         width: 100%;
       }
 
+
       .info-section,
       .faq-section {
         padding: 50px 0;
       }
 
+
       .info-grid {
         grid-template-columns: 1fr;
       }
+
 
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
       }
 
+
       .footer-bottom {
         flex-direction: column;
       }
+
     }
+
   </style>
 
+
   <script type="application/ld+json">
+
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
@@ -662,53 +775,95 @@
       "priceCurrency": "USD"
     }
   }
+
   </script>
+
 </head>
 
+
 <body>
+
 
   <!-- ================= HEADER ================= -->
 
   <header>
+
     <div class="container nav">
 
       <a href="/" class="brand">
+
         <div class="brand-icon"></div>
-        <div>YouTube<span>Toolly</span></div>
+
+        <div>
+          YouTube<span>Toolly</span>
+        </div>
+
       </a>
 
+
       <nav>
-        <a href="/#tools">Tools</a>
-        <a href="/#why">Why YouTubeToolly</a>
-        <a href="/#about">About</a>
-        <a href="/#tools" class="nav-button">Explore Tools</a>
+
+        <a href="/#tools">
+          Tools
+        </a>
+
+        <a href="/#why">
+          Why YouTubeToolly
+        </a>
+
+        <a href="/#about">
+          About
+        </a>
+
+        <a href="/#tools" class="nav-button">
+          Explore Tools
+        </a>
+
       </nav>
 
     </div>
+
   </header>
+
 
 
   <!-- ================= HERO ================= -->
 
   <section class="hero">
+
     <div class="container hero-content">
 
       <div class="badge">
+
         <span class="badge-dot"></span>
+
         Free YouTube Creator Tool
+
       </div>
 
+
       <h1>
-        YouTube <span class="highlight">Timestamp Generator</span>
+
+        YouTube
+        <span class="highlight">
+          Timestamp Generator
+        </span>
+
       </h1>
 
+
       <p>
+
         Create clean YouTube timestamps and video chapters in seconds.
-        Add your chapter times and titles, then copy the finished format directly into your YouTube description.
+        Add your chapter times and titles, then copy the finished format
+        directly into your YouTube description.
+
       </p>
 
     </div>
+
   </section>
+
 
 
   <!-- ================= TOOL ================= -->
@@ -719,15 +874,25 @@
 
       <div class="tool-box">
 
-        <h2>Create Your Timestamps</h2>
+
+        <h2>
+          Create Your Timestamps
+        </h2>
+
 
         <p class="tool-subtitle">
+
           Add a time and title for each section of your video.
+
         </p>
+
+
 
         <div id="chapterList" class="chapter-list">
 
+
           <div class="chapter-row">
+
 
             <input
               type="text"
@@ -737,11 +902,13 @@
               maxlength="8"
             >
 
+
             <input
               type="text"
               class="title-input"
               placeholder="Introduction"
             >
+
 
             <button
               type="button"
@@ -752,9 +919,13 @@
               ×
             </button>
 
+
           </div>
 
+
+
           <div class="chapter-row">
+
 
             <input
               type="text"
@@ -763,11 +934,13 @@
               maxlength="8"
             >
 
+
             <input
               type="text"
               class="title-input"
               placeholder="Main Topic"
             >
+
 
             <button
               type="button"
@@ -778,11 +951,16 @@
               ×
             </button>
 
+
           </div>
+
 
         </div>
 
+
+
         <div class="button-row">
+
 
           <button
             type="button"
@@ -792,6 +970,7 @@
             + Add Chapter
           </button>
 
+
           <button
             type="button"
             class="btn btn-light"
@@ -799,6 +978,7 @@
           >
             Clear
           </button>
+
 
           <button
             type="button"
@@ -808,16 +988,23 @@
             Generate Timestamps
           </button>
 
+
         </div>
 
+
         <div id="message" class="message"></div>
+
 
 
         <!-- RESULT -->
 
         <div id="resultBox" class="result-box">
 
-          <h3>Your YouTube Timestamps</h3>
+
+          <h3>
+            Your YouTube Timestamps
+          </h3>
+
 
           <textarea
             id="resultText"
@@ -826,19 +1013,35 @@
             aria-label="Generated YouTube timestamps"
           ></textarea>
 
+
           <div class="result-stats">
 
-            <div class="stat">
-              Chapters: <strong id="chapterCount">0</strong>
-            </div>
 
             <div class="stat">
-              Characters: <strong id="characterCount">0</strong>
+
+              Chapters:
+              <strong id="chapterCount">
+                0
+              </strong>
+
             </div>
+
+
+            <div class="stat">
+
+              Characters:
+              <strong id="characterCount">
+                0
+              </strong>
+
+            </div>
+
 
           </div>
 
+
           <div class="result-actions">
+
 
             <button
               type="button"
@@ -848,17 +1051,19 @@
               Copy All Timestamps
             </button>
 
-       
 
           </div>
 
+
         </div>
+
 
       </div>
 
     </div>
 
   </section>
+
 
 
   <!-- ================= INFO ================= -->
@@ -867,46 +1072,79 @@
 
     <div class="container info-content">
 
-      <h2>Create YouTube Chapters Easily</h2>
+
+      <h2>
+        Create YouTube Chapters Easily
+      </h2>
+
 
       <p>
-        YouTube timestamps make it easier for viewers to navigate through your video.
-        Add the starting time and title of each section, and this tool formats everything for you.
+
+        YouTube timestamps make it easier for viewers to navigate through
+        your video. Add the starting time and title of each section,
+        and this tool formats everything for you.
+
       </p>
 
+
       <p>
-        You can paste the generated timestamps directly into your YouTube video description.
-        When formatted correctly, YouTube can automatically turn them into clickable video chapters.
+
+        You can paste the generated timestamps directly into your
+        YouTube video description. When formatted correctly,
+        YouTube can automatically turn them into clickable video chapters.
+
       </p>
+
+
 
       <div class="info-grid">
 
+
         <div class="info-card">
-          <strong>⚡ Fast & Easy</strong>
+
+          <strong>
+            ⚡ Fast & Easy
+          </strong>
+
           <p>
             Create multiple timestamps in seconds without complicated settings.
           </p>
+
         </div>
 
+
         <div class="info-card">
-          <strong>📋 One-Click Copy</strong>
+
+          <strong>
+            📋 One-Click Copy
+          </strong>
+
           <p>
             Copy your complete list and paste it directly into your video description.
           </p>
+
         </div>
 
+
         <div class="info-card">
-          <strong>🔒 Private</strong>
+
+          <strong>
+            🔒 Private
+          </strong>
+
           <p>
             Your timestamp data stays in your browser and is not uploaded to a server.
           </p>
+
         </div>
+
 
       </div>
 
     </div>
 
   </section>
+
 
 
   <!-- ================= FAQ ================= -->
@@ -915,157 +1153,256 @@
 
     <div class="container faq-content">
 
-      <h2>Frequently Asked Questions</h2>
+
+      <h2>
+        Frequently Asked Questions
+      </h2>
+
 
       <div class="faq-item">
 
-        <h3>What is a YouTube timestamp?</h3>
+        <h3>
+          What is a YouTube timestamp?
+        </h3>
 
         <p>
-          A YouTube timestamp is a time marker in a video description that lets viewers jump directly to a specific part of the video.
+          A YouTube timestamp is a time marker in a video description
+          that lets viewers jump directly to a specific part of the video.
         </p>
 
       </div>
 
+
       <div class="faq-item">
 
-        <h3>How do I create YouTube chapters?</h3>
+        <h3>
+          How do I create YouTube chapters?
+        </h3>
 
         <p>
-          Add your chapter starting times and titles using this tool, generate the timestamps, then paste them into your YouTube video description.
+          Add your chapter starting times and titles using this tool,
+          generate the timestamps, then paste them into your YouTube video description.
         </p>
 
       </div>
 
+
       <div class="faq-item">
 
-        <h3>What format should YouTube timestamps use?</h3>
+        <h3>
+          What format should YouTube timestamps use?
+        </h3>
 
         <p>
-          A common format is 00:00 followed by the chapter title. Each timestamp should appear on its own line.
+          A common format is 00:00 followed by the chapter title.
+          Each timestamp should appear on its own line.
         </p>
 
       </div>
 
+
       <div class="faq-item">
 
-        <h3>Can I use this timestamp generator for YouTube Shorts?</h3>
+        <h3>
+          Can I use this timestamp generator for YouTube Shorts?
+        </h3>
 
         <p>
-          The tool can generate timestamp text for any YouTube video, although chapters are mainly useful for longer videos.
+          The tool can generate timestamp text for any YouTube video,
+          although chapters are mainly useful for longer videos.
         </p>
 
       </div>
 
+
       <div class="faq-item">
 
-        <h3>Is this YouTube Timestamp Generator free?</h3>
+        <h3>
+          Is this YouTube Timestamp Generator free?
+        </h3>
 
         <p>
-          Yes. YouTubeToolly's Timestamp Generator is completely free and works directly in your browser.
+          Yes. YouTubeToolly's Timestamp Generator is completely free
+          and works directly in your browser.
         </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
+
   <!-- ================= FOOTER ================= -->
 
   <footer>
 
+
     <div class="container">
+
 
       <div class="footer-grid">
 
+
         <div class="footer-brand">
 
+
           <a href="/" class="brand">
+
             <div class="brand-icon"></div>
-            <div>YouTube<span>Toolly</span></div>
+
+            <div>
+              YouTube<span>Toolly</span>
+            </div>
+
           </a>
 
+
           <p>
+
             Free online YouTube tools designed to help creators save time,
             optimize their videos, and grow their channels.
+
           </p>
+
 
         </div>
 
 
+
         <div class="footer-column">
 
-          <h3>Tools</h3>
 
-          <a href="/#tools">All Tools</a>
+          <h3>
+            Tools
+          </h3>
+
+
+          <a href="/#tools">
+            All Tools
+          </a>
+
+
           <a href="/tools/youtube-thumbnail-downloader.html">
             Thumbnail Downloader
           </a>
+
+
           <a href="/tools/youtube-thumbnail-resizer.html">
             Thumbnail Resizer
           </a>
+
+
           <a href="/tools/youtube-title-generator.html">
             Title Generator
           </a>
+
+
           <a href="/tools/youtube-tag-generator.html">
             Tag Generator
           </a>
 
+
         </div>
+
 
 
         <div class="footer-column">
 
-          <h3>Website</h3>
 
-          <a href="/about.html">About</a>
-          <a href="/privacy-policy.html">Privacy Policy</a>
-          <a href="/terms.html">Terms</a>
-          <a href="/contact.html">Contact</a>
+          <h3>
+            Website
+          </h3>
+
+
+          <a href="/about.html">
+            About
+          </a>
+
+
+          <a href="/privacy-policy.html">
+            Privacy Policy
+          </a>
+
+
+          <a href="/terms.html">
+            Terms
+          </a>
+
+
+          <a href="/contact.html">
+            Contact
+          </a>
+
 
         </div>
+
 
       </div>
 
 
+
       <div class="footer-bottom">
+
 
         <div>
           © 2026 YouTubeToolly. All rights reserved.
         </div>
 
+
         <div>
           YouTubeToolly is an independent tool website and is not affiliated with YouTube or Google.
         </div>
 
+
       </div>
+
 
     </div>
 
+
   </footer>
+
 
 
   <!-- ================= JAVASCRIPT ================= -->
 
   <script>
 
-    const chapterList = document.getElementById("chapterList");
-    const message = document.getElementById("message");
-    const resultBox = document.getElementById("resultBox");
-    const resultText = document.getElementById("resultText");
-    const chapterCount = document.getElementById("chapterCount");
-    const characterCount = document.getElementById("characterCount");
+
+    const chapterList =
+      document.getElementById("chapterList");
+
+    const message =
+      document.getElementById("message");
+
+    const resultBox =
+      document.getElementById("resultBox");
+
+    const resultText =
+      document.getElementById("resultText");
+
+    const chapterCount =
+      document.getElementById("chapterCount");
+
+    const characterCount =
+      document.getElementById("characterCount");
+
 
 
     function addChapter() {
 
-      const row = document.createElement("div");
+      const row =
+        document.createElement("div");
 
-      row.className = "chapter-row";
+      row.className =
+        "chapter-row";
+
 
       row.innerHTML = `
+
         <input
           type="text"
           class="time-input"
@@ -1087,22 +1424,32 @@
         >
           ×
         </button>
+
       `;
+
 
       chapterList.appendChild(row);
 
-      const inputs = row.querySelectorAll("input");
+
+      const inputs =
+        row.querySelectorAll("input");
+
 
       if (inputs.length > 0) {
+
         inputs[0].focus();
+
       }
 
     }
 
 
+
     function removeChapter(button) {
 
-      const rows = chapterList.querySelectorAll(".chapter-row");
+      const rows =
+        chapterList.querySelectorAll(".chapter-row");
+
 
       if (rows.length <= 1) {
 
@@ -1112,11 +1459,16 @@
         );
 
         return;
+
       }
 
-      button.closest(".chapter-row").remove();
+
+      button
+        .closest(".chapter-row")
+        .remove();
 
     }
+
 
 
     function clearAll() {
@@ -1128,55 +1480,92 @@
       resultBox.style.display = "none";
 
       message.className = "message";
+
       message.textContent = "";
 
     }
 
 
+
     function showMessage(text, type) {
 
       message.textContent = text;
-      message.className = "message " + type;
+
+      message.className =
+        "message " + type;
 
     }
 
 
+
     function timeToSeconds(time) {
 
-      const parts = time.trim().split(":");
+      const parts =
+        time.trim().split(":");
 
-      if (parts.length !== 2 && parts.length !== 3) {
+
+      if (
+        parts.length !== 2 &&
+        parts.length !== 3
+      ) {
+
         return null;
+
       }
 
-      const numbers = parts.map(Number);
 
-      if (numbers.some(Number.isNaN)) {
+      const numbers =
+        parts.map(Number);
+
+
+      if (
+        numbers.some(Number.isNaN)
+      ) {
+
         return null;
+
       }
+
 
       let seconds = 0;
 
+
       if (parts.length === 2) {
 
-        const minutes = numbers[0];
-        const secondsPart = numbers[1];
+        const minutes =
+          numbers[0];
+
+        const secondsPart =
+          numbers[1];
+
 
         if (
           minutes < 0 ||
           secondsPart < 0 ||
           secondsPart >= 60
         ) {
+
           return null;
+
         }
 
-        seconds = minutes * 60 + secondsPart;
+
+        seconds =
+          minutes * 60 +
+          secondsPart;
+
 
       } else {
 
-        const hours = numbers[0];
-        const minutes = numbers[1];
-        const secondsPart = numbers[2];
+        const hours =
+          numbers[0];
+
+        const minutes =
+          numbers[1];
+
+        const secondsPart =
+          numbers[2];
+
 
         if (
           hours < 0 ||
@@ -1185,8 +1574,11 @@
           secondsPart < 0 ||
           secondsPart >= 60
         ) {
+
           return null;
+
         }
+
 
         seconds =
           hours * 3600 +
@@ -1195,26 +1587,39 @@
 
       }
 
+
       return seconds;
 
     }
 
 
+
     function normalizeTime(time) {
 
-      const seconds = timeToSeconds(time);
+      const seconds =
+        timeToSeconds(time);
+
 
       if (seconds === null) {
+
         return null;
+
       }
 
-      const hours = Math.floor(seconds / 3600);
 
-      const minutes = Math.floor(
-        (seconds % 3600) / 60
-      );
+      const hours =
+        Math.floor(seconds / 3600);
 
-      const secs = seconds % 60;
+
+      const minutes =
+        Math.floor(
+          (seconds % 3600) / 60
+        );
+
+
+      const secs =
+        seconds % 60;
+
 
       if (hours > 0) {
 
@@ -1228,6 +1633,7 @@
 
       }
 
+
       return (
         String(minutes).padStart(2, "0") +
         ":" +
@@ -1237,77 +1643,112 @@
     }
 
 
+
     function generateTimestamps() {
 
       const rows =
         chapterList.querySelectorAll(".chapter-row");
 
+
       const chapters = [];
 
-      for (let i = 0; i < rows.length; i++) {
+
+      for (
+        let i = 0;
+        i < rows.length;
+        i++
+      ) {
 
         const timeInput =
           rows[i].querySelector(".time-input");
 
+
         const titleInput =
           rows[i].querySelector(".title-input");
+
 
         const time =
           timeInput.value.trim();
 
+
         const title =
           titleInput.value.trim();
 
+
         if (!time && !title) {
+
           continue;
+
         }
+
 
         if (!time) {
 
           showMessage(
-            "Please enter a time for chapter " + (i + 1) + ".",
+            "Please enter a time for chapter " +
+            (i + 1) +
+            ".",
             "error"
           );
+
 
           timeInput.focus();
 
           return;
+
         }
+
 
         if (!title) {
 
           showMessage(
-            "Please enter a title for chapter " + (i + 1) + ".",
+            "Please enter a title for chapter " +
+            (i + 1) +
+            ".",
             "error"
           );
+
 
           titleInput.focus();
 
           return;
+
         }
 
-        const seconds = timeToSeconds(time);
+
+        const seconds =
+          timeToSeconds(time);
+
 
         if (seconds === null) {
 
           showMessage(
-            "Invalid time in chapter " + (i + 1) +
+            "Invalid time in chapter " +
+            (i + 1) +
             ". Use formats such as 00:00, 01:30 or 01:05:20.",
             "error"
           );
 
+
           timeInput.focus();
 
           return;
+
         }
 
+
         chapters.push({
+
           seconds: seconds,
+
           time: normalizeTime(time),
+
           title: title
+
         });
 
       }
+
 
 
       if (chapters.length === 0) {
@@ -1318,19 +1759,34 @@
         );
 
         return;
+
       }
 
 
+
       chapters.sort(function(a, b) {
+
         return a.seconds - b.seconds;
+
       });
 
 
-      const duplicateTimes = new Set();
 
-      for (let i = 0; i < chapters.length; i++) {
+      const duplicateTimes =
+        new Set();
 
-        if (duplicateTimes.has(chapters[i].seconds)) {
+
+      for (
+        let i = 0;
+        i < chapters.length;
+        i++
+      ) {
+
+        if (
+          duplicateTimes.has(
+            chapters[i].seconds
+          )
+        ) {
 
           showMessage(
             "Two chapters cannot have the same timestamp.",
@@ -1338,11 +1794,16 @@
           );
 
           return;
+
         }
 
-        duplicateTimes.add(chapters[i].seconds);
+
+        duplicateTimes.add(
+          chapters[i].seconds
+        );
 
       }
+
 
 
       if (chapters[0].seconds !== 0) {
@@ -1353,69 +1814,178 @@
         );
 
         return;
+
       }
 
 
-      const output = chapters
-        .map(function(chapter) {
-          return chapter.time + " " + chapter.title;
-        })
-        .join("\n");
+
+      const output =
+        chapters
+          .map(function(chapter) {
+
+            return (
+              chapter.time +
+              " " +
+              chapter.title
+            );
+
+          })
+          .join("\n");
 
 
-      resultText.value = output;
 
-      chapterCount.textContent = chapters.length;
+      resultText.value =
+        output;
 
-      characterCount.textContent = output.length;
 
-      resultBox.style.display = "block";
+      chapterCount.textContent =
+        chapters.length;
+
+
+      characterCount.textContent =
+        output.length;
+
+
+      resultBox.style.display =
+        "block";
+
 
       showMessage(
         "Your timestamps are ready to copy.",
         "success"
       );
 
+
       resultBox.scrollIntoView({
+
         behavior: "smooth",
+
         block: "nearest"
+
       });
 
     }
 
 
+
+    /* ================= COPY BUTTON ================= */
+
     async function copyResult() {
 
-      const text = resultText.value.trim();
+      const text =
+        resultText.value.trim();
+
 
       if (!text) {
+
         return;
+
       }
+
+
+      const copyButton =
+        document.querySelector(
+          'button[onclick="copyResult()"]'
+        );
+
+
+      const originalText =
+        "Copy All Timestamps";
+
 
       try {
 
         await navigator.clipboard.writeText(text);
 
+
+        copyButton.textContent =
+          "✓ Copied!";
+
+
+        copyButton.style.background =
+          "#16a34a";
+
+
         showMessage(
           "Timestamps copied successfully!",
           "success"
         );
+
+
+        setTimeout(function() {
+
+          copyButton.textContent =
+            originalText;
+
+
+          copyButton.style.background =
+            "";
+
+        }, 2000);
+
 
       } catch (error) {
 
+
         resultText.focus();
+
         resultText.select();
 
-        document.execCommand("copy");
 
-        showMessage(
-          "Timestamps copied successfully!",
-          "success"
-        );
+        try {
+
+          const successful =
+            document.execCommand("copy");
+
+
+          if (!successful) {
+
+            throw new Error(
+              "Copy command failed"
+            );
+
+          }
+
+
+          copyButton.textContent =
+            "✓ Copied!";
+
+
+          copyButton.style.background =
+            "#16a34a";
+
+
+          showMessage(
+            "Timestamps copied successfully!",
+            "success"
+          );
+
+
+          setTimeout(function() {
+
+            copyButton.textContent =
+              originalText;
+
+
+            copyButton.style.background =
+              "";
+
+          }, 2000);
+
+
+        } catch (fallbackError) {
+
+          showMessage(
+            "Unable to copy timestamps. Please copy them manually.",
+            "error"
+          );
+
+        }
 
       }
 
     }
+
 
 
     /* Allow Enter to move between inputs */
@@ -1424,45 +1994,70 @@
       "keydown",
       function(event) {
 
+
         if (event.key !== "Enter") {
+
           return;
+
         }
 
-        const input = event.target;
+
+        const input =
+          event.target;
+
 
         if (
           !input.classList.contains("time-input") &&
           !input.classList.contains("title-input")
         ) {
+
           return;
+
         }
+
 
         event.preventDefault();
 
-        const row = input.closest(".chapter-row");
+
+        const row =
+          input.closest(".chapter-row");
+
 
         if (
           input.classList.contains("time-input")
         ) {
 
+
           const title =
-            row.querySelector(".title-input");
+            row.querySelector(
+              ".title-input"
+            );
+
 
           title.focus();
 
+
         } else {
+
 
           const nextRow =
             row.nextElementSibling;
 
+
           if (nextRow) {
 
+
             const nextTime =
-              nextRow.querySelector(".time-input");
+              nextRow.querySelector(
+                ".time-input"
+              );
+
 
             nextTime.focus();
 
+
           } else {
+
 
             addChapter();
 
@@ -1474,37 +2069,54 @@
     );
 
 
+
     /* Auto format simple numeric time */
 
     chapterList.addEventListener(
       "blur",
       function(event) {
 
+
         if (
-          !event.target.classList.contains("time-input")
+          !event.target.classList.contains(
+            "time-input"
+          )
         ) {
+
           return;
+
         }
+
 
         const value =
           event.target.value.trim();
 
+
         if (!value) {
+
           return;
+
         }
+
 
         const normalized =
           normalizeTime(value);
 
+
         if (normalized) {
-          event.target.value = normalized;
+
+          event.target.value =
+            normalized;
+
         }
 
       },
       true
     );
 
+
   </script>
+
 
 </body>
 </html>
