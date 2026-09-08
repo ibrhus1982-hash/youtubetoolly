@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
   <title>Contact YouTubeToolly | Get in Touch</title>
 
-  <meta name="description" content="Contact YouTubeToolly with questions, suggestions, feedback, or reports about our free YouTube creator tools.">
-  <meta name="robots" content="index, follow">
+  <meta name="description"
+    content="Contact YouTubeToolly for questions, feedback, bug reports or suggestions about our free YouTube creator tools.">
 
-  <link rel="canonical" href="https://www.youtubetoolly.com/contact.html">
+  <meta name="robots"
+    content="index, follow">
 
-  <meta property="og:title" content="Contact YouTubeToolly">
-  <meta property="og:description" content="Get in touch with YouTubeToolly for questions, suggestions and feedback.">
-  <meta property="og:url" content="https://www.youtubetoolly.com/contact.html">
-  <meta property="og:type" content="website">
+  <link rel="canonical"
+    href="https://www.youtubetoolly.com/contact.html">
+
+  <meta property="og:title"
+    content="Contact YouTubeToolly">
+
+  <meta property="og:description"
+    content="Contact YouTubeToolly for questions, feedback, bug reports or suggestions about our free YouTube creator tools.">
+
+  <meta property="og:url"
+    content="https://www.youtubetoolly.com/contact.html">
+
+  <meta property="og:type"
+    content="website">
+
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
 
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -29,6 +47,7 @@
       background: #f8fafc;
       line-height: 1.7;
     }
+
 
     header {
       height: 74px;
@@ -40,6 +59,7 @@
       z-index: 100;
     }
 
+
     .nav {
       width: min(1180px, 92%);
       height: 74px;
@@ -48,6 +68,7 @@
       align-items: center;
       justify-content: space-between;
     }
+
 
     .brand {
       display: flex;
@@ -58,6 +79,7 @@
       font-size: 20px;
       font-weight: 800;
     }
+
 
     .brand-icon {
       width: 42px;
@@ -72,6 +94,7 @@
       position: relative;
     }
 
+
     .brand-icon::after {
       content: "";
       width: 7px;
@@ -83,11 +106,13 @@
       top: 6px;
     }
 
+
     nav {
       display: flex;
       align-items: center;
       gap: 28px;
     }
+
 
     nav a {
       text-decoration: none;
@@ -96,9 +121,11 @@
       font-weight: 600;
     }
 
+
     nav a:hover {
       color: #0f172a;
     }
+
 
     .explore-btn {
       background: #0f172a;
@@ -107,16 +134,19 @@
       border-radius: 10px;
     }
 
+
     main {
       width: min(850px, 92%);
       margin: auto;
       padding: 75px 0 80px;
     }
 
+
     .hero {
       text-align: center;
       margin-bottom: 45px;
     }
+
 
     .hero h1 {
       font-size: clamp(36px, 6vw, 54px);
@@ -125,12 +155,14 @@
       letter-spacing: -1.5px;
     }
 
+
     .hero p {
       color: #64748b;
       font-size: 18px;
       max-width: 650px;
       margin: auto;
     }
+
 
     .content {
       background: white;
@@ -140,15 +172,18 @@
       box-shadow: 0 15px 40px rgba(15, 23, 42, .06);
     }
 
+
     .content h2 {
       font-size: 23px;
       margin: 0 0 12px;
     }
 
-    .content p {
+
+    .content > p {
       color: #475569;
       margin-bottom: 20px;
     }
+
 
     .contact-box {
       background: #f8fafc;
@@ -158,28 +193,89 @@
       margin-top: 25px;
     }
 
-    .contact-box strong {
+
+    .contact-box label {
       display: block;
       margin-bottom: 7px;
+      font-weight: 600;
       color: #0f172a;
     }
 
-    .email {
-      color: #ef4444;
-      text-decoration: none;
-      font-weight: 700;
-      word-break: break-word;
+
+    .contact-box input,
+    .contact-box textarea {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 18px;
+      border: 1px solid #d9dee7;
+      border-radius: 8px;
+      background: white;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #0f172a;
     }
 
-    .email:hover {
-      text-decoration: underline;
+
+    .contact-box input:focus,
+    .contact-box textarea:focus {
+      outline: none;
+      border-color: #ef4444;
+      box-shadow: 0 0 0 3px rgba(239,68,68,.1);
     }
+
+
+    .contact-box textarea {
+      min-height: 180px;
+      resize: vertical;
+    }
+
+
+    .contact-box button {
+      width: 100%;
+      padding: 14px;
+      border: 0;
+      border-radius: 8px;
+      background: #ef4444;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+
+    .contact-box button:hover {
+      background: #dc2626;
+      transform: translateY(-1px);
+    }
+
+
+    .info-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 25px;
+    }
+
+
+    .info-box h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+
+    .info-box p {
+      color: #475569;
+    }
+
 
     footer {
       background: #020617;
       color: #94a3b8;
       padding: 50px 0;
     }
+
 
     .footer-inner {
       width: min(1180px, 92%);
@@ -189,6 +285,7 @@
       gap: 50px;
     }
 
+
     .footer-brand {
       color: white;
       font-size: 20px;
@@ -196,16 +293,19 @@
       margin-bottom: 12px;
     }
 
+
     footer p {
       font-size: 14px;
       max-width: 430px;
     }
+
 
     footer h3 {
       color: white;
       font-size: 15px;
       margin-bottom: 15px;
     }
+
 
     footer a {
       display: block;
@@ -215,9 +315,11 @@
       margin-bottom: 9px;
     }
 
+
     footer a:hover {
       color: white;
     }
+
 
     .copyright {
       width: min(1180px, 92%);
@@ -227,7 +329,9 @@
       font-size: 13px;
     }
 
+
     @media (max-width: 700px) {
+
       nav {
         display: none;
       }
@@ -240,118 +344,311 @@
         padding: 25px;
       }
 
+      .contact-box {
+        padding: 20px;
+      }
+
       .footer-inner {
         grid-template-columns: 1fr;
         gap: 30px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
 <header>
+
   <div class="nav">
 
-    <a href="index.html" class="brand">
-      <div class="brand-icon">▶</div>
+    <a href="index.html"
+       class="brand">
+
+      <div class="brand-icon">
+        ▶
+      </div>
+
       YouTubeToolly
+
     </a>
 
+
     <nav>
-      <a href="index.html#tools">Tools</a>
-      <a href="index.html#why">Why YouTubeToolly</a>
-      <a href="about.html">About</a>
-      <a href="index.html#tools" class="explore-btn">Explore Tools</a>
+
+      <a href="index.html#tools">
+        Tools
+      </a>
+
+      <a href="index.html#why">
+        Why YouTubeToolly
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="index.html#tools"
+         class="explore-btn">
+        Explore Tools
+      </a>
+
     </nav>
 
   </div>
+
 </header>
+
+
 
 <main>
 
+
   <section class="hero">
-    <h1>Contact YouTubeToolly</h1>
+
+    <h1>
+      Contact YouTubeToolly
+    </h1>
+
     <p>
       Have a question, suggestion, or found a problem?
       We'd love to hear from you.
     </p>
+
   </section>
+
+
 
   <article class="content">
 
-    <h2>Get in Touch</h2>
+
+    <h2>
+      Get in Touch
+    </h2>
 
     <p>
-      If you have feedback about one of our tools, suggestions for a new
-      tool, or you have discovered a problem with the website, you can
-      contact us by email.
+      Have a question, suggestion, or technical issue?
+      Send us a message using the form below.
+      We will review your message and get back to you when possible.
     </p>
+
+
 
     <div class="contact-box">
 
-      <strong>Email</strong>
 
-      <a class="email" href="mailto:ibrhus1982@gmail.com">
-        ibrhus1982@gmail.com
+      <form
+        action="https://formsubmit.co/ibrhus1982@gmail.com"
+        method="POST"
+      >
+
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New YouTubeToolly Contact Message"
+        >
+
+
+        <input
+          type="hidden"
+          name="_captcha"
+          value="true"
+        >
+
+
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
+
+
+        <label for="name">
+          Name
+        </label>
+
+
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+
+
+
+        <label for="email">
+          Email
+        </label>
+
+
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+
+
+
+        <label for="message">
+          Message
+        </label>
+
+
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+
+
+        <button
+          type="submit"
+        >
+          Send Message
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+
+
+    <div class="info-box">
+
+      <h3>
+        What Can You Contact Us About?
+      </h3>
+
+      <p>
+        You can contact us about technical problems,
+        suggestions for new YouTube creator tools,
+        website feedback, incorrect information,
+        or general questions about YouTubeToolly.
+      </p>
+
+    </div>
+
+
+
+    <div class="info-box">
+
+      <h3>
+        Suggestions and Feedback
+      </h3>
+
+      <p>
+        We are continuously improving YouTubeToolly.
+        Your feedback can help us create better,
+        simpler and more useful tools for YouTube creators.
+      </p>
+
+    </div>
+
+
+
+    <div class="info-box">
+
+      <h3>
+        Technical Issues
+      </h3>
+
+      <p>
+        When reporting a problem, please include the
+        name of the tool you were using and a short
+        description of what went wrong.
+      </p>
+
+    </div>
+
+
+  </article>
+
+
+</main>
+
+
+
+<footer>
+
+
+  <div class="footer-inner">
+
+
+    <div>
+
+      <div class="footer-brand">
+        YouTubeToolly
+      </div>
+
+      <p>
+        Free and simple online tools for YouTube creators.
+      </p>
+
+    </div>
+
+
+
+    <div>
+
+      <h3>
+        Company
+      </h3>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
       </a>
 
     </div>
 
-    <div class="contact-box">
 
-      <strong>Suggestions</strong>
-
-      <p>
-        We welcome suggestions for new YouTube creator tools and
-        improvements to existing tools.
-      </p>
-
-    </div>
-
-    <div class="contact-box">
-
-      <strong>Technical Issues</strong>
-
-      <p>
-        When reporting a problem, please include the name of the tool
-        and a short description of what went wrong.
-      </p>
-
-    </div>
-
-  </article>
-
-</main>
-
-<footer>
-
-  <div class="footer-inner">
 
     <div>
-      <div class="footer-brand">YouTubeToolly</div>
-      <p>Free and simple online tools for YouTube creators.</p>
+
+      <h3>
+        Legal
+      </h3>
+
+      <a href="privacy-policy.html">
+        Privacy Policy
+      </a>
+
+      <a href="terms.html">
+        Terms of Service
+      </a>
+
     </div>
 
-    <div>
-      <h3>Company</h3>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div>
-      <h3>Legal</h3>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
 
   </div>
+
+
 
   <div class="copyright">
     © 2026 YouTubeToolly. All rights reserved.
   </div>
 
+
 </footer>
 
+
 </body>
+
 </html>
