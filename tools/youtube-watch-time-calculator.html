@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q48GCX0Q35"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q48GCX0Q35');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YouTube Watch Time Calculator - Free Watch Hours Calculator | YouTubeToolly</title>
+
+  <meta name="description" content="Calculate total YouTube watch time from views and average view duration, including total hours and days.">
+
+  <meta name="keywords" content="YouTube tools, YouTube creator tools">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="YouTubeToolly">
+
+  <link rel="canonical" href="https://www.youtubetoolly.com/tools/youtube-watch-time-calculator.html">
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YouTube Watch Time Calculator - Free Watch Hours Calculator | YouTubeToolly">
+  <meta property="og:description" content="Calculate total YouTube watch time from views and average view duration, including total hours and days.">
+  <meta property="og:url" content="https://www.youtubetoolly.com/tools/youtube-watch-time-calculator.html">
+  <meta property="og:site_name" content="YouTubeToolly">
+
+  <!-- Twitter -->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="YouTube Watch Time Calculator - Free Watch Hours Calculator | YouTubeToolly">
+  <meta name="twitter:description" content="Calculate total YouTube watch time from views and average view duration, including total hours and days.">
+
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Cpath d='M38 28L72 50L38 72Z' fill='white'/%3E%3Ccircle cx='75' cy='25' r='10' fill='%23ef4444'/%3E%3C/svg%3E">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Schema -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "YouTube Watch Time Calculator",
+  "url": "https://www.youtubetoolly.com/tools/youtube-watch-time-calculator.html",
+  "description": "Calculate total YouTube watch time from views and average view duration, including total hours and days.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+  </script>
+
+  <style>
+
+    :root {
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --dark: #0f172a;
+      --text: #1e293b;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --red: #ef4444;
+      --red-dark: #dc2626;
+      --blue: #2563eb;
+      --soft-red: #fef2f2;
+      --soft-blue: #eff6ff;
+      --green: #16a34a;
+      --shadow: 0 10px 30px rgba(15, 23, 42, .07);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* Header */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226,232,240,.8);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--dark);
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      background: var(--dark);
+      display: grid;
+      place-items: center;
+      position: relative;
+      box-shadow: 0 7px 18px rgba(15,23,42,.18);
+    }
+
+    .brand-icon::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 9px solid transparent;
+      border-bottom: 9px solid transparent;
+      border-left: 14px solid white;
+      margin-left: 3px;
+    }
+
+    .brand-icon::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      top: 5px;
+      right: 5px;
+      border: 2px solid white;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
+    .nav-button {
+      background: var(--dark);
+      color: white !important;
+      padding: 10px 17px;
+      border-radius: 10px;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 75px 0 65px;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(239,68,68,.10), transparent 28%),
+        radial-gradient(circle at 85% 10%, rgba(37,99,235,.09), transparent 25%),
+        var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--soft-red);
+      color: var(--red-dark);
+      border: 1px solid #fecaca;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--red);
+    }
+
+    h1 {
+      color: var(--dark);
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -2.5px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    h1 .highlight {
+      color: var(--red);
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* Tool */
+
+    .tool-section {
+      padding: 65px 0;
+    }
+
+    .tool-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .tool-box h2 {
+      text-align: center;
+      color: var(--dark);
+      font-size: 26px;
+      margin-bottom: 9px;
+    }
+
+    .tool-box-subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* Upload */
+
+    .upload-area {
+      border: 2px dashed #cbd5e1;
+      border-radius: 16px;
+      padding: 42px 25px;
+      text-align: center;
+      background: #f8fafc;
+      cursor: pointer;
+      display: block;
+      transition: background .2s, border-color .2s;
+    }
+
+    .upload-area:hover {
+      border-color: var(--red);
+      background: #f1f5f9;
+    }
+
+    .upload-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .upload-area h3 {
+      color: var(--dark);
+      font-size: 19px;
+      margin-bottom: 6px;
+    }
+
+    .upload-area p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .upload-button {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .upload-area:hover .upload-button {
+      background: var(--red-dark);
+    }
+
+    /*
+      Keep the file input accessible while visually hidden.
+      This allows the label above to trigger it reliably.
+    */
+
+    #imageInput {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Original Preview */
+
+    .original-preview {
+      display: none;
+      margin-top: 22px;
+    }
+
+    .original-preview.show {
+      display: block;
+    }
+
+    .preview-label {
+      color: var(--dark);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .original-preview-box {
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      min-height: 220px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #originalPreview {
+      display: block;
+      max-width: 100%;
+      max-height: 500px;
+      width: auto;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 7px 25px rgba(15,23,42,.10);
+    }
+
+    .original-info {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Controls */
+
+    .controls {
+      display: none;
+      margin-top: 28px;
+    }
+
+    .controls.show {
+      display: block;
+    }
+
+    .control-title {
+      color: var(--dark);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .presets {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 23px;
+    }
+
+    .preset {
+      border: 1px solid var(--border);
+      background: white;
+      color: var(--dark);
+      border-radius: 11px;
+      padding: 13px 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .preset:hover {
+      border-color: #cbd5e1;
+      background: #f8fafc;
+    }
+
+    .preset.active {
+      border-color: var(--red);
+      background: var(--soft-red);
+      color: var(--red-dark);
+    }
+
+    .preset small {
+      display: block;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+
+    .preset.active small {
+      color: var(--red-dark);
+    }
+
+    .dimensions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 17px;
+    }
+
+    .field label {
+      display: block;
+      color: #475569;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      outline: none;
+      color: var(--text);
+      background: white;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: #94a3b8;
+      box-shadow: 0 0 0 3px rgba(37,99,235,.08);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      margin: 12px 0 20px;
+    }
+
+    .checkbox-row input {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--red);
+    }
+
+    .resize-button {
+      width: 100%;
+      border: 0;
+      padding: 14px;
+      border-radius: 12px;
+      background: var(--red);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+      margin-top: 18px;
+    }
+
+    .resize-button:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .resize-button:disabled {
+      opacity: .65;
+      cursor: wait;
+      transform: none;
+    }
+
+    /* Message */
+
+    .message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-size: 14px;
+    }
+
+    .message.error {
+      display: block;
+      background: var(--soft-red);
+      color: #b91c1c;
+      border: 1px solid #fecaca;
+    }
+
+    .message.success {
+      display: block;
+      background: #f0fdf4;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    /* Results */
+
+    .results {
+      display: none;
+      margin-top: 35px;
+    }
+
+    .results-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .preview-card {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .preview-area {
+      background: #f1f5f9;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      overflow: hidden;
+    }
+
+    #previewCanvas {
+      max-width: 100%;
+      max-height: 500px;
+      width: auto;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 7px 25px rgba(15,23,42,.12);
+    }
+
+    .preview-info {
+      padding: 17px;
+    }
+
+    .preview-info h3 {
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .preview-info p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .download-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 11px 12px;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 700;
+      background: var(--dark);
+      color: white;
+      border: 1px solid var(--dark);
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .download-button:hover {
+      background: #1e293b;
+    }
+
+    .download-button.disabled {
+      opacity: .6;
+      pointer-events: none;
+    }
+
+    /* Info */
+
+    .info-section {
+      padding: 70px 0;
+      background: white;
+    }
+
+    .content-box {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .content-box h2 {
+      color: var(--dark);
+      font-size: 31px;
+      letter-spacing: -1px;
+      margin-bottom: 17px;
+    }
+
+    .content-box h3 {
+      color: var(--dark);
+      font-size: 21px;
+      margin: 30px 0 9px;
+    }
+
+    .content-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .content-box ul {
+      color: var(--muted);
+      padding-left: 22px;
+      margin-bottom: 18px;
+    }
+
+    .content-box li {
+      margin-bottom: 7px;
+    }
+
+    .info-box {
+      background: var(--soft-blue);
+      border: 1px solid #bfdbfe;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      color: #1e40af;
+    }
+
+    .info-box strong {
+      color: #1e3a8a;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding: 70px 0;
+      background: var(--bg);
+    }
+
+    .faq-title {
+      text-align: center;
+      color: var(--dark);
+      font-size: 31px;
+      margin-bottom: 35px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    .faq-item h3 {
+      color: var(--dark);
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 35px;
+    }
+
+    footer .brand {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .footer-about {
+      max-width: 430px;
+      font-size: 14px;
+    }
+
+    footer h4 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    footer a {
+      display: block;
+      font-size: 14px;
+      margin: 9px 0;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 22px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    .disclaimer {
+      max-width: 850px;
+      margin: 12px auto 0;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 700px) {
+
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding: 58px 0 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.7px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .tool-section,
+      .info-section,
+      .faq-section {
+        padding: 50px 0;
+      }
+
+      .tool-box {
+        padding: 22px;
+      }
+
+      .presets {
+        grid-template-columns: 1fr;
+      }
+
+      .dimensions {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .preview-area,
+      .original-preview-box {
+        padding: 15px;
+      }
+
+    }
+
+  
+    /* Generic creator tool styles */
+    .tool-form{display:grid;gap:18px}
+    .field textarea{width:100%;min-height:150px;padding:14px;border:1px solid var(--border);border-radius:11px;outline:none;resize:vertical;color:var(--text);background:#fff}
+    .field textarea:focus{border-color:#94a3b8;box-shadow:0 0 0 3px rgba(37,99,235,.08)}
+    .primary-btn{width:100%;border:0;padding:14px;border-radius:12px;background:var(--red);color:#fff;font-weight:700;cursor:pointer;transition:.2s}
+    .primary-btn:hover{background:var(--red-dark);transform:translateY(-1px)}
+    .secondary-btn{border:1px solid var(--border);padding:11px 16px;border-radius:10px;background:#fff;color:var(--dark);font-weight:700;cursor:pointer}
+    .secondary-btn:hover{background:#f8fafc}
+    .result{display:none;margin-top:22px;padding:20px;border:1px solid var(--border);border-radius:15px;background:#f8fafc}
+    .result.show{display:block}
+    .result h3{color:var(--dark);margin-bottom:10px}
+    .result pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;line-height:1.7}
+    .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+    .stat{background:#fff;border:1px solid var(--border);border-radius:12px;padding:15px;text-align:center}
+    .stat strong{display:block;font-size:24px;color:var(--dark)}
+    .stat span{font-size:12px;color:var(--muted)}
+    .check-list{display:grid;gap:10px;margin-top:15px}
+    .check{display:flex;justify-content:space-between;gap:15px;padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:10px;font-size:14px}
+    .ok{color:var(--green);font-weight:700}.warn{color:#d97706;font-weight:700}.bad{color:var(--red-dark);font-weight:700}
+    .copy-row{display:flex;gap:10px;margin-top:14px}.copy-row .primary-btn{width:auto;flex:1}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .chip{background:#fff;border:1px solid var(--border);border-radius:999px;padding:8px 11px;font-size:13px}
+    .score{font-size:44px;font-weight:800;color:var(--red);text-align:center;margin:5px 0}
+    .note{font-size:12px;color:var(--muted);margin-top:10px}
+    .upload-small{border:2px dashed #cbd5e1;border-radius:15px;padding:30px;text-align:center;background:#f8fafc;cursor:pointer}
+    .upload-small input{display:none}
+    .preview-img{max-width:100%;max-height:380px;display:block;margin:18px auto;border-radius:10px}
+    .code-box{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;line-height:1.6;background:#0f172a;color:#e2e8f0;padding:18px;border-radius:12px;white-space:pre-wrap;word-break:break-word}
+    .range-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:700px){nav{gap:12px}nav a:not(.nav-button){display:none}.stat-grid{grid-template-columns:1fr}.range-row{grid-template-columns:1fr}.tool-box{padding:22px}}
+
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container nav">
+    <a href="/" class="brand" aria-label="YouTubeToolly Home"><div class="brand-icon"></div>YouTube<span>Toolly</span></a>
+    <nav><a href="/#tools">Tools</a><a href="/#why">Why YouTubeToolly</a><a href="/#about">About</a><a href="/#tools" class="nav-button">Explore Tools</a></nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <div class="container hero-content">
+    <div class="badge"><span class="badge-dot"></span>Free YouTube Creator Tool</div>
+    <h1>YouTube Watch Time<br><span class="highlight">Calculator</span></h1>
+    <p>Calculate total watch time from views and average view duration in seconds or minutes.</p>
+  </div>
+</section>
+<section class="tool-section"><div class="container"><div class="tool-box"><h2>Calculate YouTube Watch Time</h2><p class="tool-box-subtitle">Useful for planning content and understanding how views translate into watch hours.</p>
+<div class="tool-form"><div class="field"><label for="views">Views</label><input id="views" type="number" min="0" placeholder="50000"></div>
+<div class="range-row"><div class="field"><label for="minutes">Average view duration — minutes</label><input id="minutes" type="number" min="0" step="0.1" placeholder="3"></div><div class="field"><label for="seconds">Extra seconds</label><input id="seconds" type="number" min="0" max="59" value="0"></div></div>
+<button class="primary-btn" onclick="calc()">Calculate Watch Time</button></div>
+<div id="result" class="result"><div class="stat-grid"><div class="stat"><strong id="hours">0</strong><span>Total hours</span></div><div class="stat"><strong id="days">0</strong><span>Total days</span></div><div class="stat"><strong id="minutesOut">0</strong><span>Total minutes</span></div></div></div></div></div></section>
+<section class="seo-content" id="about"><div class="container seo-box">
+<h2>Free YouTube Watch Time <span class="highlight">Calculator</span> Online</h2>
+<p>YouTubeToolly provides free browser-based tools for YouTube creators. This tool is designed to be simple, fast and useful without requiring an account.</p>
+<h3>How to use this tool</h3><p>Enter your information, generate or analyze the result, then copy the output for your YouTube workflow. Results are generated in your browser.</p>
+</div></section>
+</main>
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+
+      <div>
+
+        <a href="/" class="brand">
+
+          <div class="brand-icon"></div>
+
+          YouTube<span>Toolly</span>
+
+        </a>
+
+        <p class="footer-about">
+
+          Free online tools designed to help YouTube creators
+          plan, optimize and create content more efficiently.
+
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Tools
+        </h4>
+
+        <a href="/#tools">
+          All Tools
+        </a>
+
+        <a href="/#tools">
+          YouTube SEO
+        </a>
+
+        <a href="/#tools">
+          Generators
+        </a>
+
+        <a href="/#tools">
+          Creator Tools
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Website
+        </h4>
+
+        <a href="/about.html">
+          About
+        </a>
+
+        <a href="/privacy-policy.html">
+          Privacy Policy
+        </a>
+
+        <a href="/terms.html">
+          Terms of Service
+        </a>
+
+        <a href="/contact.html">
+          Contact
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 YouTubeToolly. All rights reserved.
+    </div>
+
+
+    <p class="disclaimer">
+
+      YouTubeToolly is an independent website and is not affiliated with,
+      endorsed by, or sponsored by YouTube or Google.
+
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+function calc(){const v=Math.max(0,+document.getElementById("views").value||0),m=Math.max(0,+document.getElementById("minutes").value||0),s=Math.max(0,+document.getElementById("seconds").value||0);const total=v*(m*60+s),mins=total/60,h=total/3600,d=h/24;document.getElementById("hours").textContent=h.toLocaleString(undefined,{maximumFractionDigits:2});document.getElementById("days").textContent=d.toLocaleString(undefined,{maximumFractionDigits:2});document.getElementById("minutesOut").textContent=mins.toLocaleString(undefined,{maximumFractionDigits:2});document.getElementById("result").classList.add("show")}
+</script>
+</body></html>
